@@ -1,0 +1,172 @@
+/* header */
+
+// 데스크탑 
+.header {
+
+  position: fixed;
+  top: 28px;
+  left: 0;
+  right: 0;
+
+  z-index: 3;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+
+  @include mobile {
+    top: 0;
+    padding: 20px 20px;
+
+  }
+
+  .headline {
+    text-transform: uppercase;
+  }
+
+  .menu-box {
+    margin-left: auto;
+    padding: 23px 65px;
+    display: flex;
+    width: 224px;
+    // background: #0f0;
+
+    @include mobile {
+      width: auto;
+    }
+
+    .menu-btn {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 20px;
+      // background: #00f;
+      display: inline-block;
+
+      @include mobile {
+        width: 30px;
+        height: 13px;
+      }
+
+      .title {
+        display: inline-block;
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 25px;
+        color: #fff;
+        transition: 0.2s;
+        line-height: 20px;
+        // background: #0ff;
+        width: 100%;
+
+        @include mobile {
+          font-size: 10px;
+          line-height: 1;
+        }
+
+        &.top {
+          top: 0;
+          left: 0;
+        }
+
+        &.bottom {
+          top: 100%;
+          left: 0;
+        }
+      }
+
+    }
+
+    .burgerBtn {
+      transform: translateY(0%);
+      width: 24px;
+      height: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.2s;
+
+      .burgerBar {
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        transition: all 200ms ease-in-out;
+
+        &.positionTop {
+          top: 0;
+        }
+
+        &.positionMiddle {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &.positionBottom {
+          top: 100%;
+          transform: translateY(-100%);
+        }
+      }
+
+      &.isAct {
+        .positionTop {
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+        }
+
+        .positionMiddle {
+          transform: scaleX(0);
+        }
+
+        .positionBottom {
+          top: 50%;
+          transform: translateY(-50%) rotate(-45deg);
+        }
+
+      }
+    }
+
+    &:hover {
+      .menu-btn {
+        .top {
+          top: -105%;
+        }
+
+        .bottom {
+          top: 0;
+        }
+
+      }
+
+      .burgerBtn {
+        height: 22.5px;
+      }
+
+    }
+
+    &.isAct {
+      .menu-btn {
+        .title {
+          visibility: hidden;
+        }
+      }
+    }
+
+
+
+    @include mobile {
+      margin-left: auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 10px;
+
+
+    }
+
+
+  }
+
+}
