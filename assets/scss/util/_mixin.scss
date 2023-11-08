@@ -2,16 +2,12 @@
 // 전역으로 적용시킨것들은 1229 이상으로 다 적용시키는 것이다. 
 
 // 시안에 따라 다름
-// 1025 ~ 1229
-$desktop: 1280px;
+
+
+
+
+// 1440 ~
 $max: 1440px;
-
-// 961 ~ 1250
-$tablet: 1024px;
-
-// 320 ~ 960
-$mobile: 960px;
-
 
 @mixin max {
 
@@ -21,14 +17,19 @@ $mobile: 960px;
   }
 }
 
+// 1025 ~ 1279
+$desktop: 1280px;
 
 @mixin desktop {
 
-  // 1229 이하를 꾸미는거다. 
+  // 1280 이하를 꾸미는거다. 
   @media screen and (max-width: $desktop ) {
     @content;
   }
 }
+
+// 961 ~ 1024
+$tablet: 1024px;
 
 @mixin tablet {
 
@@ -38,9 +39,13 @@ $mobile: 960px;
   }
 }
 
+
+// 320 ~ 960
+$mobile: 960px;
+
 @mixin mobile {
 
-  // 767 이하를 꾸미는거다. 
+  // 960 이하를 꾸미는거다. 
   @media screen and (max-width: $mobile ) {
     @content;
   }

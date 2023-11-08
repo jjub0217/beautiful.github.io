@@ -170,3 +170,280 @@
   }
 
 }
+
+.gnb {
+  background-color: #ff5885;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  align-items: center;
+  // display: none;
+  // opacity: 0;
+  transform: translateY(100%);
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg) translateY(0%);
+    //???? 왜 안되는거지
+    // transition: translateY 1s;
+
+    &.on {
+      // transform: translateY(100%);
+    }
+  }
+
+
+  &::before {
+    content: "";
+    display: block;
+    background: url("../images/gnb_image.png") no-repeat;
+    background-size: 100%;
+    width: 522px;
+    height: 100%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &.isAct {
+    // opacity: 1;
+    transform: translateY(0%);
+    transition: transform 0.5s;
+    display: flex;
+    align-items: flex-start;
+
+    .group {
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      gap: 148px;
+      margin: auto auto;
+
+      @include mobile {
+        display: block;
+        margin: 0;
+        padding: 54px 32px;
+      }
+
+      &-main {
+
+
+        .nav-list {
+          display: flex;
+          flex-direction: column;
+          gap: 28px;
+
+          @include mobile {
+            gap: 20px;
+          }
+
+          .nav-item {
+            font-size: 30px;
+            color: #fff;
+
+            @include mobile {
+              font-size: 40px;
+              line-height: 1;
+            }
+
+            a {
+              display: block;
+              position: relative;
+              overflow: hidden;
+              height: 30px;
+              line-height: 30px;
+
+              span {
+                position: absolute;
+                transition: 0.3s;
+                width: 100%;
+                line-height: 1;
+                height: 100%;
+
+                &.top {
+                  top: 0;
+                  left: 0;
+                }
+
+                &.bottom {
+                  top: 100%;
+                  left: 0;
+                }
+              }
+
+              &:hover {
+                .top {
+                  top: -100%;
+                }
+
+                .bottom {
+                  top: 0;
+                }
+              }
+            }
+
+
+            .sub-list {
+              padding-top: 14px;
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+
+              @include mobile {
+                padding: 20px 0;
+                gap: 20px;
+              }
+
+              .sub-item {
+                font-size: 14px;
+                position: relative;
+                overflow: hidden;
+                height: 14px;
+                line-height: 14px;
+
+                @include mobile {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-sub {
+        display: flex;
+        flex-direction: column;
+        gap: 88px;
+
+        @include mobile {
+          gap: 0px;
+        }
+
+        .sns-area {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+
+          @include mobile {
+            flex-direction: row;
+            padding: 40px 0 30px 0;
+          }
+
+          .title {
+            font-size: 18px;
+            color: #fff;
+            width: 100%;
+
+            @include mobile {
+              width: auto;
+              display: flex;
+              align-items: center;
+            }
+          }
+
+          .sns-list {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+
+            .sns-item {
+              .instagram {
+                &:before {
+                  content: "";
+                  display: block;
+                  width: 38px;
+                  height: 37px;
+                  background: url("../images/instagram.svg") no-repeat;
+                  background-size: contain;
+                  transition: 0.3s;
+                }
+
+                &:hover {
+                  &::before {
+                    opacity: 0.5;
+                  }
+                }
+              }
+
+              .twitter {
+                &:before {
+                  content: "";
+                  display: block;
+                  width: 38px;
+                  height: 37px;
+                  background: url("../images/twitter.svg") no-repeat;
+                  background-size: contain;
+                  transition: 0.3s;
+                }
+
+                &:hover {
+                  &::before {
+                    opacity: 0.5;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+      &-communication {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        color: #fff;
+        gap: 32px;
+
+        @include mobile {
+          flex-direction: row;
+          font-size: 16.5px;
+        }
+
+        a {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          overflow: hidden;
+          height: 15px;
+          line-height: 15px;
+
+          span {
+            display: block;
+            position: absolute;
+            transition: 0.3s;
+            width: 100%;
+            word-break: break-all;
+
+            &.top {
+              top: 0;
+              left: 0;
+            }
+
+            &.bottom {
+              top: 100%;
+              left: 0;
+            }
+          }
+
+          &:hover {
+            .top {
+              top: -100%;
+            }
+
+            .bottom {
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

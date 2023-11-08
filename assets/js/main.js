@@ -1,11 +1,69 @@
 $(function () {
+
+
+  const loadingText = new SplitType('.loading p', { types: 'words, chars', });
+
+  // 미리 gsap세팅
+  // gsap.set()
+
+
+  const loadingTl = gsap.timeline({
+    // loadingTl 이 완료된 후에 실행될 콜백함수
+    onComplete: function(){
+      sloganTl.play()
+    }
+  })
+  loadingTl.to($(".loading .char"), {
+    opacity: 1,
+    // 한글자씩 0.1초씩 차례대로 딜레이가 되서 opacity 1이 된다.
+    stagger: 0.06,
+    scale:1,
+    ease:"elastic.out(1,0.3)",
+  })
+  .addLabel('a')
+  .to($(".loading"), {
+    background: "#ff9daf",
+  },'a')
+  .to($(".loading p"), {
+    opacity: 0,
+  },'a')
+  .to($(".loading"), {
+    yPercent: -150
+  })
+
+  const gnbTl = gsap.timeline({})
+  gnbTl.to($(".gnb"), {
+
+  })
+
+
+
   
+  // const sloganTl = gsap.timeline({
+  //   paused: true
+  // })
+  // const sloganText = new SplitType('.section-slogan .title-box p', { types: 'words, chars', });
+  
+  // sloganTl.from($(".section-slogan picture"), {
+  //   scale: 1.1
+  // })
+  // .from($(".section-slogan .title .char"), {
+  //   opacity: 0,
+  //   stagger: 0.04,
+  //   scale:0.5,
+  //   ease:"elastic.out(1,0.4)",
+  // })
+  // .from($(".section-slogan .sub-title"), {
+  //   opacity: 0,
+  //   yPercent: 100
+  // })
+
+
   $('.gnb .nav-item').hover(function(e){
       console.log(
       $(this).find('.sub-list').length)
-      // 이벤트의 타켓인 this의 자식들에 sub-list 가 있다면 length 는 1 이 나오고, 없다면 0 이 나온다.
+
       if($(this).find('.sub-list').length){
-        // 이벤트 타겟인 this의 자식들에 sub-list 에 클래스 on 붙힘
         $(this).find('.sub-list').addClass('on');
         $('.gnb').addClass('on')
       }
@@ -14,8 +72,9 @@ $(function () {
       $('.gnb').removeClass('on')
   })
 
+
+
   $('.menu-box').click(function(){
-    console.log($(this));
     $('.gnb').toggleClass('isAct')
     $('burgerBtn').toggleClass('isAct')
     $(this).toggleClass('isAct')
