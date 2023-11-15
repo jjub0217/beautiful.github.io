@@ -110,6 +110,12 @@ $('.menu-box button').click(function(){
   }
 })
 
+$(".section-exBanner .group-area").hover(function(){
+  $(this).addClass("on")
+},function(){
+  $(this).removeClass("on")
+})
+
 $('#wave').wavify({
   height: 60,
   bones: 3,
@@ -168,8 +174,6 @@ $('#wave').wavify({
         }
       },
   } )
-
-
 })
 
 

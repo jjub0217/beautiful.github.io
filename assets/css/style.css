@@ -1864,6 +1864,7 @@ body {
   align-items: center;
   height: 300px;
   margin-bottom: 110px;
+  cursor: pointer;
 }
 @media screen and (max-width: 960px) {
   .section-exBanner .inner .group-area {
@@ -1876,9 +1877,6 @@ body {
 }
 .section-exBanner .inner .group-area .image {
   height: 100%;
-}
-.section-exBanner .inner .group-area .image:hover img {
-  filter: brightness(1.16);
 }
 .section-exBanner .inner .group-area .image img {
   -o-object-fit: cover;
@@ -1934,12 +1932,19 @@ body {
   width: 13px;
   height: 20px;
   background-size: contain;
+  transition: 0.5s;
 }
 @media screen and (max-width: 960px) {
   .section-exBanner .inner .group-area .banner .text::after {
     width: 8px;
     background-position: center;
   }
+}
+.section-exBanner .inner .group-area.on img {
+  filter: brightness(1.16);
+}
+.section-exBanner .inner .group-area.on .banner .text::after {
+  transform: translateX(5px);
 }
 .section-exBanner .inner .ingredient {
   line-height: 1.67;
