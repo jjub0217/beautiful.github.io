@@ -36,18 +36,19 @@ body {
   display: flex;
   align-items: flex-start;
   color: #fff;
+  z-index: 1;
 }
 
 .title {
   font-weight: 900;
-  font-size: 105px;
+  font-size: 13.5vw;
   color: #fff;
   word-wrap: break-word;
   line-height: 1.1;
   letter-spacing: -0.02em;
 
   @include mobile {
-    font-size: 48px;
+    font-size: 8.5vw;
   }
 }
 
@@ -143,7 +144,7 @@ body {
     position: relative;
     overflow: hidden;
     height: 26px;
-    min-width: 175px;
+    min-width: 200px;
     display: inline-block;
     word-break: break-all;
     letter-spacing: 0;
@@ -287,35 +288,26 @@ body {
 
   .image-box {
     overflow: hidden;
-
-    @include mobile {
-      position: relative;
-      padding-bottom: calc((440/500)*100%);
-    }
   }
 
   .title-box {
     position: absolute;
-
     right: 0;
     left: 0;
     top: calc(100% - min(1162px, 100vw) * 262 / 2678 * 0.5 + -41.10829px);
+    top: 87%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .title {
-      padding: 0 100px;
-      font-size: 182px;
-
       .char {
         transform: scale(1);
         position: relative;
-        z-index: 4;
+        z-index: 1;
       }
 
       @include mobile {
-        padding: 0 20px;
         max-width: none;
       }
     }
@@ -324,12 +316,13 @@ body {
       padding-top: 20px;
       color: #fff;
       font-size: 39px;
+      // font-size: 2vw;
       opacity: 1;
       transform: translateY(0%);
 
       @include mobile {
-        max-width: 117px;
         padding-top: 16px;
+        font-size: 16px;
       }
     }
   }
@@ -340,12 +333,16 @@ body {
 
 // inner 있음
 .section-concept {
-  margin-top: 250px;
-  position: relative;
+  margin-top: 300px;
 
   @include mobile {
-    margin-top: 124px;
-    position: relative;
+    margin-top: 100px;
+  }
+
+  .inner {
+    @include mobile {
+      padding: 0 20px;
+    }
   }
 
   .headline {
@@ -353,50 +350,51 @@ body {
     right: 0;
   }
 
-  .inner {
-    @include mobile {
-      padding: 0 20px;
-    }
-
-
-  }
-
   .image-box {
     max-width: 920px;
     margin: 0 auto;
+    position: relative;
+    color: transparent;
+    transform: translateY(-13%);
+    clip-path: polygon(100% 100%, 0% 100%, 0.00% 36.67%, 2.00% 36.00%, 4.00% 34.06%, 6.00% 31.05%, 8.00% 27.30%, 10.00% 23.20%, 12.00% 19.19%, 14.00% 15.68%, 16.00% 13.06%, 18.00% 11.59%, 20.00% 11.43%, 22.00% 12.61%, 24.00% 14.99%, 26.00% 18.32%, 28.00% 22.25%, 30.00% 26.37%, 32.00% 30.24%, 34.00% 33.45%, 36.00% 35.66%, 38.00% 36.63%, 40.00% 36.27%, 42.00% 34.61%, 44.00% 31.83%, 46.00% 28.22%, 48.00% 24.16%, 50.00% 20.09%, 52.00% 16.43%, 54.00% 13.57%, 56.00% 11.81%, 58.00% 11.35%, 60.00% 12.22%, 62.00% 14.34%, 64.00% 17.48%, 66.00% 21.31%, 68.00% 25.43%, 70.00% 29.39%, 72.00% 32.79%, 74.00% 35.25%, 76.00% 36.52%, 78.00% 36.47%, 80.00% 35.10%, 82.00% 32.55%, 84.00% 29.10%, 86.00% 25.11%, 88.00% 21.00%, 90.00% 17.21%, 92.00% 14.14%, 94.00% 12.11%, 96.00% 11.34%, 98.00% 11.91%, 100.00% 13.75%);
+    transition: 1s;
 
+
+    &.on {
+      clip-path:
+        polygon(100% 100%, 0% 100%, 0.00% 0.00%, 2.00% 0.00%, 4.00% 0.00%, 6.00% 0.00%, 8.00% 0.00%, 10.00% 0.00%, 12.00% 0.00%, 14.00% 0.00%, 16.00% 0.00%, 18.00% 0.00%, 20.00% 0.00%, 22.00% 0.00%, 24.00% 0.00%, 26.00% 0.00%, 28.00% 0.00%, 30.00% 0.00%, 32.00% 0.00%, 34.00% 0.00%, 36.00% 0.00%, 38.00% 0.00%, 40.00% 0.00%, 42.00% 0.00%, 44.00% 0.00%, 46.00% 0.00%, 48.00% 0.00%, 50.00% 0.00%, 52.00% 0.00%, 54.00% 0.00%, 56.00% 0.00%, 58.00% 0.00%, 60.00% 0.00%, 62.00% 0.00%, 64.00% 0.00%, 66.00% 0.00%, 68.00% 0.00%, 70.00% 0.00%, 72.00% 0.00%, 74.00% 0.00%, 76.00% 0.00%, 78.00% 0.00%, 80.00% 0.00%, 82.00% 0.00%, 84.00% 0.00%, 86.00% 0.00%, 88.00% 0.00%, 90.00% 0.00%, 92.00% 0.00%, 94.00% 0.00%, 96.00% 0.00%, 98.00% 0.00%, 100.00% 0.00%);
+    }
 
     @include mobile {
       padding: 0 52.5px;
-      margin-top: -43px;
     }
   }
 
   .desc-effect {
-    position: relative;
+    position: absolute;
+    right: 28px;
+    bottom: -88px;
+
+    @include mobile {
+      right: 7%;
+      bottom: -5%;
+    }
 
     img {
-      position: absolute;
-      right: 28px;
-      bottom: -88px;
       width: 180px;
+      // linear : 일정속도
       animation: rotate 24s linear infinite;
 
       @include mobile {
-        right: -8px;
-        bottom: -36px;
         width: 70px;
       }
     }
-
   }
-
 }
 
 // inner 없음
 .section-banner {
-  padding-top: 160px;
-  width: 2299px;
+  margin-top: 100px;
 
   @include mobile {
     padding-top: 100px;
@@ -404,22 +402,28 @@ body {
   }
 
 
-  .swiper {
-    overflow: initial;
+  .marquee {
+    display: flex;
 
-    .swiper-wrapper {
-      transition-timing-function: linear;
-      display: flex;
+    .img {
+      width: 2299px;
+      animation: marquee 30s linear infinite;
+
+      @include mobile {
+        width: 792px;
+      }
     }
   }
+
 }
 
 // inner 있어도 배경컬러가 있음
 .section-about {
   position: relative;
   max-width: 1162px;
-  margin-left: calc(50vw - min(100vw, 1440px)/ 2);
-  padding: 200px 0;
+  // margin-left: calc(50vw - min(100vw, 1440px)/ 2);
+  padding: 30px 0;
+  padding-bottom: 100px;
 
   @include mobile {
     width: calc(100% - 42px);
@@ -431,7 +435,7 @@ body {
 
   .background {
     position: absolute;
-    top: 0;
+    top: -16%;
     right: 0;
     bottom: 0;
     left: calc(-50vw - min(100vw, 1162px) * -1 / 2);
@@ -454,19 +458,52 @@ body {
 
 
   .title {
-    padding-left: 230px;
     position: relative;
-
+    z-index: 1;
+    padding-left: 245px;
+    font-size: 110px;
 
     @include mobile {
       padding-left: 63px;
       padding-top: 30px;
+      font-size: 42.5px;
+    }
+  }
+
+
+
+  .image-box {
+    max-width: 1093px;
+    margin-right: -278px;
+    transform: translateY(-15%);
+    margin-left: auto;
+
+    clip-path: polygon(100% 100%, 0% 100%, 0.00% 36.67%, 2.00% 36.00%, 4.00% 34.06%, 6.00% 31.05%, 8.00% 27.30%, 10.00% 23.20%, 12.00% 19.19%, 14.00% 15.68%, 16.00% 13.06%, 18.00% 11.59%, 20.00% 11.43%, 22.00% 12.61%, 24.00% 14.99%, 26.00% 18.32%, 28.00% 22.25%, 30.00% 26.37%, 32.00% 30.24%, 34.00% 33.45%, 36.00% 35.66%, 38.00% 36.63%, 40.00% 36.27%, 42.00% 34.61%, 44.00% 31.83%, 46.00% 28.22%, 48.00% 24.16%, 50.00% 20.09%, 52.00% 16.43%, 54.00% 13.57%, 56.00% 11.81%, 58.00% 11.35%, 60.00% 12.22%, 62.00% 14.34%, 64.00% 17.48%, 66.00% 21.31%, 68.00% 25.43%, 70.00% 29.39%, 72.00% 32.79%, 74.00% 35.25%, 76.00% 36.52%, 78.00% 36.47%, 80.00% 35.10%, 82.00% 32.55%, 84.00% 29.10%, 86.00% 25.11%, 88.00% 21.00%, 90.00% 17.21%, 92.00% 14.14%, 94.00% 12.11%, 96.00% 11.34%, 98.00% 11.91%, 100.00% 13.75%);
+    transition: 1s;
+
+    &.on {
+      clip-path:
+        polygon(100% 100%, 0% 100%, 0.00% 0.00%, 2.00% 0.00%, 4.00% 0.00%, 6.00% 0.00%, 8.00% 0.00%, 10.00% 0.00%, 12.00% 0.00%, 14.00% 0.00%, 16.00% 0.00%, 18.00% 0.00%, 20.00% 0.00%, 22.00% 0.00%, 24.00% 0.00%, 26.00% 0.00%, 28.00% 0.00%, 30.00% 0.00%, 32.00% 0.00%, 34.00% 0.00%, 36.00% 0.00%, 38.00% 0.00%, 40.00% 0.00%, 42.00% 0.00%, 44.00% 0.00%, 46.00% 0.00%, 48.00% 0.00%, 50.00% 0.00%, 52.00% 0.00%, 54.00% 0.00%, 56.00% 0.00%, 58.00% 0.00%, 60.00% 0.00%, 62.00% 0.00%, 64.00% 0.00%, 66.00% 0.00%, 68.00% 0.00%, 70.00% 0.00%, 72.00% 0.00%, 74.00% 0.00%, 76.00% 0.00%, 78.00% 0.00%, 80.00% 0.00%, 82.00% 0.00%, 84.00% 0.00%, 86.00% 0.00%, 88.00% 0.00%, 90.00% 0.00%, 92.00% 0.00%, 94.00% 0.00%, 96.00% 0.00%, 98.00% 0.00%, 100.00% 0.00%);
+
+    }
+
+    @include mobile {
+      width: calc(100vw - 85px);
+      margin-top: -28px;
+      margin-right: 0;
+      margin-left: 84px;
+      left: 10%;
+      right: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
     }
   }
 
   .desc {
     margin-left: 14%;
-    margin-top: 70px;
   }
 
   .top {
@@ -475,29 +512,6 @@ body {
     @include mobile {
       max-width: 162.5px;
     }
-
-    img {
-      &.pc {
-        display: block;
-      }
-
-      &.mo {
-        display: none;
-      }
-
-      @include mobile {
-        &.mo {
-          display: block;
-        }
-
-        &.pc {
-          display: none;
-        }
-
-
-      }
-    }
-
 
   }
 
@@ -532,44 +546,11 @@ body {
       }
     }
   }
-
-
-  .image-box {
-    max-width: 1093px;
-    margin-right: -257px;
-    margin-left: auto;
-    margin-top: -54px;
-
-    img.mo {
-      display: none;
-    }
-
-    @include mobile {
-      width: calc(100vw - 85px);
-      margin-top: -28px;
-      margin-right: 0;
-      margin-left: 84px;
-      left: 10%;
-      right: 100%;
-
-      img.mo {
-        display: block;
-        width: 100%;
-      }
-
-      img.pc {
-        display: none;
-      }
-    }
-
-
-  }
-
 }
 
 .section-ethical {
   position: relative;
-  margin-top: 200px;
+  margin-top: 300px;
 
   @include mobile {
     margin-top: 30px;
@@ -601,17 +582,18 @@ body {
 
     .title {
       margin-left: 60px;
+      font-size: 110px;
 
       br:nth-child(2) {
         display: none;
       }
 
-      @include desktop {
-        font-size: 80px;
-      }
+      // @include desktop {
+      //   font-size: 80px;
+      // }
 
       @include mobile {
-        font-size: 38.5px;
+        font-size: 42.5px;
         margin-left: 24px;
 
         br:nth-child(2) {
@@ -622,10 +604,7 @@ body {
 
     .desc {
       margin-left: 60px;
-
-      @include max {
-        margin-left: 14%;
-      }
+      // transform: translateY(30%);
 
       @include mobile {
         margin-left: 90px;
@@ -671,20 +650,16 @@ body {
     max-width: 1093px;
     margin-right: auto;
     margin-bottom: -54px;
+    position: relative;
+    clip-path: polygon(100% 100%, 0% 100%, 0.00% 36.67%, 2.00% 36.00%, 4.00% 34.06%, 6.00% 31.05%, 8.00% 27.30%, 10.00% 23.20%, 12.00% 19.19%, 14.00% 15.68%, 16.00% 13.06%, 18.00% 11.59%, 20.00% 11.43%, 22.00% 12.61%, 24.00% 14.99%, 26.00% 18.32%, 28.00% 22.25%, 30.00% 26.37%, 32.00% 30.24%, 34.00% 33.45%, 36.00% 35.66%, 38.00% 36.63%, 40.00% 36.27%, 42.00% 34.61%, 44.00% 31.83%, 46.00% 28.22%, 48.00% 24.16%, 50.00% 20.09%, 52.00% 16.43%, 54.00% 13.57%, 56.00% 11.81%, 58.00% 11.35%, 60.00% 12.22%, 62.00% 14.34%, 64.00% 17.48%, 66.00% 21.31%, 68.00% 25.43%, 70.00% 29.39%, 72.00% 32.79%, 74.00% 35.25%, 76.00% 36.52%, 78.00% 36.47%, 80.00% 35.10%, 82.00% 32.55%, 84.00% 29.10%, 86.00% 25.11%, 88.00% 21.00%, 90.00% 17.21%, 92.00% 14.14%, 94.00% 12.11%, 96.00% 11.34%, 98.00% 11.91%, 100.00% 13.75%);
+    transition: 1s;
 
-    img.mo {
-      display: none;
+    &.on {
+      clip-path:
+        polygon(100% 100%, 0% 100%, 0.00% 0.00%, 2.00% 0.00%, 4.00% 0.00%, 6.00% 0.00%, 8.00% 0.00%, 10.00% 0.00%, 12.00% 0.00%, 14.00% 0.00%, 16.00% 0.00%, 18.00% 0.00%, 20.00% 0.00%, 22.00% 0.00%, 24.00% 0.00%, 26.00% 0.00%, 28.00% 0.00%, 30.00% 0.00%, 32.00% 0.00%, 34.00% 0.00%, 36.00% 0.00%, 38.00% 0.00%, 40.00% 0.00%, 42.00% 0.00%, 44.00% 0.00%, 46.00% 0.00%, 48.00% 0.00%, 50.00% 0.00%, 52.00% 0.00%, 54.00% 0.00%, 56.00% 0.00%, 58.00% 0.00%, 60.00% 0.00%, 62.00% 0.00%, 64.00% 0.00%, 66.00% 0.00%, 68.00% 0.00%, 70.00% 0.00%, 72.00% 0.00%, 74.00% 0.00%, 76.00% 0.00%, 78.00% 0.00%, 80.00% 0.00%, 82.00% 0.00%, 84.00% 0.00%, 86.00% 0.00%, 88.00% 0.00%, 90.00% 0.00%, 92.00% 0.00%, 94.00% 0.00%, 96.00% 0.00%, 98.00% 0.00%, 100.00% 0.00%);
+
     }
 
-    @include mobile {
-      img.pc {
-        display: none;
-      }
-
-      img.mo {
-        display: block;
-      }
-    }
   }
 
   .recycle {
@@ -731,11 +706,12 @@ body {
   .group-product {
     display: grid;
     grid-template-columns: repeat(2, 544px);
+    grid-template-rows: repeat(6, 280px);
+    grid-auto-rows: 280px;
     justify-content: center;
     grid-gap: 108px 84px;
     gap: 108px 84px;
     margin-top: 200px;
-
     position: relative;
 
     @include desktop {
@@ -744,6 +720,8 @@ body {
 
     @include mobile {
       grid-template-columns: repeat(1, calc(100vw - 81px));
+      grid-template-rows: auto;
+      grid-auto-rows: auto;
       gap: 36px 0;
       margin-top: 96px;
       padding: 0 20px;
@@ -752,12 +730,10 @@ body {
 
 
   .content {
-    border-radius: 360px;
-    background-color: #ff5885;
+    position: relative;
     height: 862px;
     line-height: 1.5;
     padding: 1px 0;
-    position: relative;
 
     @include desktop {
       height: 762px;
@@ -768,59 +744,71 @@ body {
     }
 
     &:nth-child(2) {
-      transform: translateY(280px);
+      grid-column: 2;
+      grid-row: 2/5;
 
       @include mobile {
-        transform: none;
-      }
-    }
-
-    .image-box {
-      position: absolute;
-      right: 0;
-      left: 0;
-      width: 242px;
-      bottom: 26.7%;
-      margin: 0 auto;
-      z-index: 1;
-
-      @include desktop {
-        width: 190px;
-        bottom: 33%;
-      }
-
-      @include mobile {
-        width: 121px;
-        bottom: 148px;
+        grid-column: auto;
+        grid-row: auto;
       }
     }
 
     &:nth-child(3) {
-      .image-box {
-        width: 185px;
-
-        @include mobile {
-          width: 92px;
-        }
-      }
-    }
-
-    .content-title {
-      position: absolute;
-      top: 8%;
-      right: -9%;
-      width: 224px;
-
-      @include desktop {
-        width: 170px;
-        right: 0;
-      }
+      grid-column: 1;
+      grid-row: 4/5;
 
       @include mobile {
-        width: 112px;
-        top: 32px;
-        right: -20px;
+        grid-column: auto;
+        grid-row: auto;
+      }
 
+      .inner-content {
+        .image-box {
+          width: 185px;
+          top: 14.7%;
+
+          @include mobile {
+            width: 92px;
+          }
+        }
+      }
+
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 360px;
+      background-color: #ff5885;
+    }
+
+    .inner-content {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 100%;
+
+      .image-box {
+        width: 242px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        top: 8.7%;
+
+        @include desktop {
+          width: 190px;
+          bottom: 33%;
+        }
+
+        @include mobile {
+          width: 121px;
+          bottom: 148px;
+        }
       }
     }
 
@@ -859,6 +847,27 @@ body {
       }
 
     }
+
+    .content-title {
+      position: absolute;
+      top: 8%;
+      right: -9%;
+      width: 224px;
+
+      @include desktop {
+        width: 170px;
+        right: 0;
+      }
+
+      @include mobile {
+        width: 112px;
+        top: 32px;
+        right: -20px;
+
+      }
+    }
+
+
   }
 
   .link-headline {
@@ -911,7 +920,6 @@ body {
       }
     }
 
-
     .link-title {
       font-size: 31px;
       position: relative;
@@ -959,8 +967,6 @@ body {
           left: 0;
         }
       }
-
-
     }
 
     &:hover {
@@ -972,13 +978,9 @@ body {
         .bottom {
           top: 0;
         }
-
       }
     }
-
   }
-
-
 }
 
 
@@ -1020,6 +1022,7 @@ body {
 
       .swiper {
         margin-left: 130px;
+        transition: 1s;
 
         @include mobile {
           margin: 0;
@@ -1028,8 +1031,6 @@ body {
 
       .swiper-wrapper {
         .swiper-slide {
-
-
           .link-news {
             display: flex;
             flex-direction: column-reverse;

@@ -5,7 +5,6 @@
   background: url("../images/footer_background.webp")50%/1440px auto;
   background-position: 0 bottom;
   transform-origin: center bottom;
-  margin: 64px auto;
   height: auto;
   overflow: hidden;
   display: flex;
@@ -19,31 +18,50 @@
     width: calc(100vw - 240px);
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 70px;
+    padding-top: 80px;
+
 
     @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 55px;
       max-width: 640px;
       width: calc(100vw - 50px);
     }
   }
 
   &_logo {
-    a {
-      &::before {
-        content: "";
-        display: block;
-        background: url("../images/footer_logo.png") no-repeat;
-        width: 100%;
-        height: 187px;
-        background-size: contain;
-        // width: 1200px;
+    width: 100%;
 
-        @include mobile {
-          background: url("../images/footer_logo@sp.png") no-repeat;
-          background-size: contain;
-          height: 330px;
-        }
+    span {
+      display: block;
+      width: 100%;
+
+      @include mobile {
+        display: inline;
       }
+    }
+
+    .title {
+      font-size: 6vw;
+      // line-height: 170px;
+
+      @include mobile {
+        font-size: 22vw;
+      }
+    }
+
+    .sub-title {
+      font-size: 2vw;
+      color: #fff;
+
+
+      @include mobile {
+        font-size: 4vw;
+
+      }
+
+      // line-height: 1;
     }
   }
 
@@ -53,12 +71,13 @@
     justify-content: space-between;
     font-size: 19px;
     color: #fff;
-    padding-top: 100px;
+    padding-top: 120px;
 
     @include mobile {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      padding: 0;
     }
 
     .sns-area {
@@ -74,6 +93,10 @@
         font-size: 18px;
         color: #fff;
         width: auto;
+
+        @include mobile {
+          font-size: 16.5px;
+        }
       }
 
       .sns-list {
@@ -86,13 +109,15 @@
             &:before {
               content: "";
               display: block;
-              width: 38px;
-              height: 37px;
+              width: 42px;
+              height: 40px;
               background: url("../images/instagram.svg") no-repeat;
-              background-size: contain;
+              background-size: cover;
+              transition: 0.5s;
 
               @include mobile {
                 width: 34px;
+                height: 32px;
               }
             }
 
@@ -107,13 +132,14 @@
             &:before {
               content: "";
               display: block;
-              width: 38px;
-              height: 37px;
+              width: 42px;
+              height: 34px;
               background: url("../images/twitter.svg") no-repeat;
-              background-size: contain;
+              background-size: cover;
 
               @include mobile {
                 width: 34px;
+                height: 28px;
               }
             }
 
@@ -189,8 +215,8 @@
         .nav-list {
           display: flex;
           flex-direction: column;
-          gap: 15px;
-          padding: 30px 0;
+          gap: 24px;
+          padding: 32px 0;
 
           .nav-item {
 
@@ -322,233 +348,9 @@
 
 
 .footer_svg {
-  width: 100%;
-  transform: translateY(2px);
-  transform: rotate(180deg);
   position: absolute;
-  top: 0;
-
-  .footer-border-wave {
-    transform: translateX(-1440px);
-    height: 96px;
-    animation: waves 12s linear infinite;
-    fill: #ff9daf;
-
-    #path1 {
-      transform: translateX(-1440px);
-    }
-
-    #path2 {
-      transform: translateX(0px);
-    }
-
-    #path3 {
-      transform: translateX(1440px);
-    }
-  }
+  top: 0%;
+  width: 100%;
+  transform: rotate(180deg);
 
 }
-
-
-
-
-
-
-
-// .wave-border {
-//   width: 100%;
-//   height: 96px;
-//   transform: rotate(180deg);
-//   position: absolute;
-//   top: 0;
-
-//   #bigWave {
-//     transform: translateX(-1440px);
-//     fill: #ff9daf;
-//     animation: waves 12s linear infinite;
-
-//     path {
-//       d: path("M719.5 38C439.435 15.3187 412 -37 0 38V96.5H1440V38C1053.5 96.5 1003.5 61 719.5 38Z");
-//     }
-
-
-//     path#bluePath0 {
-//       transform: translateX(-1440px);
-//     }
-
-//     path#bluePath1 {
-//       transform: translateX(0px);
-
-//     }
-
-//     path#bluePath2 {
-//       transform: translateX(1440px);
-
-//     }
-//   }
-
-// }
-
-
-
-
-// .global-footer {
-//   position: relative;
-//   padding: 172px 0 100px;
-
-//   .bezier-mask {
-//     clip-path: path(M 0 997 L 0 20.2822 C 228 22.0089 228 22.0089 456 26.3119 S 684 53.721 912 35.6768 L 912 997 Z);
-//   }
-// }
-
-
-// .bezier-mask.global-footer-background-container,
-// .bezier-mask.global-footer-background-container .bezier-mask-inner,
-// .global-footer-background {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0
-// }
-
-// .bezier-mask.is-picture[data-v-6cdeafef] {
-//   line-height: 0
-// }
-
-// .bezier-mask {
-//   overflow: hidden;
-//   will-change: clip-path
-// }
-
-// 모바일
-// @media screen and (max-width: 768px) {
-
-//   .footer {
-//     background-color: #f2f2f2;
-
-//     .inner1 {
-//       padding: 25px 22px;
-//       // min-width: 320px;
-//       max-width: 1320px;
-//       gap: 20px;
-//       flex-wrap: wrap;
-
-//       .footer-logo {
-//         display: flex;
-//         height: inherit;
-
-//         a {
-//           font-size: 15px;
-//           line-height: 32px;
-//           letter-spacing: -0.32px;
-//         }
-//       }
-
-//       .policy {
-//         font-size: 14px;
-//       }
-
-//       .related {
-//         position: relative;
-//         width: 100%;
-//         height: inherit;
-//         line-height: 32px;
-//         padding-bottom: 5px;
-//         margin: 0;
-//         // border: none;
-//         border-bottom: 1px solid #b8b8b8;
-
-//         .title {
-//           width: inherit;
-//           line-height: 32px;
-//           font-size: 12px;
-//           text-align: left;
-
-//           align-items: center;
-//           justify-content: space-between;
-
-
-//           &:after {
-//             content: "";
-//             display: block;
-//             background: url("../images/sp_pc.png") no-repeat;
-//             background-size: 328px 205px;
-//             background-position: -122px -93px;
-//             width: 10px;
-//             height: 6px;
-//           }
-//         }
-
-//         .related-list {
-//           display: none;
-//         }
-
-//         &.on {
-//           background: #fff;
-//           border: none;
-
-//           .title {
-//             padding: 0 5px 0 10px;
-//             font-size: 12px;
-
-//             &:after {
-//               transform: rotate(180deg);
-//             }
-//           }
-
-//           .related-list {
-//             display: block;
-//             position: absolute;
-//             width: inherit;
-//             padding: 0 10px;
-//             bottom: 10px;
-//             transform: translateY(-27px);
-
-//             background: #fff;
-//             z-index: 1;
-//             overflow-y: scroll;
-
-//             .related-item {
-//               font-size: 12px;
-//               line-height: 42px;
-//             }
-//           }
-//         }
-//       }
-
-
-
-//       .related-list {
-//         // position: absolute;
-//         // width: inherit;
-//         // left: -1px;
-//         // bottom: 0;
-//         // transform: translateY(-27px);
-//         // border: 1px solid #808789;
-//         // border-bottom: 1px solid #b8b8b8;
-//         // background: #fff;
-//         // z-index: 1;
-//         // height: 225px;
-//         // overflow-y: scroll;
-//         // // opacity: 0;
-//         // display: none;
-
-//         // .related-item {
-//         //   .link-related {
-//         //     display: block;
-//         //     padding: 5px 0 5px 10px;
-//         //     font-size: 12px;
-//         //     text-decoration: none;
-//         //     color: #686868;
-
-//         //     &:hover {
-//         //       background: #ececec;
-//         //     }
-//         //   }
-//         // }
-//       }
-
-//     }
-//   }
-// }

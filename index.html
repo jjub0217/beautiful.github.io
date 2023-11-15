@@ -13,6 +13,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="./assets/js/split.min.js"></script>
   <script src="./assets/js/main.js" defer></script>
@@ -31,64 +32,60 @@
   </div> -->
   <div class="wrapper">
     <header class="header">
-      <h1 class="blind">the beautiful
-      </h1>
       <div class="menu-box">
-        <button class="menu-btn">
-          <span class="title top">menu</span>
-          <span class="title bottom">menu</span>
-        </button>
-        <button class="buttonNone burgerBtn" aria-label="메뉴 열기" aria-expanded="false" aria-haspopup="menu">
-          <span class="burgerBar positionTop"></span>
-          <span class="burgerBar positionMiddle"></span>
-          <span class="burgerBar positionBottom"></span>
+        <button aria-label="메뉴 열기" aria-expanded="false" aria-haspopup="menu">
+          <span class="menu-text">
+            <span class="top">menu</span>
+            <span class="bottom" aria-hidden="true">menu</span>
+          </span>
+
+          <!-- ?? 여기서 i 의 blind　가 필요한가? -->
+          <span class="burgerBtn">
+            <i class="positionTop"></i>
+            <i class="positionMiddle"></i>
+            <i class="positionBottom"></i>
+          </span>
         </button>
       </div>
     </header>
-    <nav class="gnb">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#0099ff" fill-opacity="1"
-          d="M0,96L48,90.7C96,85,192,75,288,96C384,117,480,171,576,176C672,181,768,139,864,122.7C960,107,1056,117,1152,133.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
-      </svg>
-
-      </svg>
+    <aside class="gnb">
       <div class="group">
-        <div class="group-main">
+        <nav class="group-main">
           <ul class="nav-list">
             <li class="nav-item">
-              <!-- <a href="" data-link="TOP"></a> -->
               <a href="">
                 <span class="top">TOP</span>
-                <span class="bottom">TOP</span>
+                <span class="bottom" aria-hidden="true">TOP</span>
               </a>
             </li>
             <li class="nav-item">
               <a href="">
                 <span class="top">ABOUT</span>
-                <span class="bottom">ABOUT</span>
+                <span class="bottom" aria-hidden="true">ABOUT</span>
               </a>
+            </li>
             <li class="nav-item">
               <a href="">
                 <span class="top">ETHICAL</span>
-                <span class="bottom">ETHICAL</span>
+                <span class="bottom" aria-hidden="true">ETHICAL</span>
               </a>
             </li>
             <li class="nav-item">
               <a href="">
                 <span class="top">PRODUCTS</span>
-                <span class="bottom">PRODUCTS</span>
+                <span class="bottom" aria-hidden="true">PRODUCTS</span>
               </a>
             </li>
             <li class="nav-item">
               <a href="">
                 <span class="top">NEWS</span>
-                <span class="bottom">NEWS</span>
+                <span class="bottom" aria-hidden="true">NEWS</span>
               </a>
             </li>
             <li class="nav-item">
               <a href="">
                 <span class="top">Q&#38;A</span>
-                <span class="bottom">Q&#38;A</span>
+                <span class="bottom" aria-hidden="true">Q&#38;A</span>
               </a>
             </li>
             <li class="nav-item">
@@ -98,25 +95,25 @@
                   <a href="">
                     <span class="top">&#11;-&#31;AMAZON STORE
                     </span>
-                    <span class="bottom">&#11;-&#31;AMAZON STORE</span>
+                    <span class="bottom" aria-hidden="true">&#11;-&#31;AMAZON STORE</span>
                   </a>
                 </li>
                 <li class="sub-item">
                   <a href="">
                     <span class="top">&#11;-&#31;RAKUTEN STORE</span>
-                    <span class="bottom">&#11;-&#31;RAKUTEN STORE</span>
+                    <span class="bottom" aria-hidden="true">&#11;-&#31;RAKUTEN STORE</span>
                   </a>
                 </li>
                 <li class="sub-item">
                   <a href="">
                     <span class="top">&#11;-&#31;OFFICIAL STORE</span>
-                    <span class="bottom">&#11;-&#31;OFFICIAL STORE</span>
+                    <span class="bottom" aria-hidden="true">&#11;-&#31;OFFICIAL STORE</span>
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
-        </div>
+        </nav>
         <div class="group-sub">
           <div class="sns-area">
             <p class="title">
@@ -136,109 +133,114 @@
           <div class="group-communication">
             <a href="">
               <span class="top">CONTACT US</span>
-              <span class="bottom">CONTACT US</span>
+              <span class="bottom" aria-hidden="true">CONTACT US</span>
             </a>
             <a href="">
               <span class="top">PRIVACY POLICY</span>
-              <span class="bottom">PRIVACY POLICY</span>
+              <span class="bottom" aria-hidden="true">PRIVACY POLICY</span>
             </a>
           </div>
         </div>
       </div>
-      <button class="menu-close-btn">
-        <span class="blind">메뉴 닫기버튼</span>
-      </button>
-    </nav>
+    </aside>
     <main class="container">
       <section class="section-slogan">
-        <h2 class="blind">THE BEAUTIFUL</h2>
         <div class="image-box">
-
           <picture>
             <!-- 961이상 -->
             <source media="(min-width: 961px)" srcset="./assets/images/firstview_picture.webp">
             <!-- 960미만 -->
             <source media="(max-width: 960px)" srcset="./assets/images/firstview_picture@sp.webp">
-            <img src="/assets/images/firstview_picture.webp" alt="">
+            <img src="/assets/images/firstview_picture.webp" alt>
           </picture>
-
         </div>
         <div class="title-box">
-          <p class="title">
-            THE BEAUTIFUL
-            <!-- <img src="./assets/images/title.png" alt> -->
-          </p>
-          <p class="sub-title">
+          <h1 class="title">THE BEAUTIFUL</h1>
+          <h2 class="sub-title">
             by Amino Mason
-            <!-- <img src="./assets/images/by Amino Mason.png" alt> -->
-          </p>
-        </div>
-        <div class="inner">
+          </h2>
         </div>
       </section>
       <section class="section-concept">
         <div class="inner">
-          <h2 class="headline">
-            CONCEPT
-          </h2>
-          <div class="text-box">
-            <div class="desc">
-              うねり・くせ・パサつきなどの髪ストレスで
-              艶のない<br>
-              疲れた髪の印象を変えて<span class="sup-container typesquare_option"><sup class="sup">＊1</sup></span>
-              </span>
-              <br> 髪も心も、もっとヘルシーに！<br>
-              植物のエネルギーが凝縮されたシードオイル<span class="sup-container typesquare_option"><sup
-                  class="sup">&#65290;2</sup></span>と<br>
-              スーパーアミノ酸<span class="sup-container typesquare_option"><sup
-                  class="sup">&#65290;3</sup></span>をブレンドした神艶<span class="sup-container typesquare_option"><sup
-                  class="sup">&#65290;4</sup></span>レシピで<br>
-              乾燥などによるダメージをケア。<br>
-              THE
-              BEAUTIFUL by
-              Amino Mason 誕生。</p>
+          <div class="content">
+            <h2 class="headline">
+              CONCEPT
+            </h2>
+            <div class="text-box">
+              <p class="desc">
+                うねり・くせ・パサつきなどの髪ストレスで
+                艶のない<br>
+                疲れた髪の印象を変えて<span class="sup-container typesquare_option"><sup class="sup">＊1</sup></span>
+                </span>
+                <br> 髪も心も、もっとヘルシーに！<br>
+                植物のエネルギーが凝縮されたシードオイル<span class="sup-container typesquare_option"><sup
+                    class="sup">&#65290;2</sup></span>と<br>
+                スーパーアミノ酸<span class="sup-container typesquare_option"><sup
+                    class="sup">&#65290;3</sup></span>をブレンドした神艶<span class="sup-container typesquare_option"><sup
+                    class="sup">&#65290;4</sup></span>レシピで<br>
+                乾燥などによるダメージをケア。<br>
+                THE
+                BEAUTIFUL by
+                Amino Mason 誕生。
+              </p>
             </div>
           </div>
-          <div class="image-box">
-            <img src="./assets/images/concept_picture.jpg" alt="">
-            <div class="desc-effect">
-              <img src="./assets/images/concept_decoration.png" alt="">
-            </div>
+          <div class="image-box" data-scroll="">
+            <picture>
+              <!-- 961이상 -->
+              <source media="(min-width: 961px)" srcset="./assets/images/concept_picture.jpg">
+              <!-- 960미만 -->
+              <source media="(max-width: 960px)" srcset="./assets/images/concept_picture.jpg">
+              <img src="./assets/images/concept_picture.jpg" alt>
+            </picture>
+          </div>
+          <div class="desc-effect">
+            <img src="./assets/images/concept_decoration.png" alt>
           </div>
         </div>
       </section>
       <section class="section-banner">
         <h2 class="blind">배너</h2>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets/images/separator.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/images/separator.png" alt="">
-            </div>
+        <div class="marquee">
+          <div class="img">
+            <img src="./assets/images/separator.png" alt>
+          </div>
+          <div class="img">
+            <img src="./assets/images/separator.png" alt>
           </div>
         </div>
+
       </section>
       <section class="section-about">
-        <div class="background"></div>
+        <div class="background" data-scroll=""></div>
         <h2 class="headline">
           ABOUT
         </h2>
-        <p class="title">
+        <strong class="title">
           髪の印象変わる<span class="sup-container">
             <sup class="sup">＊1</sup></span><br>神艶
           <span class="sup-container typesquare_option"><sup class="sup">＊4</sup></span>
           レシピ
-        </p>
-        <div class="image-box">
-          <img src="./assets/images/about_picture.png" alt="" class="pc">
-          <img src="./assets/images/about_picture@sp.webp" alt="" class="mo">
+        </strong>
+        <div class="image-box" data-scroll="">
+          <picture>
+            <!-- 961이상 -->
+            <source media="(min-width: 961px)" srcset="./assets/images/about_picture.png">
+            <!-- 960미만 -->
+            <source media="(max-width: 960px)" srcset="./assets/images/about_picture@sp.webp">
+            <image src="./assets/images/about_picture.png" alt>
+          </picture>
         </div>
-        <div class="desc">
+        <div class="desc" data-scroll="">
           <div class="top">
-            <img src="./assets/images/about-desc.png" alt="" class="pc">
-            <img src="./assets/images/about_footer_figure@sp.png" alt="" class="mo">
+            <picture>
+              <!-- 961이상 -->
+              <source media="(min-width: 961px)" srcset="./assets/images/about-desc.png">
+              <!-- 960미만 -->
+              <source media="(max-width: 960px)" srcset="./assets/images/about_footer_figure@sp.png">
+              <image src="./assets/images/about-desc.png" alt>
+            </picture>
           </div>
           <div class="bottom-text">
             <p class="text">
@@ -253,7 +255,7 @@
             <a href="" class="link-headline">
               <p class="link-title">
                 <span class="top">VIEW ABOUT</span>
-                <span class="bottom">VIEW ABOUT</span>
+                <span class="bottom" aria-hidden="true">VIEW ABOUT</span>
               </p>
               <div class="about-arrow">
                 <span class="prev">
@@ -265,9 +267,7 @@
               </div>
             </a>
           </div>
-
         </div>
-
       </section>
       <section class="section-ethical">
         <h2 class="headline">
@@ -275,10 +275,10 @@
         </h2>
         <div class="inner">
           <div class="text-box">
-            <p class="title">
+            <strong class="title">
               環境にやさしい<br>
               エシカルな<br>取り組み
-            </p>
+            </strong>
             <div class="desc">
               <div class="bottom">
                 <p class="text">
@@ -291,7 +291,7 @@
                 <a href="" class="link-headline">
                   <p class="link-title">
                     <span class="top">VIEW ETHICAL</span>
-                    <span class="bottom">VIEW ETHICAL</span>
+                    <span class="bottom" aria-hidden="true">VIEW ETHICAL</span>
                   </p>
                   <div class="about-arrow">
                     <span class="prev">
@@ -305,12 +305,15 @@
               </div>
             </div>
           </div>
-          <div class="image-box">
-            <img src="./assets/images/ethical_section_picture.png" alt="" class="pc">
-            <img src="./assets/images/ethical_section_picture@sp.webp" alt="" class="mo">
+          <div class="image-box" data-scroll="">
+            <picture>
+              <source media="(min-width: 961px)" srcset="./assets/images/ethical_section_picture.png">
+              <source media="(max-width: 960px)" srcset="./assets/images/ethical_section_picture@sp.webp">
+              <image src="./assets/images/ethical_section_picture.png" alt>
+            </picture>
           </div>
           <div class="recycle">
-            <img src="./assets/images/made_from_recycled_plastic.png" alt="">
+            <img src="./assets/images/made_from_recycled_plastic.png" alt>
           </div>
         </div>
       </section>
@@ -321,91 +324,99 @@
         <div class="inner">
           <div class="group-product">
             <div class="content">
-              <div class="image-box">
-                <img src="./assets/images/product_picture_1.png" alt="">
-
-              </div>
-              <div class="text-box">
-                <p class="product-name">
-                  アミノメイソン<br>
-                  シャイニー & モイスト シャンプー
-                </p>
-                <p class="product-info">440mL/¥1,650（税込）</p>
-                <a class="link-headline">
-                  <p class="link-title">
-                    <span class="top">VIEW PRODUCT</span>
-                    <span class="bottom">VIEW PRODUCT</span>
+              <div class="background"></div>
+              <div class="inner-content">
+                <div class="image-box">
+                  <img src="./assets/images/product_picture_1.png" alt>
+                </div>
+                <div class="text-box">
+                  <p class="product-name">
+                    アミノメイソン<br>
+                    シャイニー & モイスト シャンプー
                   </p>
-                  <div class="about-arrow">
-                    <span class="prev">
-                      <img src="./assets/images/icon_arrow.svg" alt>
+                  <p class="product-info">440mL/¥1,650（税込）</p>
+                  <a class="link-headline">
+                    <span class="link-title">
+                      <span class="top">VIEW PRODUCT</span>
+                      <span class="bottom" aria-hidden="true">VIEW PRODUCT</span>
                     </span>
-                    <span class="next">
-                      <img src="./assets/images/icon_arrow.svg" alt>
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div class="content-title">
-                <img src="./assets/images/product_title_en_1.png" alt="">
+                    <div class="about-arrow">
+                      <span class="prev">
+                        <img src="./assets/images/icon_arrow.svg" alt>
+                      </span>
+                      <span class="next">
+                        <img src="./assets/images/icon_arrow.svg" alt>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="content-title">
+                  <img src="./assets/images/product_title_en_1.png" alt="아미노산 샤이니&모이스트 샴푸">
+                </div>
               </div>
             </div>
             <div class="content">
-              <div class="image-box">
-                <img src="./assets/images/product_picture_2.png" alt="">
-              </div>
-              <div class="text-box">
-                <p class="product-name">
-                  アミノメイソン<br>
-                  シャイニー & モイスト ヘアトリートメント
-                </p>
-                <p class="product-info">440mL/¥1,650（税込）</p>
-                <a href="" class="link-headline">
-                  <p class="link-title">
-                    <span class="top">VIEW PRODUCT</span>
-                    <span class="bottom">VIEW PRODUCT</span>
+              <div class="background"></div>
+              <div class="inner-content">
+                <div class="image-box">
+                  <img src="./assets/images/product_picture_2.png" alt>
+                </div>
+                <div class="text-box">
+                  <p class="product-name">
+                    アミノメイソン<br>
+                    シャイニー & モイスト ヘアトリートメント
                   </p>
-                  <div class="about-arrow">
-                    <span class="prev">
-                      <img src="./assets/images/icon_arrow.svg" alt>
-                    </span>
-                    <span class="next">
-                      <img src="./assets/images/icon_arrow.svg" alt>
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div class="content-title">
-                <img src="./assets/images/product_title_en_2.png" alt="">
+                  <p class="product-info">440mL/¥1,650（税込）</p>
+                  <a href="" class="link-headline">
+                    <p class="link-title">
+                      <span class="top">VIEW PRODUCT</span>
+                      <span class="bottom" aria-hidden="true">VIEW PRODUCT</span>
+                    </p>
+                    <div class="about-arrow">
+                      <span class="prev">
+                        <img src="./assets/images/icon_arrow.svg" alt>
+                      </span>
+                      <span class="next">
+                        <img src="./assets/images/icon_arrow.svg" alt>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="content-title">
+                  <img src="./assets/images/product_title_en_2.png" alt="아미노산 샤이니&모이스트 트리트먼트">
+                </div>
               </div>
             </div>
             <div class="content">
-              <div class="image-box">
-                <img src="./assets/images/product_picture_3.png" alt="">
-              </div>
-              <div class="text-box">
-                <p class="product-name">
-                  アミノメイソン<br>
-                  シャイニー & モイスト ヘアオイル
-                </p>
-                <p class="product-info">100mL/¥1,650（税込）</p>
-                <a href="" class="link-headline">
-                  <p class="link-title">
-                    <span class="top">VIEW PRODUCT</span>
-                    <span class="bottom">VIEW PRODUCT</span>
+              <div class="background"></div>
+              <div class="inner-content">
+                <div class="image-box">
+                  <img src="./assets/images/product_picture_3.png" alt>
+                </div>
+                <div class="text-box">
+                  <p class="product-name">
+                    アミノメイソン<br>
+                    シャイニー & モイスト ヘアオイル
                   </p>
-                  <div class="about-arrow">
-                    <span class="prev">
-                      <img src="./assets/images/icon_arrow.svg" alt>
-                    </span>
-                    <span class="next">
-                      <img src="./assets/images/icon_arrow.svg" alt>
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div class="content-title">
-                <img src="./assets/images/product_title_en_3.png" alt="">
+                  <p class="product-info">100mL/¥1,650（税込）</p>
+                  <a href="" class="link-headline">
+                    <p class="link-title">
+                      <span class="top">VIEW PRODUCT</span>
+                      <span class="bottom" aria-hidden="true">VIEW PRODUCT</span>
+                    </p>
+                    <div class="about-arrow">
+                      <span class="prev">
+                        <img src="./assets/images/icon_arrow.svg" alt>
+                      </span>
+                      <span class="next">
+                        <img src="./assets/images/icon_arrow.svg" alt>
+                      </span>
+                    </div>
+                  </a>
+                </div>
+                <div class="content-title">
+                  <img src="./assets/images/product_title_en_3.png" alt="아미노산 샤이니&모이스트 헤어오일">
+                </div>
               </div>
             </div>
             <a href="" class="link-headline link-more">
@@ -413,7 +424,7 @@
                 <span class="top">VIEW
                   ALL
                 </span>
-                <span class="bottom">VIEW
+                <span class="bottom" aria-hidden="true">VIEW
                   ALL
                 </span>
               </p>
@@ -441,20 +452,19 @@
                 <li class="swiper-slide">
                   <a href="" class="link-news">
                     <div class="text-box">
-                      <div class="desc">
-                        <div class="bottom">
-                          <p class="text">
-                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル by
-                            アミノメイソン）」誕生！
-                          </p>
-                          <p class="date">
-                            2023.04.11
-                          </p>
-                        </div>
+                      <div class="bottom">
+                        <p class="text">
+                          アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル
+                          by
+                          アミノメイソン）」誕生！
+                        </p>
+                        <p class="date">
+                          2023.04.11
+                        </p>
                       </div>
                     </div>
                     <div class="image-box">
-                      <img src="./assets/images/news_thumbnail.png" alt="">
+                      <img src="./assets/images/news_thumbnail.png" alt>
                     </div>
                   </a>
                 </li>
@@ -464,7 +474,8 @@
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
-                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル by
+                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル
+                            by
                             アミノメイソン）」誕生！
                           </p>
                           <p class="date">
@@ -474,7 +485,7 @@
                       </div>
                     </div>
                     <div class="image-box">
-                      <img src="./assets/images/news_thumbnail.png" alt="">
+                      <img src="./assets/images/news_thumbnail.png" alt>
                     </div>
                   </a>
                 </li>
@@ -484,7 +495,8 @@
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
-                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル by
+                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル
+                            by
                             アミノメイソン）」誕生！
                           </p>
                           <p class="date">
@@ -494,7 +506,7 @@
                       </div>
                     </div>
                     <div class="image-box">
-                      <img src="./assets/images/news_thumbnail.png" alt="">
+                      <img src="./assets/images/news_thumbnail.png" alt>
                     </div>
                   </a>
                 </li>
@@ -504,7 +516,8 @@
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
-                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル by
+                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル
+                            by
                             アミノメイソン）」誕生！
                           </p>
                           <p class="date">
@@ -514,7 +527,7 @@
                       </div>
                     </div>
                     <div class="image-box">
-                      <img src="./assets/images/news_thumbnail.png" alt="">
+                      <img src="./assets/images/news_thumbnail.png" alt>
                     </div>
                   </a>
                 </li>
@@ -524,7 +537,8 @@
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
-                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル by
+                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル
+                            by
                             アミノメイソン）」誕生！
                           </p>
                           <p class="date">
@@ -534,7 +548,7 @@
                       </div>
                     </div>
                     <div class="image-box">
-                      <img src="./assets/images/news_thumbnail.png" alt="">
+                      <img src="./assets/images/news_thumbnail.png" alt>
                     </div>
                   </a>
                 </li>
@@ -544,7 +558,8 @@
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
-                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル by
+                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル
+                            by
                             アミノメイソン）」誕生！
                           </p>
                           <p class="date">
@@ -554,7 +569,7 @@
                       </div>
                     </div>
                     <div class="image-box">
-                      <img src="./assets/images/news_thumbnail.png" alt="">
+                      <img src="./assets/images/news_thumbnail.png" alt>
                     </div>
                   </a>
                 </li>
@@ -564,7 +579,8 @@
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
-                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル by
+                            アミノメイソンから、自分らしい艶髪を叶える、人にも環境にも優しいエシカル志向の新ヘアケアブランド「THE BEAUTIFUL by Amino Mason （ザ・ビューティフル
+                            by
                             アミノメイソン）」誕生！
                           </p>
                           <p class="date">
@@ -574,7 +590,7 @@
                       </div>
                     </div>
                     <div class="image-box">
-                      <img src="./assets/images/news_thumbnail.png" alt="">
+                      <img src="./assets/images/news_thumbnail.png" alt>
                     </div>
                   </a>
                 </li>
@@ -591,11 +607,11 @@
         <div class="inner">
           <div class="group-area">
             <div class="image">
-              <img src="./assets/images/aminomason_banner_picture.png" alt="">
+              <img src="./assets/images/aminomason_banner_picture.png" alt>
             </div>
             <div class="banner">
               <div class="text">
-                <img src="./assets/images/AMINO MASON WEB SITE.png" alt="">
+                <img src="./assets/images/AMINO MASON WEB SITE.png" alt>
               </div>
             </div>
           </div>
@@ -609,76 +625,21 @@
             ヘアオイルに配合］（全て保湿）＊4 当社比</p>
         </div>
       </section>
-      <!-- <div class="splash">
-        <h1 class="page-title splash-title">
-          <div class="char-container is-center">
-            <div class="char is-show" style="width: 32.8276px; transition-delay: 0s;">
-
-              <img src="./assets/images/私.png" alt="私" class="char-inner"
-                style="height: 32px; transform: translateX(0px);">
-            </div>
-            <div class="char is-show" style="width: 25.3793px; transition-delay: 0.03s;">
-
-              <img src="./assets/images/私.png" alt="ら" class="char-inner"
-                style="height: 32px; transform: translateX(-32.8276px);">
-            </div>
-            <div class="char is-show" style="width: 24.5517px; transition-delay: 0.06s;">
-              <img src="./assets/images/私.png" alt="し" class="char-inner"
-                style="height: 32px; transform: translateX(-58.2069px);">
-            </div>
-            <div class="char is-show" style="width: 24px; transition-delay: 0.09s;">
-              <img src="./assets/images/私.png" alt="さ" class="char-inner"
-                style="height: 32px; transform: translateX(-82.7586px);">
-            </div>
-            <div class="char is-show" style="width: 33.1034px; transition-delay: 0.12s;">
-              <img src="./assets/images/私.png" alt="が" class="char-inner"
-                style="height: 32px; transform: translateX(-106.759px);">
-            </div>
-            <div class="char is-show" style="width: 33.3793px; transition-delay: 0.15s;">
-              <img src="./assets/images/私.png" alt="艶" class="char-inner"
-                style="height: 32px; transform: translateX(-139.862px);">
-            </div>
-            <div class="char is-show" style="width: 30.8966px; transition-delay: 0.18s;">
-              <img src="./assets/images/私.png" alt="め" class="char-inner"
-                style="height: 32px; transform: translateX(-173.241px);">
-            </div>
-            <div class="char is-show" style="width: 21.5172px; transition-delay: 0.21s;">
-              <img src="./assets/images/私.png" alt="く" class="char-inner"
-                style="height: 32px; transform: translateX(-204.138px);">
-            </div>
-            <div class="char is-show" style="width: 34.4828px; transition-delay: 0.24s;">
-              <img src="./assets/images/私.png" alt="毎" class="char-inner"
-                style="height: 32px; transform: translateX(-225.655px);">
-            </div>
-            <div class="char is-show" style="width: 24.8276px; transition-delay: 0.27s;">
-              <img src="./assets/images/私.png" alt="日" class="char-inner"
-                style="height: 32px; transform: translateX(-260.138px);">
-            </div>
-            <div class="char is-show" style="width: 28.4138px; transition-delay: 0.3s;">
-              <img src="./assets/images/私.png" alt="を" class="char-inner"
-                style="height: 32px; transform: translateX(-284.966px);">
-            </div>
-            <div class="char is-show" style="width: 11.5862px; transition-delay: 0.33s;">
-              <img src="./assets/images/私.png" alt="。" class="char-inner"
-                style="height: 32px; transform: translateX(-313.379px);">
-            </div>
-          </div>
-        </h1>
-      </div> -->
-
     </main>
     <footer class="footer">
-      <svg viewBox="0 0 1440 96" class="footer_svg">
-        <g class="footer-border-wave">
-          <path id="path1" d="M719.5 38C439.435 15.3187 412 -37 0 38V96.5H1440V38C1053.5 96.5 1003.5 61 719.5 38Z" />
-          <path id="path2" d="M719.5 38C439.435 15.3187 412 -37 0 38V96.5H1440V38C1053.5 96.5 1003.5 61 719.5 38Z" />
-          <path id="path3" d="M719.5 38C439.435 15.3187 412 -37 0 38V96.5H1440V38C1053.5 96.5 1003.5 61 719.5 38Z" />
-        </g>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="footer_svg">
+        <path id="wave" d="" />
       </svg>
       <div class="footer_inner">
         <h2 class="footer_logo">
+          <span class="blind">푸터 로고</span>
           <a href="">
-            <span class="blind">푸터 로고</span>
+            <span class="title">
+              THE BEAUTIFUL
+            </span>
+            <span class="sub-title">
+              by Amino Mason
+            </span>
           </a>
         </h2>
         <div class="group-flex">
@@ -702,25 +663,25 @@
               <li class="nav-item">
                 <a href="">
                   <span class="top">TOP</span>
-                  <span class="bottom">TOP</span>
+                  <span class="bottom" aria-hidden="true">TOP</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="">
                   <span class="top">ABOUT</span>
-                  <span class="bottom">ABOUT</span>
+                  <span class="bottom" aria-hidden="true">ABOUT</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="">
                   <span class="top">ETHICAL</span>
-                  <span class="bottom">ETHICAL</span>
+                  <span class="bottom" aria-hidden="true">ETHICAL</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="">
                   <span class="top">PRODUCTS</span>
-                  <span class="bottom">PRODUCTS</span>
+                  <span class="bottom" aria-hidden="true">PRODUCTS</span>
                 </a>
               </li>
             </ul>
@@ -728,13 +689,13 @@
               <li class="nav-item">
                 <a href="">
                   <span class="top">NEWS</span>
-                  <span class="bottom">NEWS</span>
+                  <span class="bottom" aria-hidden="true">NEWS</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="">
                   <span class="top">Q&#38;A</span>
-                  <span class="bottom">Q&#38;A</span>
+                  <span class="bottom" aria-hidden="true">Q&#38;A</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -743,19 +704,19 @@
                   <li class="sub-item">
                     <a href="">
                       <span class="top">-&#31;AMAZON STORE</span>
-                      <span class="bottom">-&#31;AMAZON STORE</span>
+                      <span class="bottom" aria-hidden="true">-&#31;AMAZON STORE</span>
                     </a>
                   </li>
                   <li class="sub-item">
                     <a href="">
                       <span class="top">-&#31;RAKUTEN STORE</span>
-                      <span class="bottom">-&#31;RAKUTEN STORE</span>
+                      <span class="bottom" aria-hidden="true">-&#31;RAKUTEN STORE</span>
                     </a>
                   </li>
                   <li class="sub-item">
                     <a href="">
                       <span class="top">-&#31;OFFICIAL STORE</span>
-                      <span class="bottom">-&#31;OFFICIAL STORE</span>
+                      <span class="bottom" aria-hidden="true">-&#31;OFFICIAL STORE</span>
                     </a>
                   </li>
                 </ul>
@@ -764,11 +725,11 @@
             <div class="group-communication">
               <a href="">
                 <span class="top">CONTACT US</span>
-                <span class="bottom">CONTACT US</span>
+                <span class="bottom" aria-hidden="true">CONTACT US</span>
               </a>
               <a href="">
                 <span class="top">PRIVACY POLICY</span>
-                <span class="bottom">PRIVACY POLICY</span>
+                <span class="bottom" aria-hidden="true">PRIVACY POLICY</span>
               </a>
             </div>
             <address class="addr">
@@ -780,6 +741,7 @@
           </div>
         </div>
       </div>
+
     </footer>
   </div>
 </body>
