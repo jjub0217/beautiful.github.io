@@ -140,6 +140,7 @@ fieldset {
   font-size: 100px;
   font-weight: 900;
   letter-spacing: -11px;
+  color: #fff;
 }
 @media screen and (max-width: 960px) {
   .loading p {
@@ -876,9 +877,9 @@ body {
 
 .headline {
   position: absolute;
+  transform: translateY(100%) rotate(90deg);
   font-size: 25px;
   color: #fff;
-  transform: translateY(100%) rotate(90deg);
   letter-spacing: 0.04em;
 }
 @media screen and (max-width: 960px) {
@@ -904,10 +905,10 @@ body {
 
 .text-box {
   position: relative;
+  z-index: 1;
   display: flex;
   align-items: flex-start;
   color: #fff;
-  z-index: 1;
 }
 
 .title {
@@ -955,29 +956,29 @@ body {
 }
 @media screen and (max-width: 960px) {
   .bottom .text {
-    font-size: 14px;
     display: flex;
     flex-direction: column;
+    font-size: 14px;
   }
 }
 
-.sup-container {
-  display: inline-block;
-  position: relative;
-  vertical-align: top;
-}
-.sup-container .sup {
+.sup {
   position: absolute;
-  font-size: 14px;
   top: -10px;
   left: -16px;
+  font-size: 14px;
   white-space: nowrap;
 }
+.sup-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
 @media screen and (max-width: 960px) {
-  .sup-container .sup {
-    font-size: 0.1em;
+  .sup {
     top: -5px;
     left: -10px;
+    font-size: 0.1em;
   }
 }
 
@@ -986,8 +987,8 @@ body {
   top: 2%;
   right: -4%;
   font-size: 25px;
-  color: #fff;
   transform: translateY(100%) rotate(90deg);
+  color: #fff;
   letter-spacing: 0.04em;
 }
 .cate::after {
@@ -1006,12 +1007,12 @@ body {
   gap: 16px;
 }
 .link-headline .link-title {
-  font-size: 31px;
   position: relative;
   overflow: hidden;
+  display: inline-block;
   height: 26px;
   min-width: 200px;
-  display: inline-block;
+  font-size: 31px;
   word-break: break-all;
   letter-spacing: 0;
 }
@@ -1025,14 +1026,14 @@ body {
 }
 @media screen and (max-width: 960px) {
   .link-headline .link-title {
+    min-width: 110px;
     font-size: 18.5px;
     margin-left: 116px;
-    min-width: 110px;
   }
 }
 .link-headline .link-title span {
-  display: inline-block;
   position: absolute;
+  display: inline-block;
   width: 100%;
   transition: 0.2s;
   line-height: 1;
@@ -1053,11 +1054,11 @@ body {
 .link-headline .about-arrow {
   position: relative;
   overflow: hidden;
+  display: inline-block;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   border: 2px solid #fff;
-  display: inline-block;
 }
 @media screen and (max-width: 960px) {
   .link-headline .about-arrow {
@@ -1067,12 +1068,12 @@ body {
   }
 }
 .link-headline .about-arrow span {
-  display: inline-block;
   position: absolute;
+  top: 0%;
+  display: inline-block;
   width: 100%;
   height: 100%;
   transition: 0.2s;
-  top: 0%;
 }
 .link-headline .about-arrow span img {
   width: 25px;
@@ -1091,10 +1092,10 @@ body {
   justify-content: center;
 }
 .link-headline .about-arrow span.next {
-  right: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  right: 100%;
 }
 .link-headline:hover .link-title .top {
   top: -100%;
@@ -1134,9 +1135,9 @@ body {
   align-items: center;
 }
 .section-slogan .title-box .title .char {
-  transform: scale(1);
   position: relative;
   z-index: 1;
+  transform: scale(1);
 }
 @media screen and (max-width: 960px) {
   .section-slogan .title-box .title {
@@ -1144,11 +1145,11 @@ body {
   }
 }
 .section-slogan .title-box .sub-title {
+  transform: translateY(0%);
   padding-top: 20px;
   color: #fff;
   font-size: 39px;
   opacity: 1;
-  transform: translateY(0%);
 }
 @media screen and (max-width: 960px) {
   .section-slogan .title-box .sub-title {
@@ -1286,9 +1287,9 @@ body {
   }
 }
 .section-about .image-box {
+  transform: translateY(-15%);
   max-width: 1093px;
   margin-right: -278px;
-  transform: translateY(-15%);
   margin-left: auto;
   -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 36.67%, 2% 36%, 4% 34.06%, 6% 31.05%, 8% 27.3%, 10% 23.2%, 12% 19.19%, 14% 15.68%, 16% 13.06%, 18% 11.59%, 20% 11.43%, 22% 12.61%, 24% 14.99%, 26% 18.32%, 28% 22.25%, 30% 26.37%, 32% 30.24%, 34% 33.45%, 36% 35.66%, 38% 36.63%, 40% 36.27%, 42% 34.61%, 44% 31.83%, 46% 28.22%, 48% 24.16%, 50% 20.09%, 52% 16.43%, 54% 13.57%, 56% 11.81%, 58% 11.35%, 60% 12.22%, 62% 14.34%, 64% 17.48%, 66% 21.31%, 68% 25.43%, 70% 29.39%, 72% 32.79%, 74% 35.25%, 76% 36.52%, 78% 36.47%, 80% 35.1%, 82% 32.55%, 84% 29.1%, 86% 25.11%, 88% 21%, 90% 17.21%, 92% 14.14%, 94% 12.11%, 96% 11.34%, 98% 11.91%, 100% 13.75%);
           clip-path: polygon(100% 100%, 0% 100%, 0% 36.67%, 2% 36%, 4% 34.06%, 6% 31.05%, 8% 27.3%, 10% 23.2%, 12% 19.19%, 14% 15.68%, 16% 13.06%, 18% 11.59%, 20% 11.43%, 22% 12.61%, 24% 14.99%, 26% 18.32%, 28% 22.25%, 30% 26.37%, 32% 30.24%, 34% 33.45%, 36% 35.66%, 38% 36.63%, 40% 36.27%, 42% 34.61%, 44% 31.83%, 46% 28.22%, 48% 24.16%, 50% 20.09%, 52% 16.43%, 54% 13.57%, 56% 11.81%, 58% 11.35%, 60% 12.22%, 62% 14.34%, 64% 17.48%, 66% 21.31%, 68% 25.43%, 70% 29.39%, 72% 32.79%, 74% 35.25%, 76% 36.52%, 78% 36.47%, 80% 35.1%, 82% 32.55%, 84% 29.1%, 86% 25.11%, 88% 21%, 90% 17.21%, 92% 14.14%, 94% 12.11%, 96% 11.34%, 98% 11.91%, 100% 13.75%);
@@ -1300,12 +1301,12 @@ body {
 }
 @media screen and (max-width: 960px) {
   .section-about .image-box {
+    left: 10%;
+    right: 100%;
     width: calc(100vw - 85px);
     margin-top: -28px;
     margin-right: 0;
     margin-left: 84px;
-    left: 10%;
-    right: 100%;
   }
 }
 .section-about .image-box img {
@@ -1578,11 +1579,11 @@ body {
   height: 100%;
 }
 .section-products .content .inner-content .image-box {
+  position: relative;
+  top: 8.7%;
+  z-index: 1;
   width: 242px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  top: 8.7%;
 }
 @media screen and (max-width: 1280px) {
   .section-products .content .inner-content .image-box {
@@ -1669,12 +1670,12 @@ body {
 }
 @media screen and (max-width: 960px) {
   .section-products .link-headline.link-more {
-    position: relative;
-    left: 0;
-    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
   }
   .section-products .link-headline.link-more .about-arrow {
     width: 50px;
@@ -1692,10 +1693,10 @@ body {
   }
 }
 .section-products .link-headline.link-more .link-title {
-  font-size: 31px;
   position: relative;
-  border: 0;
   height: 33px;
+  font-size: 31px;
+  border: 0;
   text-align: center;
   letter-spacing: 0;
   word-break: break-all;
@@ -1717,8 +1718,8 @@ body {
   }
 }
 .section-products .link-headline.link-more .link-title span {
-  display: inline-block;
   position: absolute;
+  display: inline-block;
   width: 100%;
   transition: 0.2s;
   line-height: 1;
@@ -1891,12 +1892,12 @@ body {
   }
 }
 .section-exBanner .inner .group-area .banner {
-  background: #fff;
-  height: 100%;
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #fff;
+  height: 100%;
+  width: 50%;
 }
 @media screen and (max-width: 960px) {
   .section-exBanner .inner .group-area .banner {

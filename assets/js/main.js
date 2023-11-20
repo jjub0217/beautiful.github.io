@@ -1,11 +1,6 @@
 $(function () {
 
-
   const loadingText = new SplitType('.loading p', { types: 'words, chars', });
-
-  // 미리 gsap세팅
-  // gsap.set()
-
 
   const loadingTl = gsap.timeline({
     // loadingTl 이 완료된 후에 실행될 콜백함수
