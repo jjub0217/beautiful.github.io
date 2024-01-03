@@ -148,7 +148,7 @@ $(function () {
       trigger: $(".section-news"),
       start: "0% 70%",
       end: "100% 0%",
-      markers: true,
+      markers: false,
     },
     xPercent: 300,
     stagger: 0.3
