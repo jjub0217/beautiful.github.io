@@ -32,7 +32,7 @@ $(function () {
     opacity: 0,
   },'a')
   .to($(".loading"), {
-    yPercent: -150
+    yPercent: -160
   })
 
 
@@ -174,7 +174,7 @@ $(function () {
     height: 60,
     bones: 3,
     amplitude: 40,
-    color: '#ff9daf',
+    color: '#f48f58',
     speed: .25
   });
 

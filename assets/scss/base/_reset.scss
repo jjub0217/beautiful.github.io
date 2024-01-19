@@ -31,7 +31,7 @@
 * {
   margin: 0;
   padding: 0;
-  font: inherit;
+  // font: inherit;
   color: inherit;
 }
 
@@ -83,7 +83,9 @@ ul {
 /* 세팅 */
 body {
   /* 기본적인 국문의 폰트패밀리 적용 */
+  // font-family: "pretandard", sans-serif;
   font-family: "Poppins", sans-serif;
+  // font-family: "OG", sans-serif;
   color: #222222;
   letter-spacing: -0.025em;
 }

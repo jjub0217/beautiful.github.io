@@ -47,3 +47,18 @@ $mobile: 960px;
     @content;
   }
 }
+
+@mixin ellipse($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if($line > 1) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+
+  @else {
+    white-space: nowrap;
+  }
+}
