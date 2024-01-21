@@ -34,7 +34,7 @@
   <div class="wrapper">
     <header class="header">
       <div class="menu-box">
-        <button aria-label="메뉴 열기" aria-expanded="false" aria-haspopup="menu">
+        <button aria-labelledby="메뉴 열기" aria-expanded="false" aria-haspopup="menu">
           <span class="menu-text">
             <span class="top">menu</span>
             <span class="bottom" aria-hidden="true">menu</span>
@@ -120,12 +120,12 @@
               <a href="">FOLLOW US!</a>
             </p>
             <ul class="sns-list">
-              <li class="sns-item">
-                <a href="https://www.instagram.com/sulwhasoo.official/" class="instagram" aria-label="인스타그램">
+              <li class="sns-item" aria-labelledby="instagram">
+                <a href="https://www.instagram.com/sulwhasoo.official/" id="instagram">
                 </a>
               </li>
-              <li class="sns-item">
-                <a href="https://twitter.com/SulwhasooKR" class="twitter" aria-label="X">
+              <li class="sns-item" aria-labelledby="twitter">
+                <a href="https://twitter.com/SulwhasooKR" id="twitter">
                 </a>
               </li>
             </ul>
@@ -224,7 +224,7 @@
             <source media="(min-width: 961px)" srcset="./assets/images/about_picture2-3.png">
             <!-- <source media="(min-width: 961px)" srcset="./assets/images/about_picture2.png"> -->
             <!-- 960미만 -->
-            <source media="(max-width: 960px)" srcset="./assets/images/about_picture2@sp.webp">
+            <source media="(max-width: 960px)" srcset="./assets/images/about_picture2-3@sp.webp">
             <img src="./assets/images/about_picture2-3.png" alt>
           </picture>
         </div>
@@ -274,9 +274,9 @@
             <div class="desc">
               <div class="bottom">
                 <p class="text">
-                  보습과 진정에 탁월한 다섯 가지 원료의 조합으로<br>
+                  보습과 진정에 탁월한 다섯 가지 <br> 원료의 조합으로<br>
                   탄생시킨 자음보습단이<br>
-                  외부 자극으로 약해진 건조한 피부를 케어해 드립니다.<br>
+                  외부 자극으로 약해진 건조한 <br> 피부를 케어해 드립니다.<br>
                   시작은 윤조에센스로, 마무리는 자음생세럼과 <br>자음생크림으로<br>
                   피부에 인삼의 힘을 온전히 전달하세요
                 </p>
@@ -610,12 +610,13 @@
               <img src="./assets/images/aminomason_banner_picture2.png" alt>
             </div>
             <div class="banner">
-              <div class="text">
-                <img src="./assets/images/AMINO_MASON_WEB_SITE2.png" alt>
+              <div class="text" aria-labelledby="sulwhasoo-link">
+                <img src="./assets/images/AMINO_MASON_WEB_SITE2.png" alt id="sulwhasoo-link">
               </div>
             </div>
           </div>
-          <p class="ingredient">정제수, 부틸렌글라이콜, 글리세린, 세틸에틸헥사노에이트, 메틸글루세스-20, 베헤닐알코올, 베타인, 1,2-헥산다이올, 나이아신아마이드,
+          <p class="ingredient" aria-describedby="성분">정제수, 부틸렌글라이콜, 글리세린, 세틸에틸헥사노에이트, 메틸글루세스-20, 베헤닐알코올, 베타인,
+            1,2-헥산다이올, 나이아신아마이드,
             메톡시피이지-114/폴리엡실론카프로락톤, 카보머, 트로메타민,
             페닐트라이메티콘, 카프릴릴메티콘, 호호바에스터, 향료, 하이드롤라이즈드홍삼사포닌, 글리세릴카프릴레이트, 페녹시에탄올, 아라키딜알코올, 에틸헥실글리세린, 다이소듐이디티에이, 덱스트린,
             카카오추출물,
@@ -638,11 +639,11 @@
         <path id="wave" d="" />
       </svg>
       <div class="footer_inner">
-        <h2 class="footer_logo">
+        <h2 class="footer_logo" id="footer-logo">
           <span class="blind">푸터 로고</span>
-          <a href="">
+          <a href="" aria-labelledby="footer-logo">
             <span class="title">
-              THE BEAUTIFUL
+              THE <br> BEAUTI <br> FUL
             </span>
             <span class="sub-title">
               by Sulwhasoo
@@ -652,15 +653,15 @@
         <div class="group-flex">
           <div class="sns-area">
             <p class="title">
-              <a href="">FOLLOW US!</a>
+              <a href="">FOLLOW <br> US!</a>
             </p>
             <ul class="sns-list">
-              <li class="sns-item">
-                <a href="https://www.instagram.com/sulwhasoo.official/" class="instagram" aria-label="인스타그램">
+              <li class="sns-item" aria-describedby="instagram">
+                <a href="https://www.instagram.com/sulwhasoo.official/" id="instagram">
                 </a>
               </li>
-              <li class="sns-item">
-                <a href="https://twitter.com/SulwhasooKR" class="twitter" aria-label="X">
+              <li class="sns-item" aria-describedby="twitter">
+                <a href="https://twitter.com/SulwhasooKR" id="twitter">
                 </a>
               </li>
             </ul>

@@ -133,8 +133,10 @@ $(function () {
     $(this).find(".menu-text").toggleClass("on")
     if ($(this).attr('aria-expanded') === 'false') {
       $(this).attr('aria-expanded', 'true' )
+      $(this).attr('aria-labelledby', '메뉴 닫기' )
     } else {
       $(this).attr('aria-expanded', 'false' )
+      $(this).attr('aria-labelledby', '메뉴 열기' )
     }
   })
 

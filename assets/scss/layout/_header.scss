@@ -344,7 +344,7 @@
           gap: 32px;
 
           .sns-item {
-            .instagram {
+            #instagram {
               &:before {
                 content: "";
                 display: block;
@@ -366,7 +366,7 @@
               }
             }
 
-            .twitter {
+            #twitter {
               &:before {
                 content: "";
                 display: block;

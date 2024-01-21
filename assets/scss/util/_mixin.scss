@@ -48,6 +48,16 @@ $mobile: 960px;
   }
 }
 
+$MinDevice: 479px;
+
+@mixin minDevice {
+
+  // 479 이하을 꾸미는거다. 
+  @media screen and (max-width: $MinDevice ) {
+    @content;
+  }
+}
+
 @mixin ellipse($line: 1) {
   overflow: hidden;
   text-overflow: ellipsis;
