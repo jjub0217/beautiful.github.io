@@ -138,17 +138,17 @@ fieldset {
   height: 100%;
   background: #e5631c;
   z-index: 100;
+  font-family: "SUITE-Regular", sans-serif;
 }
 .loading p {
   font-size: 100px;
   font-weight: 900;
-  letter-spacing: -11px;
+  letter-spacing: -3px;
   color: #fff;
 }
 @media screen and (max-width: 960px) {
   .loading p {
     font-size: 30px;
-    letter-spacing: -3px;
   }
 }
 .loading p .char {
@@ -352,7 +352,7 @@ fieldset {
   z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: #ff5885;
+  background-color: #e5631c;
   -webkit-clip-path: circle(0% at 50% 50%);
           clip-path: circle(0% at 50% 50%);
   transition: 0.5s;
@@ -360,9 +360,9 @@ fieldset {
 .gnb::before {
   content: "";
   display: block;
-  background: url("../images/gnb_image.png") no-repeat;
+  background: url("../images/gnb_image2.png") no-repeat;
   background-size: 100%;
-  width: 522px;
+  width: 440px;
   height: 100%;
 }
 @media screen and (max-width: 1280px) {

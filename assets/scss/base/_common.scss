@@ -40,16 +40,16 @@
   // background: #ff5885;
   background: #e5631c;
   z-index: 100;
+  font-family: "SUITE-Regular", sans-serif;
 
   p {
     font-size: 100px;
     font-weight: 900;
-    letter-spacing: -11px;
+    letter-spacing: -3px;
     color: #fff;
 
     @include mobile {
       font-size: 30px;
-      letter-spacing: -3px;
     }
 
     .char {
