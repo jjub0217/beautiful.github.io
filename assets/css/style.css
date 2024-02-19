@@ -136,7 +136,7 @@ fieldset {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: #e5631c;
+  background: #e43d67;
   z-index: 100;
   font-family: "SUITE-Regular", sans-serif;
 }
@@ -902,7 +902,7 @@ fieldset {
 }
 
 body {
-  background-color: #f48f58;
+  background-color: #e43d67;
 }
 
 .headline {
@@ -949,6 +949,7 @@ body {
   line-height: 1.1;
   letter-spacing: -0.02em;
   font-family: "SUITE-Regular", sans-serif;
+  display: block;
 }
 @media screen and (max-width: 960px) {
   .title {
@@ -963,7 +964,7 @@ body {
   color: #fff;
   word-wrap: break-word;
   letter-spacing: -0.02em;
-  font-family: "SUITE-Regular", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 @media screen and (max-width: 960px) {
   .desc {
@@ -1195,7 +1196,7 @@ body {
 }
 
 .section-concept {
-  margin-top: 400px;
+  margin-top: 300px;
 }
 @media screen and (max-width: 960px) {
   .section-concept {
@@ -1220,6 +1221,9 @@ body {
   -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 36.67%, 2% 36%, 4% 34.06%, 6% 31.05%, 8% 27.3%, 10% 23.2%, 12% 19.19%, 14% 15.68%, 16% 13.06%, 18% 11.59%, 20% 11.43%, 22% 12.61%, 24% 14.99%, 26% 18.32%, 28% 22.25%, 30% 26.37%, 32% 30.24%, 34% 33.45%, 36% 35.66%, 38% 36.63%, 40% 36.27%, 42% 34.61%, 44% 31.83%, 46% 28.22%, 48% 24.16%, 50% 20.09%, 52% 16.43%, 54% 13.57%, 56% 11.81%, 58% 11.35%, 60% 12.22%, 62% 14.34%, 64% 17.48%, 66% 21.31%, 68% 25.43%, 70% 29.39%, 72% 32.79%, 74% 35.25%, 76% 36.52%, 78% 36.47%, 80% 35.1%, 82% 32.55%, 84% 29.1%, 86% 25.11%, 88% 21%, 90% 17.21%, 92% 14.14%, 94% 12.11%, 96% 11.34%, 98% 11.91%, 100% 13.75%);
           clip-path: polygon(100% 100%, 0% 100%, 0% 36.67%, 2% 36%, 4% 34.06%, 6% 31.05%, 8% 27.3%, 10% 23.2%, 12% 19.19%, 14% 15.68%, 16% 13.06%, 18% 11.59%, 20% 11.43%, 22% 12.61%, 24% 14.99%, 26% 18.32%, 28% 22.25%, 30% 26.37%, 32% 30.24%, 34% 33.45%, 36% 35.66%, 38% 36.63%, 40% 36.27%, 42% 34.61%, 44% 31.83%, 46% 28.22%, 48% 24.16%, 50% 20.09%, 52% 16.43%, 54% 13.57%, 56% 11.81%, 58% 11.35%, 60% 12.22%, 62% 14.34%, 64% 17.48%, 66% 21.31%, 68% 25.43%, 70% 29.39%, 72% 32.79%, 74% 35.25%, 76% 36.52%, 78% 36.47%, 80% 35.1%, 82% 32.55%, 84% 29.1%, 86% 25.11%, 88% 21%, 90% 17.21%, 92% 14.14%, 94% 12.11%, 96% 11.34%, 98% 11.91%, 100% 13.75%);
   transition: 1s;
+}
+.section-concept .image-box img {
+  width: 100%;
 }
 .section-concept .image-box.on {
   -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 2% 0%, 4% 0%, 6% 0%, 8% 0%, 10% 0%, 12% 0%, 14% 0%, 16% 0%, 18% 0%, 20% 0%, 22% 0%, 24% 0%, 26% 0%, 28% 0%, 30% 0%, 32% 0%, 34% 0%, 36% 0%, 38% 0%, 40% 0%, 42% 0%, 44% 0%, 46% 0%, 48% 0%, 50% 0%, 52% 0%, 54% 0%, 56% 0%, 58% 0%, 60% 0%, 62% 0%, 64% 0%, 66% 0%, 68% 0%, 70% 0%, 72% 0%, 74% 0%, 76% 0%, 78% 0%, 80% 0%, 82% 0%, 84% 0%, 86% 0%, 88% 0%, 90% 0%, 92% 0%, 94% 0%, 96% 0%, 98% 0%, 100% 0%);
@@ -1294,7 +1298,7 @@ body {
   bottom: 0;
   left: calc(-50vw - min(100vw, 1162px) * -1 / 2);
   z-index: -1;
-  background: #e5631c;
+  background: #e96880;
 }
 @media screen and (max-width: 960px) {
   .section-about .background {
@@ -1325,6 +1329,7 @@ body {
 .section-about .image-box {
   transform: translateY(-15%);
   max-width: 1093px;
+  height: 632px;
   margin-right: -278px;
   margin-left: auto;
   -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 36.67%, 2% 36%, 4% 34.06%, 6% 31.05%, 8% 27.3%, 10% 23.2%, 12% 19.19%, 14% 15.68%, 16% 13.06%, 18% 11.59%, 20% 11.43%, 22% 12.61%, 24% 14.99%, 26% 18.32%, 28% 22.25%, 30% 26.37%, 32% 30.24%, 34% 33.45%, 36% 35.66%, 38% 36.63%, 40% 36.27%, 42% 34.61%, 44% 31.83%, 46% 28.22%, 48% 24.16%, 50% 20.09%, 52% 16.43%, 54% 13.57%, 56% 11.81%, 58% 11.35%, 60% 12.22%, 62% 14.34%, 64% 17.48%, 66% 21.31%, 68% 25.43%, 70% 29.39%, 72% 32.79%, 74% 35.25%, 76% 36.52%, 78% 36.47%, 80% 35.1%, 82% 32.55%, 84% 29.1%, 86% 25.11%, 88% 21%, 90% 17.21%, 92% 14.14%, 94% 12.11%, 96% 11.34%, 98% 11.91%, 100% 13.75%);
@@ -1345,10 +1350,14 @@ body {
     margin-left: 84px;
   }
 }
+.section-about .image-box picture {
+  height: 100%;
+}
 .section-about .image-box img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 .section-about .desc {
   margin-left: 14%;
@@ -1469,16 +1478,16 @@ body {
     gap: 40px;
   }
 }
-.section-ethical .text-box .desc .bottom .text br:nth-child(1), .section-ethical .text-box .desc .bottom .text br:nth-child(4) {
+.section-ethical .text-box .desc .bottom .text br:nth-child(1) {
   display: none;
 }
 @media screen and (max-width: 960px) {
-  .section-ethical .text-box .desc .bottom .text br:nth-child(1), .section-ethical .text-box .desc .bottom .text br:nth-child(4) {
+  .section-ethical .text-box .desc .bottom .text br:nth-child(1) {
     display: block;
   }
 }
 @media screen and (max-width: 479px) {
-  .section-ethical .text-box .desc .bottom .text br:nth-child(1), .section-ethical .text-box .desc .bottom .text br:nth-child(4) {
+  .section-ethical .text-box .desc .bottom .text br:nth-child(1) {
     display: block;
   }
 }
@@ -1636,7 +1645,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 360px;
-  background-color: #e5631c;
+  background-color: #e96880;
 }
 .section-products .content .inner-content {
   position: absolute;
@@ -1825,7 +1834,7 @@ body {
 }
 
 .section-news {
-  background: #e5631c;
+  background: #e96880;
   position: relative;
   margin-top: 256px;
 }

@@ -26,7 +26,7 @@ $(function () {
   })
   .addLabel('a')
   .to($(".loading"), {
-    background: "#ff9daf",
+    background: "#e43d67",
   },'a')
   .to($(".loading p"), {
     opacity: 0,
@@ -178,7 +178,7 @@ $(function () {
     height: 60,
     bones: 3,
     amplitude: 40,
-    color: '#f48f58',
+    color: '#e43d67',
     speed: .25
   });
 
@@ -231,3 +231,5 @@ $(function () {
 
 
 
+
+  
