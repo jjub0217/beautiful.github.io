@@ -1037,7 +1037,7 @@ body {
 .link-headline {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 .link-headline .link-title {
   position: relative;
@@ -1089,8 +1089,8 @@ body {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
@@ -1604,7 +1604,7 @@ body {
   grid-row: 2/5;
 }
 .section-products .content:nth-child(2) .inner-content .image-box {
-  width: 334px;
+  width: 300px;
 }
 @media screen and (max-width: 960px) {
   .section-products .content:nth-child(2) .inner-content .image-box {
@@ -1712,7 +1712,7 @@ body {
   }
 }
 .section-products .content .text-box .link-title {
-  min-width: 110px;
+  min-width: 175px;
 }
 .section-products .content .text-box .link-title:after {
   bottom: 10px;
@@ -1739,7 +1739,7 @@ body {
 }
 .section-products .link-headline {
   padding-top: 10px;
-  padding-left: 20px;
+  padding-left: 50px;
 }
 .section-products .link-headline .link-title {
   font-size: 20px;
@@ -1910,7 +1910,14 @@ body {
     font-size: 11px;
   }
 }
+.section-news .inner .content .swiper-wrapper .swiper-slide .link-news .image-box {
+  height: 180px;
+}
 .section-news .inner .content .swiper-wrapper .swiper-slide .link-news .image-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
   transition: filter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .section-news .inner .content .swiper-wrapper .swiper-slide .link-news .image-box:hover img {

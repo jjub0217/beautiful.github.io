@@ -1,5 +1,6 @@
 body {
   background-color: #e43d67;
+
   // background-color: #ff9daf;
 }
 
@@ -138,7 +139,7 @@ body {
 .link-headline {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 
   .link-title {
     position: relative;
@@ -194,8 +195,8 @@ body {
     position: relative;
     overflow: hidden;
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 2px solid #fff;
 
@@ -754,7 +755,7 @@ body {
 
       .inner-content {
         .image-box {
-          width: 334px;
+          width: 300px;
 
           @include mobile {
             width: 200px;
@@ -867,8 +868,8 @@ body {
       }
 
       .link-title {
-        // min-width: 175px;
-        min-width: 110px;
+        min-width: 175px;
+        // min-width: 110px;
 
         &:after {
           bottom: 10px;
@@ -898,7 +899,7 @@ body {
 
   .link-headline {
     padding-top: 10px;
-    padding-left: 20px;
+    padding-left: 50px;
 
     .link-title {
       font-size: 20px;
@@ -1086,7 +1087,12 @@ body {
             }
 
             .image-box {
+              height: 180px;
+
               img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
                 transition: filter .5s cubic-bezier(.175, .885, .32, 1.275);
               }
 
