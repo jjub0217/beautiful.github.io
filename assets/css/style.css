@@ -232,6 +232,7 @@ fieldset {
   margin-left: auto;
   padding: 23px 65px;
   width: 224px;
+  cursor: pointer;
 }
 @media screen and (max-width: 960px) {
   .header .menu-box {

@@ -110,12 +110,10 @@ $(function () {
    * 
   */
   $('.gnb .nav-item').hover(function(e){
-      console.log(
-      $(this).find('.sub-list').length)
-      if($(this).find('.sub-list').length){
-        $(this).find('.sub-list').addClass('on');
-        $('.gnb').addClass('on')
-      }
+    if($(this).find('.sub-list').length){
+      $(this).find('.sub-list').addClass('on');
+      $('.gnb').addClass('on')
+    }
   },function(){
       $(this).find('.sub-list').removeClass('on');
       $('.gnb').removeClass('on')
@@ -138,8 +136,22 @@ $(function () {
     } else {
       $(this).attr('aria-expanded', 'false' )
       $(this).attr('aria-labelledby', '메뉴 열기' )
-             $(this).attr('aria-selected', 'false' )
+      $(this).attr('aria-selected', 'false' )
     }
+  })
+
+  /** 
+   *  @TOP버튼을클릭했을때gnb가사라지는기능
+   * 
+  */
+  $('.toMain').click(function(e){
+    e.preventDefault()
+    if($('.gnb').has("isAct")){
+      $('.gnb').removeClass('isAct')
+      $('.burgerBtn').removeClass('isAct')
+      $('.menu-text').removeClass('on')
+      $('html, body').animate({scrollTop: 0}, 800);
+    } return
   })
 
 

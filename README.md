@@ -24,7 +24,7 @@
 
 ## 프로젝트 웹표준(W3C의 Markup Validation Service)
 결과 : 0개 <br>
-<img src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/d46e6408-480b-4baf-ab9a-47b87c150ef7" width=500> <br>
+<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/948ed539-706f-4526-baef-b76972e23b34" width=500> <br>
 
 
 ## 프로젝트 웹접근성

@@ -28,6 +28,7 @@
     margin-left: auto;
     padding: 23px 65px;
     width: 224px;
+    cursor: pointer;
 
     @include mobile {
       width: auto;
