@@ -515,7 +515,7 @@ fieldset {
   align-items: center;
   gap: 32px;
 }
-.gnb .group-sub .sns-area .sns-list .sns-item #instagram:before {
+.gnb .group-sub .sns-area .sns-list .sns-item .instagram:before {
   content: "";
   display: block;
   width: 38px;
@@ -525,14 +525,14 @@ fieldset {
   transition: 0.3s;
 }
 @media screen and (max-width: 960px) {
-  .gnb .group-sub .sns-area .sns-list .sns-item #instagram:before {
+  .gnb .group-sub .sns-area .sns-list .sns-item .instagram:before {
     width: 34px;
   }
 }
-.gnb .group-sub .sns-area .sns-list .sns-item #instagram:hover::before {
+.gnb .group-sub .sns-area .sns-list .sns-item .instagram:hover::before {
   opacity: 0.5;
 }
-.gnb .group-sub .sns-area .sns-list .sns-item #twitter:before {
+.gnb .group-sub .sns-area .sns-list .sns-item .twitter:before {
   content: "";
   display: block;
   width: 38px;
@@ -541,7 +541,7 @@ fieldset {
   background-size: contain;
   transition: 0.3s;
 }
-.gnb .group-sub .sns-area .sns-list .sns-item #twitter:hover::before {
+.gnb .group-sub .sns-area .sns-list .sns-item .twitter:hover::before {
   opacity: 0.5;
 }
 .gnb .group-communication {
@@ -729,7 +729,7 @@ fieldset {
     gap: 20px;
   }
 }
-.footer .group-flex .sns-area .sns-list .sns-item #instagram:before {
+.footer .group-flex .sns-area .sns-list .sns-item .instagram:before {
   content: "";
   display: block;
   width: 42px;
@@ -739,21 +739,21 @@ fieldset {
   transition: 0.5s;
 }
 @media screen and (max-width: 960px) {
-  .footer .group-flex .sns-area .sns-list .sns-item #instagram:before {
+  .footer .group-flex .sns-area .sns-list .sns-item .instagram:before {
     width: 34px;
     height: 32px;
   }
 }
 @media screen and (max-width: 479px) {
-  .footer .group-flex .sns-area .sns-list .sns-item #instagram:before {
+  .footer .group-flex .sns-area .sns-list .sns-item .instagram:before {
     width: 26px;
     height: 24px;
   }
 }
-.footer .group-flex .sns-area .sns-list .sns-item #instagram:hover::before {
+.footer .group-flex .sns-area .sns-list .sns-item .instagram:hover::before {
   opacity: 0.5;
 }
-.footer .group-flex .sns-area .sns-list .sns-item #twitter:before {
+.footer .group-flex .sns-area .sns-list .sns-item .twitter:before {
   content: "";
   display: block;
   width: 42px;
@@ -762,18 +762,18 @@ fieldset {
   background-size: cover;
 }
 @media screen and (max-width: 960px) {
-  .footer .group-flex .sns-area .sns-list .sns-item #twitter:before {
+  .footer .group-flex .sns-area .sns-list .sns-item .twitter:before {
     width: 34px;
     height: 28px;
   }
 }
 @media screen and (max-width: 479px) {
-  .footer .group-flex .sns-area .sns-list .sns-item #twitter:before {
+  .footer .group-flex .sns-area .sns-list .sns-item .twitter:before {
     width: 26px;
     height: 20px;
   }
 }
-.footer .group-flex .sns-area .sns-list .sns-item #twitter:hover::before {
+.footer .group-flex .sns-area .sns-list .sns-item .twitter:hover::before {
   opacity: 0.5;
 }
 .footer .group-flex .group-grid {
