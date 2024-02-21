@@ -958,14 +958,19 @@ body {
 }
 
 .title {
+  display: block;
   font-weight: 900;
-  font-size: 13.5vw;
+  font-size: 13vw;
   color: #fff;
   word-wrap: break-word;
   line-height: 1.1;
   letter-spacing: -0.02em;
   font-family: "poppins", sans-serif;
-  display: block;
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 195px;
+  }
 }
 @media screen and (max-width: 960px) {
   .title {
@@ -1179,11 +1184,14 @@ body {
 .section-slogan .image-box {
   overflow: hidden;
 }
+.section-slogan .image-box img {
+  width: 100%;
+}
 .section-slogan .title-box {
   position: absolute;
   right: 0;
   left: 0;
-  top: 87%;
+  top: calc(100% - min(1440px, 100vw) * 402 / 2678 * 0.5 + 4.89171px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1219,7 +1227,7 @@ body {
 }
 
 .section-concept {
-  margin-top: 300px;
+  margin-top: 250px;
 }
 @media screen and (max-width: 960px) {
   .section-concept {

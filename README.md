@@ -1,21 +1,25 @@
-# 해외 사이트 audio-pro 웹 사이트 클론코딩 
+# 샤넬 웹 사이트 제작 
 
-  <img alt="logo" src="https://github.com/jjub0217/jjub0217.github.io/assets/62126380/c6d30a06-42b2-4d44-ba61-3f112c49e557" width=80>
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/jjub0217/beautiful.github.io/assets/62126380/a7f4fc95-c4de-4315-b7ea-82f15b3351fb#gh-dark-mode-only">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/jjub0217/beautiful.github.io/assets/62126380/7fccbee8-fc8a-4697-ac58-79a11e45253e#gh-light-mode-only">
+  <img alt="logo" src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/7fccbee8-fc8a-4697-ac58-79a11e45253e" width=100>
+</picture>
 
 ----
-이 프로젝트는 해외 사이트 audio-pro 웹 사이트 클론코딩 한 페이지입니다. <br>
-2023.09.07 ~ 2023.10.28 두달간 페이지 를 제작, 수정 및 배포하였습니다. <br>
+이 프로젝트는 명품 브랜드 샤넬 웹 사이트 제작한 페이지입니다. <br>
+2023.07.23 ~ 2023.08.03/2023.11.09,15,21,/2024.02.19,21 15일간 페이지 를 제작, 수정 및 배포하였습니다. <br>
 
 ## 프로젝트 기능
-1. 반응형 웹 페이지.
-2. 사이트가 열리기까지 로딩을 카운트다운으로 보인다.
-3. 스크롤을 위아래로 올림에 따라 고정된 영역 내에서 이미지가 움직인다.  
-4. 스크롤을 위아래로 올림에 따라 텍스트가 살짝씩 스크롤에 따라 위아래로 움직인다.
-5. 메뉴가 아래로 펼쳐졌다 접힌다.
-6. 마우스포인터가 OS의 기본 마우스포인터가 아니라 커스텀 마우스포인터로 보인다.
-7. 특정 요소에 마우스포인터를 갖다 대면 마우스포인터가 커진다.
-8. 마우스포인터 안보임
+1. 반응형 웹 페이지.(레이아웃과 디자인이 다르다)
+2. 사이트가 열리면서 페이지가 물결모양으로 아래에서 위로 올라가는 모양으로 보인다.
+3. 스크롤을 위아래로 올림에 따라 이미지가 위 아래로 움직인다.  
+4. 스크롤을 아래로 내림에 따라 이미지가 물결모양으로 나타난다.  
+5. 스크롤을 아래로 내림에 따라 이미지가 나타난다.  
+6. 특정 요소에 마우스포인터를 갖다 대면 마우스포인터 내의 화살표가 움직인다.
+7. 특정 텍스트요소에 마우스포인터를 갖다 대면 텍스트가 위아래로 움직인다.
+8. 좌우 화살표를 클릭함에 따라 컨텐츠들이 움직인다.
+9. 물결모양으로 넘실대는 영역이 있다.
 
 
 ## 프로젝트 웹표준(W3C의 Markup Validation Service)

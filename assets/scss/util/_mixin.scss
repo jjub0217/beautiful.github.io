@@ -3,12 +3,12 @@
 
 // 시안에 따라 다름
 
-// 1440 ~
+// 2560 ~
 $max: 2560px;
 
 @mixin max {
 
-  // 1440 이상를 꾸미는거다. 
+  // 2560 이상를 꾸미는거다. 
   @media screen and (min-width: $max ) {
     @content;
   }
