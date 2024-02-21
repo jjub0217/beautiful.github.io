@@ -352,7 +352,7 @@ fieldset {
   z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: #e5631c;
+  background-color: #e43d67;
   -webkit-clip-path: circle(0% at 50% 50%);
           clip-path: circle(0% at 50% 50%);
   transition: 0.5s;
@@ -360,7 +360,7 @@ fieldset {
 .gnb::before {
   content: "";
   display: block;
-  background: url("../images/gnb_image2.png") no-repeat;
+  background: url("../images/gnb_image.png") no-repeat;
   background-size: 100%;
   width: 440px;
   height: 100%;
@@ -2060,6 +2060,7 @@ body {
   font-size: 14px;
   letter-spacing: normal;
   color: #fff;
+  font-family: "SUITE-Regular", sans-serif;
 }
 @media screen and (max-width: 960px) {
   .section-exBanner .inner .ingredient {
