@@ -7,7 +7,6 @@
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2") format("woff2");
-  font-weight: 400;
 }
 @font-face {
   font-family: "SUITE-Regular";
@@ -333,6 +332,13 @@ fieldset {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
 }
+@media screen and (max-width: 479px) {
+  .header .menu-box button {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 5px;
+  }
+}
 @media screen and (max-width: 960px) {
   .header .menu-box {
     margin-left: auto;
@@ -550,12 +556,22 @@ fieldset {
     font-size: 16.5px;
   }
 }
+@media screen and (max-width: 479px) {
+  .gnb .group-communication {
+    gap: 0px;
+  }
+}
 .gnb .group-communication a {
   display: block;
   position: relative;
   overflow: hidden;
   height: 15px;
   line-height: 15px;
+}
+@media screen and (max-width: 479px) {
+  .gnb .group-communication a {
+    width: 50%;
+  }
 }
 .gnb .group-communication a span {
   position: absolute;
@@ -948,12 +964,17 @@ body {
   word-wrap: break-word;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  font-family: "SUITE-Regular", sans-serif;
+  font-family: "poppins", sans-serif;
   display: block;
 }
 @media screen and (max-width: 960px) {
   .title {
     font-size: 8.5vw;
+  }
+}
+@media screen and (max-width: 479px) {
+  .title {
+    font-size: 13vw;
   }
 }
 
@@ -1162,11 +1183,15 @@ body {
   position: absolute;
   right: 0;
   left: 0;
-  top: calc(100% - min(1162px, 100vw) * 262 / 2678 * 0.5 - 41.10829px);
   top: 87%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 479px) {
+  .section-slogan .title-box {
+    top: 92%;
+  }
 }
 .section-slogan .title-box .title {
   font-family: "Poppins", sans-serif;
@@ -1183,14 +1208,12 @@ body {
 }
 .section-slogan .title-box .sub-title {
   transform: translateY(0%);
-  padding-top: 20px;
   color: #fff;
   font-size: 39px;
   opacity: 1;
 }
 @media screen and (max-width: 960px) {
   .section-slogan .title-box .sub-title {
-    padding-top: 16px;
     font-size: 16px;
   }
 }
@@ -1264,6 +1287,11 @@ body {
     width: 792px;
   }
 }
+@media screen and (max-width: 479px) {
+  .section-banner {
+    padding-top: 0;
+  }
+}
 .section-banner .marquee {
   display: flex;
 }
@@ -1289,6 +1317,12 @@ body {
     max-width: 598px;
     margin-left: calc(50vw - min(100vw, 640px) / 2);
     padding: 113px 0;
+  }
+}
+@media screen and (max-width: 479px) {
+  .section-about {
+    padding: 0;
+    padding-top: 50px;
   }
 }
 .section-about .background {
@@ -1335,6 +1369,11 @@ body {
   -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 36.67%, 2% 36%, 4% 34.06%, 6% 31.05%, 8% 27.3%, 10% 23.2%, 12% 19.19%, 14% 15.68%, 16% 13.06%, 18% 11.59%, 20% 11.43%, 22% 12.61%, 24% 14.99%, 26% 18.32%, 28% 22.25%, 30% 26.37%, 32% 30.24%, 34% 33.45%, 36% 35.66%, 38% 36.63%, 40% 36.27%, 42% 34.61%, 44% 31.83%, 46% 28.22%, 48% 24.16%, 50% 20.09%, 52% 16.43%, 54% 13.57%, 56% 11.81%, 58% 11.35%, 60% 12.22%, 62% 14.34%, 64% 17.48%, 66% 21.31%, 68% 25.43%, 70% 29.39%, 72% 32.79%, 74% 35.25%, 76% 36.52%, 78% 36.47%, 80% 35.1%, 82% 32.55%, 84% 29.1%, 86% 25.11%, 88% 21%, 90% 17.21%, 92% 14.14%, 94% 12.11%, 96% 11.34%, 98% 11.91%, 100% 13.75%);
           clip-path: polygon(100% 100%, 0% 100%, 0% 36.67%, 2% 36%, 4% 34.06%, 6% 31.05%, 8% 27.3%, 10% 23.2%, 12% 19.19%, 14% 15.68%, 16% 13.06%, 18% 11.59%, 20% 11.43%, 22% 12.61%, 24% 14.99%, 26% 18.32%, 28% 22.25%, 30% 26.37%, 32% 30.24%, 34% 33.45%, 36% 35.66%, 38% 36.63%, 40% 36.27%, 42% 34.61%, 44% 31.83%, 46% 28.22%, 48% 24.16%, 50% 20.09%, 52% 16.43%, 54% 13.57%, 56% 11.81%, 58% 11.35%, 60% 12.22%, 62% 14.34%, 64% 17.48%, 66% 21.31%, 68% 25.43%, 70% 29.39%, 72% 32.79%, 74% 35.25%, 76% 36.52%, 78% 36.47%, 80% 35.1%, 82% 32.55%, 84% 29.1%, 86% 25.11%, 88% 21%, 90% 17.21%, 92% 14.14%, 94% 12.11%, 96% 11.34%, 98% 11.91%, 100% 13.75%);
   transition: 1s;
+}
+@media screen and (max-width: 479px) {
+  .section-about .image-box {
+    height: 300px;
+  }
 }
 .section-about .image-box.on {
   -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 2% 0%, 4% 0%, 6% 0%, 8% 0%, 10% 0%, 12% 0%, 14% 0%, 16% 0%, 18% 0%, 20% 0%, 22% 0%, 24% 0%, 26% 0%, 28% 0%, 30% 0%, 32% 0%, 34% 0%, 36% 0%, 38% 0%, 40% 0%, 42% 0%, 44% 0%, 46% 0%, 48% 0%, 50% 0%, 52% 0%, 54% 0%, 56% 0%, 58% 0%, 60% 0%, 62% 0%, 64% 0%, 66% 0%, 68% 0%, 70% 0%, 72% 0%, 74% 0%, 76% 0%, 78% 0%, 80% 0%, 82% 0%, 84% 0%, 86% 0%, 88% 0%, 90% 0%, 92% 0%, 94% 0%, 96% 0%, 98% 0%, 100% 0%);
@@ -1414,6 +1453,11 @@ body {
     margin-top: 30px;
   }
 }
+@media screen and (max-width: 479px) {
+  .section-ethical {
+    margin-top: 160px;
+  }
+}
 .section-ethical .headline {
   top: 0;
   right: 0px;
@@ -1435,6 +1479,11 @@ body {
 .section-ethical .text-box {
   z-index: 1;
   flex-direction: column;
+}
+@media screen and (max-width: 479px) {
+  .section-ethical .text-box {
+    padding-top: 50px;
+  }
 }
 .section-ethical .text-box .title {
   margin-left: 60px;
@@ -1489,6 +1538,11 @@ body {
 @media screen and (max-width: 479px) {
   .section-ethical .text-box .desc .bottom .text br:nth-child(1) {
     display: block;
+  }
+}
+@media screen and (max-width: 479px) {
+  .section-ethical .text-box .desc .bottom .text br:nth-child(3) {
+    display: none;
   }
 }
 .section-ethical .text-box .desc .bottom .link-title {
@@ -1677,6 +1731,8 @@ body {
 @media screen and (max-width: 479px) {
   .section-products .content .inner-content .image-box {
     width: 35vw;
+    display: flex;
+    justify-content: center;
   }
 }
 .section-products .content .text-box {
@@ -1714,6 +1770,11 @@ body {
 .section-products .content .text-box .link-title {
   min-width: 175px;
 }
+@media screen and (max-width: 479px) {
+  .section-products .content .text-box .link-title {
+    min-width: 105px;
+  }
+}
 .section-products .content .text-box .link-title:after {
   bottom: 10px;
   border-width: 1px;
@@ -1740,6 +1801,11 @@ body {
 .section-products .link-headline {
   padding-top: 10px;
   padding-left: 50px;
+}
+@media screen and (max-width: 479px) {
+  .section-products .link-headline {
+    padding-left: 20px;
+  }
 }
 .section-products .link-headline .link-title {
   font-size: 20px;

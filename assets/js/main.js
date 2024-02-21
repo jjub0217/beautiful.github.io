@@ -81,7 +81,7 @@ $(function () {
         $(el).addClass("on")
       }
     },
-    yPercent:15
+    yPercent:13
   })
 })
 

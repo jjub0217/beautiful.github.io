@@ -155,6 +155,11 @@
         }
       }
 
+      @include minDevice {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5px;
+      }
     }
 
     @include mobile {
@@ -401,21 +406,25 @@
         font-size: 16.5px;
       }
 
+      @include minDevice {
+        gap: 0px;
+      }
+
       a {
         display: block;
-        // display: flex;
-        // flex-direction: column;
         position: relative;
         overflow: hidden;
         height: 15px;
         line-height: 15px;
 
+        @include minDevice {
+          width: 50%;
+        }
+
         span {
-          // display: block;
           position: absolute;
           transition: 0.3s;
           width: 100%;
-          // word-break: break-all;
 
           &.top {
             top: 0;
