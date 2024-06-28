@@ -110,15 +110,15 @@
         </ul>
         <div class="social_contact_area">
           <div class="social_box">
-            <p class="title" id="snslabel">
+            <p class="title" id="sns_label">
               <a href="#">FOLLOW US!</a>
             </p>
             <ul class="sns_list">
-              <li class="sns_item" aria-labelledby="snslabel">
+              <li class="sns_item" aria-labelledby="sns_label">
                 <a href="https://www.instagram.com/chanelofficial/?hl=en" class="instagram" aria-label="샤넬 인스타그램">
                 </a>
               </li>
-              <li class="sns_item" aria-labelledby="snslabel">
+              <li class="sns_item" aria-labelledby="sns_label">
                 <a href="https://twitter.com/tekkenchanel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
                   class="twitter" aria-label="샤넬 트위터">
                 </a>
@@ -144,24 +144,24 @@
           <picture>
             <source media="(min-width: 961px)" srcset="./assets/images/img_visual_desktop.webp 2220w" sizes="100vw">
             <source media="(max-width: 960px)" srcset="./assets/images/img_visual_mobile.webp 1277w" sizes="100vw">
-            <img src="./assets/images/img_visual.webp" alt="">
+            <img src="./assets/images/img_visual.webp" alt="샤넬 메인모델 제니화보">
           </picture>
         </div>
         <div class="title_box">
           <h1 class="title">THE BEAUTIFUL</h1>
-          <h2 class="sub_title">
+          <strong class="sub_title">
             by CHANEL
-          </h2>
+          </strong>
         </div>
       </section>
       <section class="section_concept">
         <div class="inner">
           <div class="content">
-            <h2 class="headline" aria-describedby="conceptDescription">
+            <h2 class="headline" aria-describedby="concept_description">
               CONCEPT
             </h2>
-            <div class="text_box">
-              <p class="desc" id="conceptDescription">
+            <div class="description_wrap">
+              <p class="description" id="concept_description">
                 In-depth study of the House’s emblematic <br>flower led CHANEL Research <br>to discover its
                 extraordinary levels<br>
                 of
@@ -172,7 +172,7 @@
               </p>
             </div>
           </div>
-          <div class="image_box" data-scroll="">
+          <div class="image_box" data-scroll="" aria-hidden="true">
             <picture>
               <source media="(min-width: 961px)"
                 srcset="./assets/images/img_concept_desktop1.jpg 960w, ./assets/images/img_concept_desktop2.jpg 1024w, ./assets/images/img_concept_desktop3.jpg 1280w" 
@@ -185,32 +185,31 @@
                 alt="">
             </picture>
           </div>
-          <div class="desc_effect">
+          <div class="desc_effect" aria-hidden="true">
             <img src="./assets/images/img_concept_animation.png" alt="">
           </div>
         </div>
       </section>
-      <section class="section_banner">
-        <h2 class="blind">배너</h2>
+      <div class="banner_area" aria-hidden="true">
         <div class="marquee">
-          <div class="img">
+          <div class="img_box">
             <img src="./assets/images/img_banner.png" alt="">
           </div>
-          <div class="img">
+          <div class="img_box">
             <img src="./assets/images/img_banner.png" alt="">
           </div>
         </div>
-      </section>
+      </div>
       <section class="section_about" id="about">
         <div class="background" data-scroll=""></div>
-        <h2 class="headline" aria-describedby="aboutDescription">
+        <h2 class="headline" aria-describedby="about_description">
           ABOUT
         </h2>
         <strong class="title">
           THE KEY <br>INGREDIENT
           <br>IN N°1 DE CHANEL
         </strong>
-        <div class="image_box" data-scroll="">
+        <div class="image_box" data-scroll="" aria-hidden="true">
           <picture>
             <source media="(min-width: 961px)"
               srcset="./assets/images/img_about_desktop1.jpg 960w, 
@@ -234,32 +233,32 @@
               alt="">
           </picture>
         </div>
-        <div class="desc" data-scroll="" id="aboutDescription">
-          <div class="top">
+        <div class="text_box" data-scroll="" id="about_description">
+          <div class="about_effect">
             <picture>
               <source media="(min-width: 961px)" srcset="./assets/images/img_about_desc.png 2132w" sizes="100vw">
               <source media="(max-width: 960px)" srcset="./assets/images/img_about_desc_mobile.png 325w"
                 sizes="100vw">
-              <img src="./assets/images/img_about_desc.png" alt="">
+              <img src="./assets/images/img_about_desc.png" alt="엘라스틱 효과와 모이스쳐 효과와 수딩효과">
             </picture>
           </div>
-          <div class="bottom_text">
-            <p class="text">
+          <div class="description_wrap">
+            <p class="description">
               The Red Camellia is a flower <br>unlike any other. <br>Its exceptional resilience and <br>concentrated
               energy
               allow <br>it to bloom
               during winter <br>at extreme temperatures.
             </p>
-            <a href="#" class="link_headline">
-              <p class="link_title">
-                <span class="top">VIEW ABOUT</span>
-                <span class="bottom" aria-hidden="true">VIEW ABOUT</span>
+            <a href="#" class="link_more">
+              <p class="link_text">
+                <span class="text_top">VIEW ABOUT</span>
+                <span class="text_bottom" aria-hidden="true">VIEW ABOUT</span>
               </p>
               <div class="about_arrow">
                 <span class="prev">
-                  <img src="./assets/images/ico_arrow.svg" alt="">
+                  <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘">
                 </span>
-                <span class="next">
+                <span class="next" aria-hidden="false">
                   <img src="./assets/images/ico_arrow.svg" alt="">
                 </span>
               </div>
@@ -267,19 +266,18 @@
           </div>
         </div>
       </section>
-      <section class="section_ethical" id="ethical">
-        <h2 class="headline" aria-describedby="ethicalDescription">
-          ETHICAL
+      <section class="section_research" id="ethical">
+        <h2 class="headline" aria-describedby="ethical_description">
+          RESEARCH
         </h2>
         <div class="inner">
           <div class="text_box">
-            <strong class="title" id="ethicalDescription">
+            <strong class="title" id="ethical_description">
               THE RESEARCH<br>
               INGREDIENT
             </strong>
-            <div class="desc">
-              <div class="bottom">
-                <p class="text">
+              <div class="description_wrap">
+                <p class="description">
                   The ability to harness the power of <br>the Red Czar Camellia, <br> the ingredient at the heart of
                   the
                   N°1
@@ -288,31 +286,30 @@
                   result of 17 years of research.<br>
                   At the heart of N°1 DE CHANEL is the Red Camellia, <br>a flower with revitalizing powers
                 </p>
-                <a href="#" class="link_headline">
-                  <p class="link_title">
-                    <span class="top">VIEW SIGNATURE</span>
-                    <span class="bottom" aria-hidden="true">VIEW SIGNATURE</span>
+                <a href="#" class="link_more">
+                  <p class="link_text">
+                    <span class="text_top">VIEW RESEARCH</span>
+                    <span class="text_bottom" aria-hidden="true">VIEW RESEARCH</span>
                   </p>
                   <div class="about_arrow">
                     <span class="prev">
-                      <img src="./assets/images/ico_arrow.svg" alt="">
+                      <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘">
                     </span>
-                    <span class="next">
+                    <span class="next" aria-hidden="true">
                       <img src="./assets/images/ico_arrow.svg" alt="">
                     </span>
                   </div>
                 </a>
               </div>
-            </div>
           </div>
-          <div class="image_box" data-scroll="">
+          <div class="image_box" data-scroll="" aria-hidden="true">
             <picture>
-              <source media="(min-width: 961px)" srcset="./assets/images/img_ethical.jpg">
-              <source media="(max-width: 960px)" srcset="./assets/images/img_ethical_mobile.webp">
-              <img src="./assets/images/img_ethical.jpg" alt="">
+              <source media="(min-width: 961px)" srcset="./assets/images/img_research.jpg">
+              <source media="(max-width: 960px)" srcset="./assets/images/img_research_mobile.webp">
+              <img src="./assets/images/img_research.jpg" alt="">
             </picture>
           </div>
-          <div class="slogan">
+          <div class="slogan" aria-hidden="true">
             <img src="./assets/images/img_slogan.png" alt="">
           </div>
         </div>
@@ -322,118 +319,151 @@
           PRODUCTS
         </h2>
         <div class="inner">
-          <div class="group_product">
-            <div class="content">
-              <div class="background"></div>
-              <div class="inner_content">
+          <div class="product_group">
+            <div class="product">
+              <div class="background" aria-hidden="true"></div>
+              <div class="content">
                 <div class="image_box">
-                  <img src="./assets/images/img_product1.png" alt="">
+                  <img src="./assets/images/img_product1.png" alt="REVITALIZING SERUM">
                 </div>
                 <div class="text_box">
-                  <p class="product_name">
+                  <strong class="product_name">
+                    <span class="blind">상품명</span>
                     N°1 DE CHANEL<br>
                     REVITALIZING SERUM
-                  </p>
-                  <p class="product_info">50mL/ ₩220,000</p>
-                  <a class="link_headline">
-                    <span class="link_title">
-                      <span class="top">VIEW PRODUCT</span>
-                      <span class="bottom" aria-hidden="true">VIEW PRODUCT</span>
+                  </strong>
+                  <div class="product_info">
+                    <em class="info">
+                      <span class="blind">용량</span>
+                      50mL
+                    </em>
+                    /
+                    <em class="info">
+                      <span class="blind">가격</span>
+                      ₩220,000
+                    </em>
+                  </div> 
+                  <a href="" class="link_more">
+                    <span class="link_text">
+                      <span class="text_top">VIEW PRODUCT</span>
+                      <span class="text_bottom" aria-hidden="true">VIEW PRODUCT</span>
                     </span>
                     <div class="about_arrow">
-                      <span class="prev">
-                        <img src="./assets/images/ico_arrow.svg" alt>
-                      </span>
-                      <span class="next">
-                        <img src="./assets/images/ico_arrow.svg" alt>
-                      </span>
+                      <button class="prev">
+                        <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘" aria-selected="false">
+                      </button>
+                      <button class="next" aria-hidden="true">
+                        <img src="./assets/images/ico_arrow.svg" alt="">
+                      </button>
                     </div>
                   </a>
                 </div>
-                <div class="content_title">
-                  <img src="./assets/images/img_product1_title.png" alt="REVITALIZING SERUM">
+                <div class="visual_title" aria-hidden="true">
+                  <img src="./assets/images/img_product1_title.png" alt="">
                 </div>
               </div>
             </div>
-            <div class="content">
-              <div class="background"></div>
-              <div class="inner_content">
+            <div class="product">
+              <div class="background" aria-hidden="true"></div>
+              <div class="content">
                 <div class="image_box">
-                  <img src="./assets/images/img_product2.png" alt>
+                  <img src="./assets/images/img_product2.png" alt="REVITALIZING EYE CREAM">
                 </div>
                 <div class="text_box">
-                  <p class="product_name">
+                  <strong class="product_name">
+                    <span class="blind">상품명</span>
                     N°1 DE CHANEL<br>
                     REVITALIZING EYE CREAM
-                  </p>
-                  <p class="product_info">15g/₩119,000</p>
-                  <a href="#" class="link_headline">
-                    <p class="link_title">
-                      <span class="top">VIEW PRODUCT</span>
-                      <span class="bottom" aria-hidden="true">VIEW PRODUCT</span>
+                  </strong>
+                  <div class="product_info">
+                    <em class="info">
+                      <span class="blind">용량</span>
+                      15g
+                    </em>
+                    /
+                    <em class="info">
+                      <span class="blind">가격</span>
+                      ₩119,000
+                    </em>
+                  </div>
+                  <a href="#" class="link_more">
+                    <p class="link_text">
+                      <span class="text_top">VIEW PRODUCT</span>
+                      <span class="text_bottom" aria-hidden="true">VIEW PRODUCT</span>
                     </p>
                     <div class="about_arrow">
                       <span class="prev">
-                        <img src="./assets/images/ico_arrow.svg" alt>
+                        <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘">
                       </span>
                       <span class="next">
-                        <img src="./assets/images/ico_arrow.svg" alt>
+                        <img src="./assets/images/ico_arrow.svg" alt="">
                       </span>
                     </div>
                   </a>
                 </div>
-                <div class="content_title">
-                  <img src="./assets/images/img_product2_title.png" alt=" REVITALIZING EYE CREAM">
+                <div class="visual_title" aria-hidden="true">
+                  <img src="./assets/images/img_product2_title.png" alt="">
                 </div>
               </div>
             </div>
-            <div class="content">
+            <div class="product">
               <div class="background"></div>
-              <div class="inner_content">
+              <div class="content">
                 <div class="image_box">
-                  <img src="./assets/images/img_product3.png" alt="">
+                  <img src="./assets/images/img_product3.png" alt="REVITALIZING FOUNDATION">
                 </div>
                 <div class="text_box">
-                  <p class="product_name">
+                  <strong class="product_name">
+                    <span class="blind">상품명</span>
                     N°1 DE CHANEL<br>
                     REVITALIZING FOUNDATION
-                  </p>
-                  <p class="product_info">30mL/₩107,000</p>
-                  <a href="#" class="link_headline">
-                    <p class="link_title">
-                      <span class="top">VIEW PRODUCT</span>
-                      <span class="bottom" aria-hidden="true">VIEW PRODUCT</span>
+                  </strong>
+                  <div class="product_info">
+                    <em class="info">
+                      <span class="blind">용량</span>
+                      30mL
+                    </em>
+                    /
+                    <em class="info">
+                      <span class="blind">가격</span>
+                      ₩107,000
+                    </em>
+                  </div>
+                  <a href="#" class="link_more">
+                    <p class="link_text">
+                      <span class="text_top">VIEW PRODUCT</span>
+                      <span class="text_bottom" aria-hidden="true">VIEW PRODUCT</span>
                     </p>
                     <div class="about_arrow">
                       <span class="prev">
-                        <img src="./assets/images/ico_arrow.svg" alt>
+                        <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘">
                       </span>
-                      <span class="next">
-                        <img src="./assets/images/ico_arrow.svg" alt>
+                      <span class="next" aria-hidden="true">
+                        <img src="./assets/images/ico_arrow.svg" alt="">
                       </span>
                     </div>
                   </a>
                 </div>
-                <div class="content_title">
-                  <img src="./assets/images/img_product3_title.png" alt="REVITALIZING FOUNDATION">
+                <div class="visual_title" aria-hidden="true">
+                  <img src="./assets/images/img_product3_title.png" alt="">
                 </div>
               </div>
             </div>
-            <a href="#" class="link_headline link_more">
-              <p class="link_title">
-                <span class="top">VIEW
+            <a href="#" class="link_more link_all">
+              <p class="link_text">
+                <span class="text_top">VIEW
                   ALL
                 </span>
-                <span class="bottom" aria-hidden="true">VIEW
+                <span class="text_bottom" aria-hidden="true">VIEW
                   ALL
                 </span>
               </p>
               <div class="about_arrow">
                 <span class="prev">
-                  <img src="./assets/images/ico_arrow.svg" alt>
+                  <img src="./assets/images/ico_arrow.svg" alt="모두 보기 화살표 아이콘">
                 </span>
-                <span class="next">
-                  <img src="./assets/images/ico_arrow.svg" alt>
+                <span class="next" aria-hidden="true">
+                  <img src="./assets/images/ico_arrow.svg" alt="">
                 </span>
               </div>
             </a>
@@ -452,177 +482,151 @@
                 <li class="swiper-slide">
                   <a href="#" class="link_news">
                     <div class="text_box">
-                      <div class="bottom">
-                        <p class="text">
-                          Chanel is set to open a beauty pop-up in Edinburgh for the launch of its new Rouge Allure
-                          Velvet Nuit Blanche lipstick.
-                          Fronted by actress Margot Robbie, the new luminous matte lipstick range is available in eight
-                          shades based on each hour
-                          of the night.
-                        </p>
-                        <p class="date">
-                          2024.02.19
-                        </p>
-                      </div>
+                      <p class="news_text">
+                        Chanel is set to open a beauty pop-up in Edinburgh for the launch of its new Rouge Allure
+                        Velvet Nuit Blanche lipstick.
+                        Fronted by actress Margot Robbie, the new luminous matte lipstick range is available in eight
+                        shades based on each hour
+                        of the night.
+                      </p>
+                      <p class="news_date">
+                        2024.02.19
+                      </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail1.jpeg" alt="">
+                      <img src="./assets/images/img_news_thumbnail1.jpeg" alt="샤넬, 에든버러에서 새로운 루즈 알뤼르 벨벳 뉘 블랑쉬 립스틱 팝업 오픈">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
                   <a href="#" class="link_news">
                     <div class="text_box">
-                      <div class="desc">
-                        <div class="bottom">
-                          <p class="text">
-                            Chanel is on to the next wave. In a departure for the brand, which usually appoints one
-                            makeup artist as its creative
-                            director, the house has enlisted three—the newly formed Cometes Collective, who will be
-                            creating, designing, and
-                            collaborating on new products and collections.
-                          </p>
-                          <p class="date">
-                            2024.02.14
-                          </p>
-                        </div>
-                      </div>
+                      <p class="news_text">
+                        Chanel is on to the next wave. In a departure for the brand, which usually appoints one
+                        makeup artist as its creative
+                        director, the house has enlisted three—the newly formed Cometes Collective, who will be
+                        creating, designing, and
+                        collaborating on new products and collections.
+                      </p>
+                      <p class="news_date">
+                        2024.02.14
+                      </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail2.jpg" alt="">
+                      <img src="./assets/images/img_news_thumbnail2.jpg" alt="창의적 감독으로 세 명의 메이크업 아티스트를 임명">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
                   <a href="#" class="link_news">
                     <div class="text_box">
-                      <div class="desc">
-                        <div class="bottom">
-                          <p class="text">
-                            Chanel Parfums Beauté and g.pivaudran have joined forces for the large-scale launch of the
-                            very first mascara product
-                            packed in recycled aluminium. The innovation will be showcased at the Paris Packaging Week
-                            on 17th and 18th January
-                            2024.
-                          </p>
-                          <p class="date">
-                            2024.02.12
-                          </p>
-                        </div>
-                      </div>
+                      <p class="news_text">
+                        Chanel Parfums Beauté and g.pivaudran have joined forces for the large-scale launch of the
+                        very first mascara product
+                        packed in recycled aluminium. The innovation will be showcased at the Paris Packaging Week
+                        on 17th and 18th January
+                        2024.
+                      </p>
+                      <p class="news_date">
+                        2024.02.12
+                      </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail3.jpg" alt="">
+                      <img src="./assets/images/img_news_thumbnail3.jpg" alt="재활용 알루미늄으로 만든 첫 마스카라 출시">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
                   <a href="#" class="link_news">
                     <div class="text_box">
-                      <div class="desc">
-                        <div class="bottom">
-                          <p class="text">
-                            Chanel’s Spring/Summer 2024 haute couture show today centered not only on creative director
-                            Virginie Viard’s newest
-                            collection, but also on a single style detail in particular: the button. An oversize
-                            prototype of the fashion house’s
-                            interlocking C jacket button hung over the Paris runway like a crown jewel, in a nod to both
-                            grace and utilitarianism.
-                          </p>
-                          <p class="date">
-                            2024.01.23
-                          </p>
-                        </div>
-                      </div>
+                      <p class="news_text">
+                        Chanel’s Spring/Summer 2024 haute couture show today centered not only on creative director
+                        Virginie Viard’s newest
+                        collection, but also on a single style detail in particular: the button. An oversize
+                        prototype of the fashion house’s
+                        interlocking C jacket button hung over the Paris runway like a crown jewel, in a nod to both
+                        grace and utilitarianism.
+                      </p>
+                      <p class="news_date">
+                        2024.01.23
+                      </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail4.jpg" alt="">
+                      <img src="./assets/images/img_news_thumbnail4.jpg" alt="샤넬 2024 봄/여름 오뜨 꾸뛰르 쇼, 버튼 디테일로 주목받다">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
                   <a href="#" class="link_news">
                     <div class="text_box">
-                      <div class="desc">
-                        <div class="bottom">
-                          <p class="text">
-                            Chanel is celebrating the roaring 1920s for its Christmas campaign 2023 this party season.
-                            Striking eyes, deep lipsticks and champagne highlights nod to the iconic looks Gabrielle
-                            Chanel helped popularise in
-                            'les années folles'.
-                            "Its aesthetic resonates with Gabrielle Chanel’s style. Her black evening dresses covered
-                            with sequins in the 1920s
-                            responded to the quest of graphic impact and the desire to shine," said Chanel.
-                          </p>
-                          <p class="date">
-                            2023.11.23
-                          </p>
-                        </div>
-                      </div>
+                      <p class="news_text">
+                        Chanel is celebrating the roaring 1920s for its Christmas campaign 2023 this party season.
+                        Striking eyes, deep lipsticks and champagne highlights nod to the iconic looks Gabrielle
+                        Chanel helped popularise in
+                        'les années folles'.
+                        "Its aesthetic resonates with Gabrielle Chanel’s style. Her black evening dresses covered
+                        with sequins in the 1920s
+                        responded to the quest of graphic impact and the desire to shine," said Chanel.
+                      </p>
+                      <p class="news_date">
+                        2023.11.23
+                      </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail5.jpeg" alt="">
+                      <img src="./assets/images/img_news_thumbnail5.jpeg" alt="샤넬, 2023년 크리스마스 캠페인에서 1920년대 황금기를 기념하다">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
                   <a href="#" class="link_news">
                     <div class="text_box">
-                      <div class="desc">
-                        <div class="bottom">
-                          <p class="text">
-                            In collaboration with Chanel, Shinsegae Duty Free has opened Asia’s largest travel retail
-                            podium at the Incheon
-                            International Airport, Terminal 2, on November 16, 2023.
+                      <p class="news_text">
+                        In collaboration with Chanel, Shinsegae Duty Free has opened Asia’s largest travel retail
+                        podium at the Incheon
+                        International Airport, Terminal 2, on November 16, 2023.
 
-                            Dubbed "Chanel Wonderland" the new space is a mesmerizing mega podium designed to create a
-                            magical experience for
-                            travelers during the holiday season. With its grand dimensions, standing at 7 meters in
-                            height and occupying
-                            approximately 130 square meters, this podium is set to redefine the duty-free experience. It
-                            is brought to life with the
-                            theme of "the magic of a special holiday with Chanel."
-                          </p>
-                          <p class="date">
-                            2023.11.19
-                          </p>
-                        </div>
-                      </div>
+                        Dubbed "Chanel Wonderland" the new space is a mesmerizing mega podium designed to create a
+                        magical experience for
+                        travelers during the holiday season. With its grand dimensions, standing at 7 meters in
+                        height and occupying
+                        approximately 130 square meters, this podium is set to redefine the duty-free experience. It
+                        is brought to life with the
+                        theme of "the magic of a special holiday with Chanel."
+                      </p>
+                      <p class="news_date">
+                        2023.11.19
+                      </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail6.jpg" alt="">
+                      <img src="./assets/images/img_news_thumbnail6.jpg" alt="샤넬, 신세계 면세점과 협력하여 인천공항에 아시아 최대 면세 포디움 오픈">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
                   <a href="#" class="link_news">
                     <div class="text_box">
-                      <div class="desc">
-                        <div class="bottom">
-                          <p class="text">
-                            Chanel has teased behind-the-scenes shots from its hotly-anticipated Bleu De Chanel campaign
-                            video starring new
-                            ambassador, actor Timothée Chalamet.
-                            The luxury brand’s short film, directed by Taxi Driver and Goodfellas director Martin
-                            Scorsese, casts Chalamet a man on
-                            a quest to find himself, following only his own instinct.
-                          </p>
-                          <p class="date">
-                            2023.10.11
-                          </p>
-                        </div>
-                      </div>
+                      <p class="news_text">
+                        Chanel has teased behind-the-scenes shots from its hotly-anticipated Bleu De Chanel campaign
+                        video starring new
+                        ambassador, actor Timothée Chalamet.
+                        The luxury brand’s short film, directed by Taxi Driver and Goodfellas director Martin
+                        Scorsese, casts Chalamet a man on
+                        a quest to find himself, following only his own instinct.
+                      </p>
+                      <p class="news_date">
+                        2023.10.11
+                      </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail7.jpeg" alt="">
+                      <img src="./assets/images/img_news_thumbnail7.jpeg" alt="샤넬, 팀시 샬라메가 출연하는 블루 드 샤넬 캠페인 비디오 티저 공개">
                     </div>
                   </a>
                 </li>
               </ul>
             </div>
             <div class="control_area">
-              <button class="btn btn_prev" aria-label="이전슬라이드"></button>
-              <button class="btn btn_next" aria-label="다음슬라이드"></button>
+              <button class="slide_btn btn_prev" aria-label="이전슬라이드" aria-selected="false"></button>
+              <button class="slide_btn btn_next" aria-label="다음슬라이드"></button>
             </div>
           </div>
         </div>
@@ -630,15 +634,13 @@
       <section class="section_link_banner">
         <h2 class="blind">배너</h2>
         <div class="inner">
-          <div class="group_area">
-            <div class="image">
-              <img src="./assets/images/img_link_banner.png" alt="">
+          <div class="banner_box">
+            <div class="image_box">
+              <img src="./assets/images/img_link_banner.png" alt="샤넬 카멜리아 배너">
             </div>
-            <div class="banner">
-              <div class="text">
-                <img src="./assets/images/img_link_banner_title.png" alt="">
-              </div>
-            </div>
+            <a href="#" class="banner_link">
+              <div class="image_box"><img src="./assets/images/img_link_banner_title.png" alt="샤넬 웹사이트"></div>
+            </a>
           </div>
           <p class="ingredient">CAMELLIA JAPONICA FLOWER WATER, AQUA (WATER),
             GLYCERIN, MORINGA OIL/HYDROGENATED MORINGA OIL
@@ -660,22 +662,19 @@
     </main>
     <footer class="footer">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="footer_svg">
-        <path id="wave" d="">
+        <path id="wave" d=""/>
       </svg>
       <div class="footer_inner">
-        <h2 class="footer_logo" id="footer_logo">
-          <span class="blind">푸터 로고</span>
-          <a href="#">
-            <span class="title">
-              THE <br> BEAUTI <br> FUL
-            </span>
-            <span class="sub_title">
-              by CHANEL
-            </span>
-          </a>
-        </h2>
-        <div class="group_flex">
-          <div class="sns_area">
+        <a href="#" class="footer_logo">
+          <span class="footer_logo_title">
+            THE <br> BEAUTI <br> FUL
+          </span>
+          <span class="footer_logo_sub_title">
+            by CHANEL
+          </span>
+        </a>
+        <nav class="footer_nav">
+          <div class="sns_box">
             <p class="title">
               <a href="#">FOLLOW <br> US!</a>
             </p>
@@ -693,78 +692,78 @@
               </li>
             </ul>
           </div>
-          <div class="group_grid">
-            <ul class="nav_list left">
-              <li class="nav_item">
-                <a href="#" class="toMain">
-                  <span class="top">TOP</span>
-                  <span class="bottom" aria-hidden="true">TOP</span>
+          <div class="links_area">
+            <ul class="footer_nav_list">
+              <li>
+                <a href="#" class="footer_nav_link to_home">
+                  <span class="text_top">TOP</span>
+                  <span class="text_bottom" aria-hidden="true">TOP</span>
                 </a>
               </li>
-              <li class="nav_item">
-                <a href="#about">
-                  <span class="top">ABOUT</span>
-                  <span class="bottom" aria-hidden="true">ABOUT</span>
+              <li>
+                <a href="#about" class="footer_nav_link" >
+                  <span class="text_top">ABOUT</span>
+                  <span class="text_bottom" aria-hidden="true">ABOUT</span>
                 </a>
               </li>
-              <li class="nav_item">
-                <a href="#ethical">
-                  <span class="top">ETHICAL</span>
-                  <span class="bottom" aria-hidden="true">ETHICAL</span>
+              <li>
+                <a href="#ethical" class="footer_nav_link" >
+                  <span class="text_top">ETHICAL</span>
+                  <span class="text_bottom" aria-hidden="true">ETHICAL</span>
                 </a>
               </li>
-              <li class="nav_item">
-                <a href="#product">
-                  <span class="top">PRODUCTS</span>
-                  <span class="bottom" aria-hidden="true">PRODUCTS</span>
+              <li>
+                <a href="#product" class="footer_nav_link">
+                  <span class="text_top">PRODUCTS</span>
+                  <span class="text_bottom" aria-hidden="true">PRODUCTS</span>
                 </a>
               </li>
             </ul>
-            <ul class="nav_list right">
-              <li class="nav_item">
-                <a href="#news">
-                  <span class="top">NEWS</span>
-                  <span class="bottom" aria-hidden="true">NEWS</span>
+            <ul class="footer_nav_list">
+              <li>
+                <a href="#news" class="footer_nav_link">
+                  <span class="text_top">NEWS</span>
+                  <span class="text_bottom" aria-hidden="true">NEWS</span>
                 </a>
               </li>
-              <li class="nav_item">
-                <a href="#">
-                  <span class="top">Q&amp;A</span>
-                  <span class="bottom" aria-hidden="true">Q&amp;A</span>
+              <li>
+                <a href="#" class="footer_nav_link">
+                  <span class="text_top">Q&amp;A</span>
+                  <span class="text_bottom" aria-hidden="true">Q&amp;A</span>
                 </a>
               </li>
-              <li class="nav_item">
+              <li>
                 <p>ONLINE STORE</p>
                 <ul class="sub_list">
                   <li class="sub_item">
-                    <a href="#">
-                      <span class="top">- AMAZON STORE</span>
-                      <span class="bottom" aria-hidden="true">- AMAZON STORE</span>
+                    <a href="#" class="footer_nav_link">
+                      <span class="text_top">- AMAZON STORE</span>
+                      <span class="text_bottom" aria-hidden="true">- AMAZON STORE</span>
                     </a>
                   </li>
                   <li class="sub_item">
-                    <a href="#">
-                      <span class="top">- RAKUTEN STORE</span>
-                      <span class="bottom" aria-hidden="true">- RAKUTEN STORE</span>
+                    <a href="#" class="footer_nav_link">
+                      <span class="text_top">- RAKUTEN STORE</span>
+                      <span class="text_bottom" aria-hidden="true">- RAKUTEN STORE</span>
                     </a>
                   </li>
                   <li class="sub_item">
-                    <a href="#">
-                      <span class="top">- OFFICIAL STORE</span>
-                      <span class="bottom" aria-hidden="true">- OFFICIAL STORE</span>
+                    <a href="#" class="footer_nav_link">
+                      <span class="text_top">- OFFICIAL STORE</span>
+                      <span class="text_bottom" aria-hidden="true">- OFFICIAL STORE</span>
                     </a>
                   </li>
                 </ul>
               </li>
             </ul>
-            <div class="group_communication">
-              <a href="#">
-                <span class="top">CONTACT US</span>
-                <span class="bottom" aria-hidden="true">CONTACT US</span>
+            <div class="contact_box">
+              <a href="#" class="contact_link">
+                <span class="text_top">CONTACT US</span>
+                <span class="text_bottom" aria-hidden="true">CONTACT US</span>
               </a>
-              <a href="#">
-                <span class="top">PRIVACY POLICY</span>
-                <span class="bottom" aria-hidden="true">PRIVACY POLICY</span>
+              <a href="#" class="contact_link">
+                <span class="text_top">PRIVACY POLICY</span>
+                <span class="text_bottom" aria-hidden="true">PRIVACY POLICY</span>
               </a>
             </div>
             <address class="addr">
@@ -774,7 +773,7 @@
               <a href="tel:+33975180661" class="tel">Tel.+33-9-75-18-06-61</a>
             </address>
           </div>
-        </div>
+        </nav>
       </div>
     </footer>
   </div>

@@ -1,13 +1,13 @@
 .footer {
+  overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   padding: 130px 0 100px;
   background: url("../images/img_footer_background.webp") 50%/1440px auto;
   background-position: 0 bottom;
   transform-origin: center bottom;
-  height: auto;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 
   @include mobile {
     padding: 80px 0 24px;
@@ -15,7 +15,7 @@
 
   &_inner {
     width: calc(100vw - 240px);
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 
     @include mobile {
@@ -39,11 +39,18 @@
       }
     }
 
-    .title {
-      // font-size: 11vw;
-      font-weight: bold;
+    .footer_logo_title {
       font-family: "Poppins", sans-serif;
+      font-size: 11vw;
+      font-weight: 900;
+      color: #fff;
       white-space: nowrap;
+      word-wrap: break-word;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      @media screen and (min-width: 1440px) {
+        font-size: 180px;
+      }
 
       br {
         display: none;
@@ -59,10 +66,11 @@
       }
     }
 
-    .sub_title {
-      font-size: 3vw;
-      color: #fff;
+    .footer_logo_sub_title {
       font-family: "SUITE-Regular", sans-serif;
+      font-size: 3vw;
+      font-weight: 900;
+      color: #fff;
       line-height: 1;
 
       @include mobile {
@@ -71,13 +79,13 @@
     }
   }
 
-  .group_flex {
+  .footer_nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 100px;
     font-size: 19px;
     color: #fff;
-    padding-top: 100px;
 
     @include mobile {
       display: flex;
@@ -86,7 +94,7 @@
       padding: 0;
     }
 
-    .sns_area {
+    .sns_box {
       display: flex;
       align-items: center;
       gap: 32px;
@@ -100,17 +108,17 @@
       }
 
       .title {
-        font-size: 18px;
-        color: #fff;
         width: auto;
         font-family: "Poppins", sans-serif;
-
-        br {
-          display: none;
-        }
+        font-size: 18px;
+        color: #fff;
 
         @include mobile {
           font-size: 16.5px;
+        }
+
+        br {
+          display: none;
         }
 
         @include minDevice {
@@ -122,25 +130,24 @@
         }
       }
 
-      .sns_list {
-        display: flex;
-        align-items: center;
-        gap: 32px;
+      .sns {
+        &_list {
+          display: flex;
+          align-items: center;
+          gap: 32px;
 
-        @include minDevice {
-          gap: 20px;
-        }
+          @include minDevice {
+            gap: 20px;
+          }
 
-        .sns_item {
-          .instagram {
+          .instagram,
+          .twitter {
             &:before {
-              content: "";
               display: block;
               width: 42px;
               height: 40px;
-              background: url("../images/ico_instagram.svg") no-repeat;
-              background-size: cover;
               transition: 0.5s;
+              content: "";
 
               @include mobile {
                 width: 34px;
@@ -160,122 +167,84 @@
             }
           }
 
+          .instagram {
+            &:before {
+              background: url("../images/ico_instagram.svg") no-repeat;
+              background-size: contain;
+            }
+          }
+
           .twitter {
             &:before {
-              content: "";
-              display: block;
-              width: 42px;
-              height: 34px;
               background: url("../images/ico_twitter.svg") no-repeat;
-              background-size: cover;
-
-              @include mobile {
-                width: 34px;
-                height: 28px;
-              }
-
-              @include minDevice {
-                width: 26px;
-                height: 20px;
-              }
-            }
-
-            &:hover {
-              &::before {
-                opacity: 0.5;
-              }
+              background-size: contain;
             }
           }
         }
       }
     }
 
-    .group_grid {
-      align-items: flex-start;
+    .links_area {
       display: grid;
       grid-template-columns: repeat(2, 0.8fr);
-      padding: 0;
+      align-items: flex-start;
       gap: 0;
+      padding: 0;
 
       @include mobile {
-        font-size: 16px;
         grid-template-columns: repeat(2, 120px);
-      }
-
-      .nav_list {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        @include mobile {
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-          padding: 32px 0;
-        }
-
-        @include minDevice {
-          font-size: 12px;
-          gap: 10px;
-        }
-
-        .nav_item {
-          a {
-            display: block;
-            position: relative;
-            overflow: hidden;
-            height: 20px;
-            line-height: 20px;
-
-            span {
-              position: absolute;
-              word-break: break-all;
-              transition: 0.3s;
-              width: 100%;
-              height: 100%;
-
-              &.top {
-                top: 0;
-                left: 0;
-              }
-
-              &.bottom {
-                top: 100%;
-                left: 0;
-              }
-            }
-
-            &:hover {
-              .top {
-                top: -100%;
-              }
-
-              .bottom {
-                top: 0;
-              }
-            }
-          }
-        }
+        font-size: 16px;
       }
     }
 
-    .sub_list {
+    &_list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      padding-top: 10px;
+      gap: 20px;
 
       @include mobile {
-        padding-top: 5px;
-        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 32px 0;
       }
 
-      .sub_item {
-        font-size: 16px;
-        height: 16px;
-        line-height: 16px;
+      @include minDevice {
+        gap: 10px;
+        font-size: 12px;
+      }
+    }
+    &_link {
+      display: block;
+      height: 20px;
+      line-height: 20px;
+
+      @include hidden_text_transition;
+      .text_top,
+      .text_bottom {
+        word-break: break-all;
+      }
+    }
+
+    .sub {
+      &_list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+
+        @include mobile {
+          gap: 5px;
+          padding-top: 5px;
+        }
+      }
+
+      &_item {
         width: 100%;
         min-width: 140px;
+        height: 16px;
+        font-size: 16px;
+        line-height: 16px;
 
         @include mobile {
           font-size: 11.5px;
@@ -283,65 +252,43 @@
       }
     }
 
-    .group_communication {
-      grid-column: span 2;
+    .contact_box {
       display: flex;
       flex-direction: column;
-      font-size: 17px;
+      grid-column: span 2;
       gap: 24px;
+      font-size: 17px;
 
       @include mobile {
         flex-direction: row;
         font-size: 12px;
       }
 
-      a {
+      .contact_link {
         display: flex;
         flex-direction: column;
-        position: relative;
-        overflow: hidden;
+        width: 100%;
         height: 15px;
         line-height: 15px;
-        width: 100%;
+        @include hidden_text_transition;
 
         &:nth-child(1) {
           width: 33%;
         }
-
-        span {
+        .text_top,
+        .text_bottom {
           display: block;
-          position: absolute;
-          transition: 0.3s;
-          width: 100%;
           word-break: break-all;
-
-          &.top {
-            top: 0;
-            left: 0;
-          }
-
-          &.bottom {
-            top: 100%;
-            left: 0;
-          }
-        }
-
-        &:hover {
-          .top {
-            top: -100%;
-          }
-
-          .bottom {
-            top: 0;
-          }
         }
       }
     }
   }
 
   .addr {
-    font-size: 12px;
     padding-top: 48px;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 

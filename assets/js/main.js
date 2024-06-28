@@ -76,7 +76,7 @@ $(function () {
    *  @이미지들이스크롤에의해살짝씩위로올라가는기능
    *
    */
-  function applyScrollAnimation(yPercentValue) {
+  // function applyScrollAnimation(yPercentValue) {
     $("[data-scroll]").each(function (i, el) {
       gsap.to(el, {
         scrollTrigger: {
@@ -89,36 +89,18 @@ $(function () {
             $(el).addClass("on");
           },
         },
-        yPercent: yPercentValue,
+        yPercent:13,
+        // yPercent: yPercentValue,
       });
     });
-  }
+  // }
 
-  /**
-   * 초기 브라우저 너비에 따른 yPercent 설정
-   *
-   */
-  var yPercentValue = window.matchMedia("(max-width: 1080px)").matches
-    ? -30
-    : 13;
-  applyScrollAnimation(yPercentValue);
-
-  /**
-   * 브라우저 너비가 변경될 때 yPercent 업데이트
-   *
-   */
-  window
-    .matchMedia("(max-width: 1080px)")
-    .addEventListener("change", function (event) {
-      yPercentValue = event.matches ? -30 : 13;
-      applyScrollAnimation(yPercentValue);
-    });
 
   /**
    *  @products영역내에서background와콘텐츠들이스크롤에의해나타나는기능
    *
    */
-  $(".section_products .content").each(function (i, el) {
+  $(".section_products .product").each(function (i, el) {
     prdTl = gsap.timeline({
       scrollTrigger: {
         trigger: el,
@@ -129,7 +111,7 @@ $(function () {
     });
     prdTl
       .from($(this).find(".background"), 0.5, { scale: 0 })
-      .from($(this).find(".inner_content"), 0.5, { opacity: 0 });
+      .from($(this).find(".content"), 0.5, { opacity: 0 });
   });
 
   /**
@@ -201,7 +183,7 @@ $(function () {
     bones: 3,
     amplitude: 40,
     color: "#e43d67",
-    speed: 0.25,
+    speed: 0.2,
   });
 
   /**

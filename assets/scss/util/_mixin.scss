@@ -51,6 +51,39 @@ $MinDevice: 479px;
   }
 }
 
+@mixin hidden_text_transition {
+  overflow: hidden;
+  position: relative;
+
+  .text_top,
+  .text_bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
+
+  .text_top {
+    top: 0;
+    left: 0;
+  }
+
+  .text_bottom {
+    top: 100%;
+    left: 0;
+  }
+
+  &:hover {
+    .text_top {
+      top: -100%;
+    }
+
+    .text_bottom {
+      top: 0;
+    }
+  }
+}
+
 @keyframes waves {
   to {
     transform: translateX(1440px);
