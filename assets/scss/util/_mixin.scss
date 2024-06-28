@@ -1,59 +1,39 @@
-// 1230 안에서 잘 나오면 오케이
-// 전역으로 적용시킨것들은 1229 이상으로 다 적용시키는 것이다. 
-
-// 시안에 따라 다름
-
-// 2560 ~
 $max: 2560px;
-
 @mixin max {
-
-  // 2560 이상를 꾸미는거다. 
-  @media screen and (min-width: $max ) {
+  // 2560 이상를 꾸미는거다.
+  @media screen and (min-width: $max) {
     @content;
   }
 }
 
-// 1025 ~ 1279
 $desktop: 1280px;
-
 @mixin desktop {
-
-  // 1280 이하를 꾸미는거다. 
-  @media screen and (max-width: $desktop ) {
+  // 1280 이하를 꾸미는거다.
+  @media screen and (max-width: $desktop) {
     @content;
   }
 }
 
-// 961 ~ 1024
 $tablet: 1024px;
-
 @mixin tablet {
-
-  // 1024 이하를 꾸미는거다. 
-  @media screen and (max-width: $tablet ) {
+  // 1024 이하를 꾸미는거다.
+  @media screen and (max-width: $tablet) {
     @content;
   }
 }
 
-
-// 320 ~ 960
 $mobile: 960px;
-
 @mixin mobile {
-
-  // 960 이하를 꾸미는거다. 
-  @media screen and (max-width: $mobile ) {
+  // 960 이하를 꾸미는거다.
+  @media screen and (max-width: $mobile) {
     @content;
   }
 }
 
 $MinDevice: 479px;
-
 @mixin minDevice {
-
-  // 479 이하을 꾸미는거다. 
-  @media screen and (max-width: $MinDevice ) {
+  // 479 이하을 꾸미는거다.
+  @media screen and (max-width: $MinDevice) {
     @content;
   }
 }
@@ -62,13 +42,47 @@ $MinDevice: 479px;
   overflow: hidden;
   text-overflow: ellipsis;
 
-  @if($line > 1) {
+  @if ($line > 1) {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $line;
+  } @else {
+    white-space: nowrap;
+  }
+}
+
+@keyframes waves {
+  to {
+    transform: translateX(1440px);
+  }
+}
+
+@keyframes up-to {
+  0% {
+    height: 0%;
   }
 
-  @else {
-    white-space: nowrap;
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
   }
 }

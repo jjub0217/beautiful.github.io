@@ -10,163 +10,157 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="./assets/js/split.min.js"></script>
-  <script src="./assets/js/main.js" defer></script>
+
 </head>
 
 <body>
-  <div class="loading">
+  <!-- <div class="loading">
     <div class="text-area">
-      <p>Modernism's Splendor</p>　
+      <p>Modernism's Splendor</p>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#e43d67" fill-opacity="1"
         d="M0,192L34.3,165.3C68.6,139,137,85,206,96C274.3,107,343,181,411,197.3C480,213,549,171,617,154.7C685.7,139,754,149,823,176C891.4,203,960,245,1029,256C1097.1,267,1166,245,1234,208C1302.9,171,1371,117,1406,90.7L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
       </path>
     </svg>
-  </div>
+  </div> -->
   <div class="wrapper">
-    <header class="header">
-      <div class="menu-box">
-        <button aria-expanded="false" aria-haspopup="menu">
-          <span class="menu-text">
-            <span class="top">menu</span>
-            <span class="bottom" aria-hidden="true">menu</span>
-          </span>
-          <span class="burgerBtn">
-            <i class="positionTop"></i>
-            <i class="positionMiddle"></i>
-            <i class="positionBottom"></i>
-          </span>
-        </button>
-      </div>
+    <div class="skip">
+      <a href="#header">메뉴 바로가기</a>
+      <a href="#main">본문 바로가기</a>
+    </div>
+    <header class="header" id="header">
+      <button class="menu_button" aria-expanded="false" aria-haspopup="menu" aria-selected="false">
+        <span class="menu_text">
+          <span class="menu_text_top">menu</span>
+          <span class="menu_text_bottom" aria-hidden="true">menu</span>
+        </span>
+        <span class="hamburger_icon" aria-hidden="true">
+          <i class="line_top"></i>
+          <i class="line_middle"></i>
+          <i class="line_bottom"></i>
+        </span>
+      </button>
     </header>
+
+    <!-- [D] menu_button 을 클릭했을때, gnb에 class="is_active" 추가 -->
     <aside class="gnb">
-      <div class="group">
-        <nav class="group-main">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="" class="toMain">
-                <span class="top">TOP</span>
-                <span class="bottom" aria-hidden="true">TOP</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#about">
-                <span class="top">ABOUT</span>
-                <span class="bottom" aria-hidden="true">ABOUT</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#ethical">
-                <span class="top">ETHICAL</span>
-                <span class="bottom" aria-hidden="true">ETHICAL</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#product">
-                <span class="top">PRODUCTS</span>
-                <span class="bottom" aria-hidden="true">PRODUCTS</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#news">
-                <span class="top">NEWS</span>
-                <span class="bottom" aria-hidden="true">NEWS</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="">
-                <span class="top">Q&#38;A</span>
-                <span class="bottom" aria-hidden="true">Q&#38;A</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <p>ONLINE STORE</p>
-              <ul class="sub-list">
-                <li class="sub-item">
-                  <a href="">
-                    <span class="top">- AMAZON STORE
-                    </span>
-                    <span class="bottom" aria-hidden="true">- AMAZON STORE</span>
-                  </a>
-                </li>
-                <li class="sub-item">
-                  <a href="">
-                    <span class="top">- RAKUTEN STORE</span>
-                    <span class="bottom" aria-hidden="true">- RAKUTEN STORE</span>
-                  </a>
-                </li>
-                <li class="sub-item">
-                  <a href="">
-                    <span class="top">- OFFICIAL STORE</span>
-                    <span class="bottom" aria-hidden="true">- OFFICIAL STORE</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <div class="group-sub">
-          <div class="sns-area">
-            <p class="title" id="snslabel">
-              <a href="">FOLLOW US!</a>
-            </p>
-            <ul class="sns-list">
-              <li class="sns-item" aria-labelledby="snslabel">
-                <a href="https://www.instagram.com/chanelofficial/?hl=en" class="instagram">
-                  <span class="blind">샤넬 인스타그램 링크</span>
+      <nav class="nav">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="#" class="nav_link to_home">
+              <span class="text_top">HOME</span>
+              <span class="text_bottom" aria-hidden="true">HOME</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#about" class="nav_link">
+              <span class="text_top">ABOUT</span>
+              <span class="text_bottom" aria-hidden="true">ABOUT</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#ethical" class="nav_link">
+              <span class="text_top">ETHICAL</span>
+              <span class="text_bottom" aria-hidden="true">ETHICAL</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#product" class="nav_link">
+              <span class="text_top">PRODUCTS</span>
+              <span class="text_bottom" aria-hidden="true">PRODUCTS</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#news" class="nav_link">
+              <span class="text_top">NEWS</span>
+              <span class="text_bottom" aria-hidden="true">NEWS</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="#" class="nav_link">
+              <span class="text_top">Q&amp;A</span>
+              <span class="text_bottom" aria-hidden="true">Q&amp;A</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <p>ONLINE STORE</p>
+            <ul class="sub_list">
+              <li class="sub_item">
+                <a href="#" class="nav_link">
+                  <span class="text_top">- AMAZON STORE
+                  </span>
+                  <span class="text_bottom" aria-hidden="true">- AMAZON STORE</span>
                 </a>
               </li>
-              <li class="sns-item" aria-labelledby="snslabel">
+              <li class="sub_item">
+                <a href="#" class="nav_link">
+                  <span class="text_top">- RAKUTEN STORE</span>
+                  <span class="text_bottom" aria-hidden="true">- RAKUTEN STORE</span>
+                </a>
+              </li>
+              <li class="sub_item">
+                <a href="#" class="nav_link">
+                  <span class="text_top">- OFFICIAL STORE</span>
+                  <span class="text_bottom" aria-hidden="true">- OFFICIAL STORE</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="social_contact_area">
+          <div class="social_box">
+            <p class="title" id="snslabel">
+              <a href="#">FOLLOW US!</a>
+            </p>
+            <ul class="sns_list">
+              <li class="sns_item" aria-labelledby="snslabel">
+                <a href="https://www.instagram.com/chanelofficial/?hl=en" class="instagram" aria-label="샤넬 인스타그램">
+                </a>
+              </li>
+              <li class="sns_item" aria-labelledby="snslabel">
                 <a href="https://twitter.com/tekkenchanel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                  class="twitter">
-                  <span class="blind">샤넬 트위터 링크</span>
+                  class="twitter" aria-label="샤넬 트위터">
                 </a>
               </li>
             </ul>
           </div>
-          <div class="group-communication">
-            <a href="">
-              <span class="top">CONTACT US</span>
-              <span class="bottom" aria-hidden="true">CONTACT US</span>
+          <div class="contact_box">
+            <a href="#" class="contact_link">
+              <span class="text_top">CONTACT US</span>
+              <span class="text_bottom" aria-hidden="true">CONTACT US</span>
             </a>
-            <a href="">
-              <span class="top">PRIVACY POLICY</span>
-              <span class="bottom" aria-hidden="true">PRIVACY POLICY</span>
+            <a href="#" class="contact_link">
+              <span class="text_top">PRIVACY POLICY</span>
+              <span class="text_bottom" aria-hidden="true">PRIVACY POLICY</span>
             </a>
           </div>
         </div>
-      </div>
+      </nav>
     </aside>
     <main class="container" id="main">
-      <section class="section-slogan">
-        <div class="image-box">
+      <section class="section_visual">
+        <div class="image_box">
           <picture>
-            <source media="(min-width: 961px)" srcset="./assets/images/firstview_picture2.webp 2220w" sizes="100vw">
-            <source media="(max-width: 960px)" srcset="./assets/images/firstview_picture2@sp.webp 1277w" sizes="100vw">
-            <img src="./assets/images/firstview_picture2.webp" alt>
+            <source media="(min-width: 961px)" srcset="./assets/images/img_visual_desktop.webp 2220w" sizes="100vw">
+            <source media="(max-width: 960px)" srcset="./assets/images/img_visual_mobile.webp 1277w" sizes="100vw">
+            <img src="./assets/images/img_visual.webp" alt="">
           </picture>
         </div>
-        <div class="title-box">
+        <div class="title_box">
           <h1 class="title">THE BEAUTIFUL</h1>
-          <h2 class="sub-title">
+          <h2 class="sub_title">
             by CHANEL
           </h2>
         </div>
       </section>
-      <section class="section-concept">
+      <section class="section_concept">
         <div class="inner">
           <div class="content">
             <h2 class="headline" aria-describedby="conceptDescription">
               CONCEPT
             </h2>
-            <div class="text-box">
+            <div class="text_box">
               <p class="desc" id="conceptDescription">
                 In-depth study of the House’s emblematic <br>flower led CHANEL Research <br>to discover its
                 extraordinary levels<br>
@@ -175,40 +169,39 @@
                 antioxidant
                 properties.<br>
                 THE POWER OF THE RED CAMELLIA<br>
-
               </p>
             </div>
           </div>
-          <div class="image-box" data-scroll="">
+          <div class="image_box" data-scroll="">
             <picture>
-              <source media="(max-width: 960px)"
-                srcset="https://puls-img.chanel.com/c_limit,w_320/q_auto:best,dpr_auto/1667230099718-03actifmjpg_980x750.jpg 320w, https://puls-img.chanel.com/c_limit,w_480/q_auto:best,dpr_auto/1667230099718-03actifmjpg_980x750.jpg 480w, https://puls-img.chanel.com/c_limit,w_640/q_auto:best,dpr_auto/1667230099718-03actifmjpg_980x750.jpg 640w, https://puls-img.chanel.com/c_limit,w_768/q_auto:best,dpr_auto/1667230099718-03actifmjpg_980x750.jpg 768w"
-                sizes="100vw">
               <source media="(min-width: 961px)"
-                srcset="https://puls-img.chanel.com/c_limit,w_960/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg 960w, https://puls-img.chanel.com/c_limit,w_1024/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg 1024w, https://puls-img.chanel.com/c_limit,w_1280/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg 1280w, https://puls-img.chanel.com/c_limit,w_1400/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg 1400w, https://puls-img.chanel.com/c_limit,w_1600/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg 1600w, https://puls-img.chanel.com/c_limit,w_1920/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg 1920w, https://puls-img.chanel.com/c_limit,w_2400/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg 2400w, https://puls-img.chanel.com/c_limit,w_2800/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg 2800w, https://puls-img.chanel.com/c_limit,w_3200/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg 3200w"
+                srcset="./assets/images/img_concept_desktop1.jpg 960w, ./assets/images/img_concept_desktop2.jpg 1024w, ./assets/images/img_concept_desktop3.jpg 1280w" 
+                sizes="100vw">
+                <source media="(max-width: 960px)"
+                srcset="./assets/images/img_concept_mobile1.jpg 320w, ./assets/images/img_concept_mobile2.jpg 480w, ./assets/images/img_concept_mobile3.jpg 640w, ./assets/images/img_concept_mobile4.jpg 768w"
                 sizes="100vw">
               <img
-                src="https://puls-img.chanel.com/c_limit,w_3200/q_auto:best,dpr_auto/1667230087508-03actifdjpg_1140x1140.jpg"
-                alt>
+                src="./assets/images/img_concept.jpg"
+                alt="">
             </picture>
           </div>
-          <div class="desc-effect">
-            <img src="./assets/images/concept_decoration2.png" alt>
+          <div class="desc_effect">
+            <img src="./assets/images/img_concept_animation.png" alt="">
           </div>
         </div>
       </section>
-      <section class="section-banner">
+      <section class="section_banner">
         <h2 class="blind">배너</h2>
         <div class="marquee">
           <div class="img">
-            <img src="./assets/images/separator.png" alt>
+            <img src="./assets/images/img_banner.png" alt="">
           </div>
           <div class="img">
-            <img src="./assets/images/separator.png" alt>
+            <img src="./assets/images/img_banner.png" alt="">
           </div>
         </div>
       </section>
-      <section class="section-about" id="about">
+      <section class="section_about" id="about">
         <div class="background" data-scroll=""></div>
         <h2 class="headline" aria-describedby="aboutDescription">
           ABOUT
@@ -217,60 +210,69 @@
           THE KEY <br>INGREDIENT
           <br>IN N°1 DE CHANEL
         </strong>
-        <div class="image-box" data-scroll="">
+        <div class="image_box" data-scroll="">
           <picture>
-            <source media="(max-width: 960px)"
-              srcset="https://puls-img.chanel.com/c_limit,w_320/q_auto:best,dpr_auto/1667230099755-01covermjpg_820x750.jpg 320w, https://puls-img.chanel.com/c_limit,w_480/q_auto:best,dpr_auto/1667230099755-01covermjpg_820x750.jpg 480w, https://puls-img.chanel.com/c_limit,w_640/q_auto:best,dpr_auto/1667230099755-01covermjpg_820x750.jpg 640w, https://puls-img.chanel.com/c_limit,w_768/q_auto:best,dpr_auto/1667230099755-01covermjpg_820x750.jpg 768w"
-              sizes="100vw">
             <source media="(min-width: 961px)"
-              srcset="https://puls-img.chanel.com/c_limit,w_960/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg 960w, https://puls-img.chanel.com/c_limit,w_1024/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg 1024w, https://puls-img.chanel.com/c_limit,w_1280/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg 1280w, https://puls-img.chanel.com/c_limit,w_1400/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg 1400w, https://puls-img.chanel.com/c_limit,w_1600/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg 1600w, https://puls-img.chanel.com/c_limit,w_1920/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg 1920w, https://puls-img.chanel.com/c_limit,w_2400/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg 2400w, https://puls-img.chanel.com/c_limit,w_2800/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg 2800w, https://puls-img.chanel.com/c_limit,w_3200/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg 3200w"
+              srcset="./assets/images/img_about_desktop1.jpg 960w, 
+              ./assets/images/img_about_desktop2.jpg 1024w,
+              ./assets/images/img_about_desktop3.jpg 1280w, 
+              ./assets/images/img_about_desktop4.jpg 1400w, 
+              ./assets/images/img_about_desktop5.jpg 1600w, 
+              ./assets/images/img_about_desktop6.jpg 1920w, 
+              ./assets/images/img_about_desktop7.jpg 2400w, 
+              ./assets/images/img_about_desktop8.jpg 2800w, 
+              ./assets/images/img_about_desktop9.jpg 3200w"
+              sizes="100vw">
+              <source media="(max-width: 960px)"
+              srcset="./assets/images/img_about_mobile1.jpg 320w, 
+              ./assets/images/img_about_mobile2.jpg 480w,
+              ./assets/images/img_about_mobile3.jpg 640w, 
+              ./assets/images/img_about_mobile4.jpg 768w"
               sizes="100vw">
             <img
-              src="https://puls-img.chanel.com/c_limit,w_3200/q_auto:best,dpr_auto/1667230087642-01coverdjpg_1300x2880.jpg"
-              alt>
+              src="./assets/images/img_about.jpeg"
+              alt="">
           </picture>
         </div>
         <div class="desc" data-scroll="" id="aboutDescription">
           <div class="top">
             <picture>
-              <!-- 961픽셀 이상 -->
-              <source media="(min-width: 961px)" srcset="./assets/images/about-desc2.png 2132w" sizes="100vw">
-              <!-- 960픽셀 미만 -->
-              <source media="(max-width: 960px)" srcset="./assets/images/about_footer_figure2@sp.png 325w"
+              <source media="(min-width: 961px)" srcset="./assets/images/img_about_desc.png 2132w" sizes="100vw">
+              <source media="(max-width: 960px)" srcset="./assets/images/img_about_desc_mobile.png 325w"
                 sizes="100vw">
-              <img src="./assets/images/about-desc2.png" alt>
+              <img src="./assets/images/img_about_desc.png" alt="">
             </picture>
           </div>
-          <div class="bottom-text">
+          <div class="bottom_text">
             <p class="text">
               The Red Camellia is a flower <br>unlike any other. <br>Its exceptional resilience and <br>concentrated
               energy
               allow <br>it to bloom
               during winter <br>at extreme temperatures.
             </p>
-            <a href="" class="link-headline">
-              <p class="link-title">
+            <a href="#" class="link_headline">
+              <p class="link_title">
                 <span class="top">VIEW ABOUT</span>
                 <span class="bottom" aria-hidden="true">VIEW ABOUT</span>
               </p>
-              <div class="about-arrow">
+              <div class="about_arrow">
                 <span class="prev">
-                  <img src="./assets/images/icon_arrow.svg" alt>
+                  <img src="./assets/images/ico_arrow.svg" alt="">
                 </span>
                 <span class="next">
-                  <img src="./assets/images/icon_arrow.svg" alt>
+                  <img src="./assets/images/ico_arrow.svg" alt="">
                 </span>
               </div>
             </a>
           </div>
         </div>
       </section>
-      <section class="section-ethical" id="ethical">
+      <section class="section_ethical" id="ethical">
         <h2 class="headline" aria-describedby="ethicalDescription">
           ETHICAL
         </h2>
         <div class="inner">
-          <div class="text-box">
+          <div class="text_box">
             <strong class="title" id="ethicalDescription">
               THE RESEARCH<br>
               INGREDIENT
@@ -286,139 +288,139 @@
                   result of 17 years of research.<br>
                   At the heart of N°1 DE CHANEL is the Red Camellia, <br>a flower with revitalizing powers
                 </p>
-                <a href="" class="link-headline">
-                  <p class="link-title">
+                <a href="#" class="link_headline">
+                  <p class="link_title">
                     <span class="top">VIEW SIGNATURE</span>
                     <span class="bottom" aria-hidden="true">VIEW SIGNATURE</span>
                   </p>
-                  <div class="about-arrow">
+                  <div class="about_arrow">
                     <span class="prev">
-                      <img src="./assets/images/icon_arrow.svg" alt>
+                      <img src="./assets/images/ico_arrow.svg" alt="">
                     </span>
                     <span class="next">
-                      <img src="./assets/images/icon_arrow.svg" alt>
+                      <img src="./assets/images/ico_arrow.svg" alt="">
                     </span>
                   </div>
                 </a>
               </div>
             </div>
           </div>
-          <div class="image-box" data-scroll="">
+          <div class="image_box" data-scroll="">
             <picture>
-              <source media="(min-width: 961px)" srcset="./assets/images/scienceantiaged.jpg">
-              <source media="(max-width: 960px)" srcset="./assets/images/scienceantiagedet@sp.webp">
-              <img src="./assets/images/scienceantiaged.jpg" alt>
+              <source media="(min-width: 961px)" srcset="./assets/images/img_ethical.jpg">
+              <source media="(max-width: 960px)" srcset="./assets/images/img_ethical_mobile.webp">
+              <img src="./assets/images/img_ethical.jpg" alt="">
             </picture>
           </div>
-          <div class="recycle">
-            <img src="./assets/images/made_from_recycled_plastic2.png" alt>
+          <div class="slogan">
+            <img src="./assets/images/img_slogan.png" alt="">
           </div>
         </div>
       </section>
-      <section class="section-products" id="product">
+      <section class="section_products" id="product">
         <h2 class="headline">
           PRODUCTS
         </h2>
         <div class="inner">
-          <div class="group-product">
+          <div class="group_product">
             <div class="content">
               <div class="background"></div>
-              <div class="inner-content">
-                <div class="image-box">
-                  <img src="./assets/images/product_picture_1-2.png" alt>
+              <div class="inner_content">
+                <div class="image_box">
+                  <img src="./assets/images/img_product1.png" alt="">
                 </div>
-                <div class="text-box">
-                  <p class="product-name">
+                <div class="text_box">
+                  <p class="product_name">
                     N°1 DE CHANEL<br>
                     REVITALIZING SERUM
                   </p>
-                  <p class="product-info">50mL/ ₩220,000</p>
-                  <a class="link-headline">
-                    <span class="link-title">
+                  <p class="product_info">50mL/ ₩220,000</p>
+                  <a class="link_headline">
+                    <span class="link_title">
                       <span class="top">VIEW PRODUCT</span>
                       <span class="bottom" aria-hidden="true">VIEW PRODUCT</span>
                     </span>
-                    <div class="about-arrow">
+                    <div class="about_arrow">
                       <span class="prev">
-                        <img src="./assets/images/icon_arrow.svg" alt>
+                        <img src="./assets/images/ico_arrow.svg" alt>
                       </span>
                       <span class="next">
-                        <img src="./assets/images/icon_arrow.svg" alt>
+                        <img src="./assets/images/ico_arrow.svg" alt>
                       </span>
                     </div>
                   </a>
                 </div>
-                <div class="content-title">
-                  <img src="./assets/images/product_title_en_1.png" alt="REVITALIZING SERUM">
+                <div class="content_title">
+                  <img src="./assets/images/img_product1_title.png" alt="REVITALIZING SERUM">
                 </div>
               </div>
             </div>
             <div class="content">
               <div class="background"></div>
-              <div class="inner-content">
-                <div class="image-box">
-                  <img src="./assets/images/product_picture_2-2.png" alt>
+              <div class="inner_content">
+                <div class="image_box">
+                  <img src="./assets/images/img_product2.png" alt>
                 </div>
-                <div class="text-box">
-                  <p class="product-name">
+                <div class="text_box">
+                  <p class="product_name">
                     N°1 DE CHANEL<br>
                     REVITALIZING EYE CREAM
                   </p>
-                  <p class="product-info">15g/₩119,000</p>
-                  <a href="" class="link-headline">
-                    <p class="link-title">
+                  <p class="product_info">15g/₩119,000</p>
+                  <a href="#" class="link_headline">
+                    <p class="link_title">
                       <span class="top">VIEW PRODUCT</span>
                       <span class="bottom" aria-hidden="true">VIEW PRODUCT</span>
                     </p>
-                    <div class="about-arrow">
+                    <div class="about_arrow">
                       <span class="prev">
-                        <img src="./assets/images/icon_arrow.svg" alt>
+                        <img src="./assets/images/ico_arrow.svg" alt>
                       </span>
                       <span class="next">
-                        <img src="./assets/images/icon_arrow.svg" alt>
+                        <img src="./assets/images/ico_arrow.svg" alt>
                       </span>
                     </div>
                   </a>
                 </div>
-                <div class="content-title">
-                  <img src="./assets/images/product_title_en_2.png" alt=" REVITALIZING EYE CREAM">
+                <div class="content_title">
+                  <img src="./assets/images/img_product2_title.png" alt=" REVITALIZING EYE CREAM">
                 </div>
               </div>
             </div>
             <div class="content">
               <div class="background"></div>
-              <div class="inner-content">
-                <div class="image-box">
-                  <img src="./assets/images/product_picture_3-3.png" alt>
+              <div class="inner_content">
+                <div class="image_box">
+                  <img src="./assets/images/img_product3.png" alt="">
                 </div>
-                <div class="text-box">
-                  <p class="product-name">
+                <div class="text_box">
+                  <p class="product_name">
                     N°1 DE CHANEL<br>
                     REVITALIZING FOUNDATION
                   </p>
-                  <p class="product-info">30mL/₩107,000</p>
-                  <a href="" class="link-headline">
-                    <p class="link-title">
+                  <p class="product_info">30mL/₩107,000</p>
+                  <a href="#" class="link_headline">
+                    <p class="link_title">
                       <span class="top">VIEW PRODUCT</span>
                       <span class="bottom" aria-hidden="true">VIEW PRODUCT</span>
                     </p>
-                    <div class="about-arrow">
+                    <div class="about_arrow">
                       <span class="prev">
-                        <img src="./assets/images/icon_arrow.svg" alt>
+                        <img src="./assets/images/ico_arrow.svg" alt>
                       </span>
                       <span class="next">
-                        <img src="./assets/images/icon_arrow.svg" alt>
+                        <img src="./assets/images/ico_arrow.svg" alt>
                       </span>
                     </div>
                   </a>
                 </div>
-                <div class="content-title">
-                  <img src="./assets/images/product_title_en_3.png" alt="REVITALIZING FOUNDATION">
+                <div class="content_title">
+                  <img src="./assets/images/img_product3_title.png" alt="REVITALIZING FOUNDATION">
                 </div>
               </div>
             </div>
-            <a href="" class="link-headline link-more">
-              <p class="link-title">
+            <a href="#" class="link_headline link_more">
+              <p class="link_title">
                 <span class="top">VIEW
                   ALL
                 </span>
@@ -426,19 +428,19 @@
                   ALL
                 </span>
               </p>
-              <div class="about-arrow">
+              <div class="about_arrow">
                 <span class="prev">
-                  <img src="./assets/images/icon_arrow.svg" alt>
+                  <img src="./assets/images/ico_arrow.svg" alt>
                 </span>
                 <span class="next">
-                  <img src="./assets/images/icon_arrow.svg" alt>
+                  <img src="./assets/images/ico_arrow.svg" alt>
                 </span>
               </div>
             </a>
           </div>
         </div>
       </section>
-      <section class="section-news" id="news">
+      <section class="section_news" id="news">
         <h2 class="blind">news</h2>
         <p class="headline">
           NEWS
@@ -448,8 +450,8 @@
             <div class="swiper">
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
-                  <a href="" class="link-news">
-                    <div class="text-box">
+                  <a href="#" class="link_news">
+                    <div class="text_box">
                       <div class="bottom">
                         <p class="text">
                           Chanel is set to open a beauty pop-up in Edinburgh for the launch of its new Rouge Allure
@@ -463,14 +465,14 @@
                         </p>
                       </div>
                     </div>
-                    <div class="image-box">
-                      <img src="./assets/images/news_thumbnail2.jpeg" alt>
+                    <div class="image_box">
+                      <img src="./assets/images/img_news_thumbnail1.jpeg" alt="">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
-                  <a href="" class="link-news">
-                    <div class="text-box">
+                  <a href="#" class="link_news">
+                    <div class="text_box">
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
@@ -486,14 +488,14 @@
                         </div>
                       </div>
                     </div>
-                    <div class="image-box">
-                      <img src="./assets/images/news_thumbnail3.jpg" alt>
+                    <div class="image_box">
+                      <img src="./assets/images/img_news_thumbnail2.jpg" alt="">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
-                  <a href="" class="link-news">
-                    <div class="text-box">
+                  <a href="#" class="link_news">
+                    <div class="text_box">
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
@@ -509,15 +511,14 @@
                         </div>
                       </div>
                     </div>
-                    <div class="image-box">
-                      <img src="./assets/images/news_thumbnail4.jpg" alt>
+                    <div class="image_box">
+                      <img src="./assets/images/img_news_thumbnail3.jpg" alt="">
                     </div>
                   </a>
                 </li>
-
                 <li class="swiper-slide">
-                  <a href="" class="link-news">
-                    <div class="text-box">
+                  <a href="#" class="link_news">
+                    <div class="text_box">
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
@@ -534,14 +535,14 @@
                         </div>
                       </div>
                     </div>
-                    <div class="image-box">
-                      <img src="./assets/images/news_thumbnail5.jpg" alt>
+                    <div class="image_box">
+                      <img src="./assets/images/img_news_thumbnail4.jpg" alt="">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
-                  <a href="" class="link-news">
-                    <div class="text-box">
+                  <a href="#" class="link_news">
+                    <div class="text_box">
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
@@ -559,14 +560,14 @@
                         </div>
                       </div>
                     </div>
-                    <div class="image-box">
-                      <img src="./assets/images/news_thumbnail6.jpeg" alt>
+                    <div class="image_box">
+                      <img src="./assets/images/img_news_thumbnail5.jpeg" alt="">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
-                  <a href="" class="link-news">
-                    <div class="text-box">
+                  <a href="#" class="link_news">
+                    <div class="text_box">
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
@@ -588,14 +589,14 @@
                         </div>
                       </div>
                     </div>
-                    <div class="image-box">
-                      <img src="./assets/images/news_thumbnail7.jpg" alt>
+                    <div class="image_box">
+                      <img src="./assets/images/img_news_thumbnail6.jpg" alt="">
                     </div>
                   </a>
                 </li>
                 <li class="swiper-slide">
-                  <a href="" class="link-news">
-                    <div class="text-box">
+                  <a href="#" class="link_news">
+                    <div class="text_box">
                       <div class="desc">
                         <div class="bottom">
                           <p class="text">
@@ -612,34 +613,33 @@
                         </div>
                       </div>
                     </div>
-                    <div class="image-box">
-                      <img src="./assets/images/news_thumbnail8.jpeg" alt>
+                    <div class="image_box">
+                      <img src="./assets/images/img_news_thumbnail7.jpeg" alt="">
                     </div>
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="control-area">
-              <button class="btn btn-prev" aria-label="이전슬라이드"></button>
-              <button class="btn btn-next" aria-label="다음슬라이드"></button>
+            <div class="control_area">
+              <button class="btn btn_prev" aria-label="이전슬라이드"></button>
+              <button class="btn btn_next" aria-label="다음슬라이드"></button>
             </div>
           </div>
         </div>
       </section>
-      <section class="section-exBanner">
+      <section class="section_link_banner">
         <h2 class="blind">배너</h2>
         <div class="inner">
-          <div class="group-area">
+          <div class="group_area">
             <div class="image">
-              <img src="./assets/images/aminomason_banner_picture2.png" alt>
+              <img src="./assets/images/img_link_banner.png" alt="">
             </div>
             <div class="banner">
               <div class="text">
-                <img src="./assets/images/AMINO_MASON_WEB_SITE.png" alt>
+                <img src="./assets/images/img_link_banner_title.png" alt="">
               </div>
             </div>
           </div>
-
           <p class="ingredient">CAMELLIA JAPONICA FLOWER WATER, AQUA (WATER),
             GLYCERIN, MORINGA OIL/HYDROGENATED MORINGA OIL
             ESTERS, OCTYLDODECYL MYRISTATE, CETEARYL ALCOHOL, CAMELLIA OLEIFERA SEED OIL, BEHENYL ALCOHOL, CAMELLIA
@@ -660,32 +660,32 @@
     </main>
     <footer class="footer">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="footer_svg">
-        <path id="wave" d="" />
+        <path id="wave" d="">
       </svg>
       <div class="footer_inner">
-        <h2 class="footer_logo" id="footer-logo">
+        <h2 class="footer_logo" id="footer_logo">
           <span class="blind">푸터 로고</span>
-          <a href="">
+          <a href="#">
             <span class="title">
               THE <br> BEAUTI <br> FUL
             </span>
-            <span class="sub-title">
+            <span class="sub_title">
               by CHANEL
             </span>
           </a>
         </h2>
-        <div class="group-flex">
-          <div class="sns-area">
+        <div class="group_flex">
+          <div class="sns_area">
             <p class="title">
-              <a href="">FOLLOW <br> US!</a>
+              <a href="#">FOLLOW <br> US!</a>
             </p>
-            <ul class="sns-list">
-              <li class="sns-item">
+            <ul class="sns_list">
+              <li class="sns_item">
                 <a href="https://www.instagram.com/chanelofficial/?hl=en" class="instagram">
                   <span class="blind">샤넬 인스타그램 링크</span>
                 </a>
               </li>
-              <li class="sns-item">
+              <li class="sns_item">
                 <a href="https://twitter.com/tekkenchanel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
                   class="twitter">
                   <span class="blind">샤넬 트위터 링크</span>
@@ -693,63 +693,63 @@
               </li>
             </ul>
           </div>
-          <div class="group-grid">
-            <ul class="nav-list left">
-              <li class="nav-item">
-                <a href="" class="toMain">
+          <div class="group_grid">
+            <ul class="nav_list left">
+              <li class="nav_item">
+                <a href="#" class="toMain">
                   <span class="top">TOP</span>
                   <span class="bottom" aria-hidden="true">TOP</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav_item">
                 <a href="#about">
                   <span class="top">ABOUT</span>
                   <span class="bottom" aria-hidden="true">ABOUT</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav_item">
                 <a href="#ethical">
                   <span class="top">ETHICAL</span>
                   <span class="bottom" aria-hidden="true">ETHICAL</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav_item">
                 <a href="#product">
                   <span class="top">PRODUCTS</span>
                   <span class="bottom" aria-hidden="true">PRODUCTS</span>
                 </a>
               </li>
             </ul>
-            <ul class="nav-list right">
-              <li class="nav-item">
+            <ul class="nav_list right">
+              <li class="nav_item">
                 <a href="#news">
                   <span class="top">NEWS</span>
                   <span class="bottom" aria-hidden="true">NEWS</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav_item">
                 <a href="#">
-                  <span class="top">Q&#38;A</span>
-                  <span class="bottom" aria-hidden="true">Q&#38;A</span>
+                  <span class="top">Q&amp;A</span>
+                  <span class="bottom" aria-hidden="true">Q&amp;A</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav_item">
                 <p>ONLINE STORE</p>
-                <ul class="sub-list">
-                  <li class="sub-item">
-                    <a href="">
+                <ul class="sub_list">
+                  <li class="sub_item">
+                    <a href="#">
                       <span class="top">- AMAZON STORE</span>
                       <span class="bottom" aria-hidden="true">- AMAZON STORE</span>
                     </a>
                   </li>
-                  <li class="sub-item">
-                    <a href="">
+                  <li class="sub_item">
+                    <a href="#">
                       <span class="top">- RAKUTEN STORE</span>
                       <span class="bottom" aria-hidden="true">- RAKUTEN STORE</span>
                     </a>
                   </li>
-                  <li class="sub-item">
-                    <a href="">
+                  <li class="sub_item">
+                    <a href="#">
                       <span class="top">- OFFICIAL STORE</span>
                       <span class="bottom" aria-hidden="true">- OFFICIAL STORE</span>
                     </a>
@@ -757,12 +757,12 @@
                 </ul>
               </li>
             </ul>
-            <div class="group-communication">
-              <a href="">
+            <div class="group_communication">
+              <a href="#">
                 <span class="top">CONTACT US</span>
                 <span class="bottom" aria-hidden="true">CONTACT US</span>
               </a>
-              <a href="">
+              <a href="#">
                 <span class="top">PRIVACY POLICY</span>
                 <span class="bottom" aria-hidden="true">PRIVACY POLICY</span>
               </a>
@@ -776,9 +776,15 @@
           </div>
         </div>
       </div>
-
     </footer>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/split.min.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

@@ -1,217 +1,161 @@
-/* header */
-
-// 데스크탑 
 .header {
-  position: fixed;
-  top: 28px;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: flex-end;
-  z-index: 3;
-
-  background-color: transparent;
   overflow: hidden;
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 65px;
+  z-index: 3;
+  background-color: transparent;
   cursor: pointer;
 
   @include mobile {
-    top: 0;
-    padding: 30px 20px;
-
+    top: 28px;
+    right: 32px;
   }
 
   .headline {
     text-transform: uppercase;
   }
 
-  .menu-box {
-    margin-left: auto;
-    padding: 23px 65px;
-    width: 224px;
+  .menu_button {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
     cursor: pointer;
 
-    @include mobile {
-      width: auto;
-    }
-
-    button {
-      display: flex;
-      width: 100%;
-
-      &:hover {
-        .menu-text {
-          .top {
-            top: -105%;
-          }
-
-          .bottom {
-            top: 0;
-          }
-        }
-
-        .burgerBtn {
-          height: 22.5px;
-        }
+    &:hover {
+      .menu_text_top {
+        top: -105%;
       }
-
-      &.isAct {
-        .menu-btn {
-          .title {
-            visibility: hidden;
-          }
-        }
+      .menu_text_bottom {
+        top: 0;
       }
-
-      .menu-text {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 20px;
-        display: inline-block;
-
-        @include mobile {
-          width: 30px;
-          height: 13px;
-        }
-
-        &.on {
-          visibility: hidden;
-        }
-
-        span {
-          display: inline-block;
-          position: absolute;
-          text-transform: uppercase;
-          font-size: 25px;
-          color: #fff;
-          transition: 0.2s;
-          line-height: 20px;
-          width: 100%;
-
-          @include mobile {
-            font-size: 10px;
-            line-height: 1;
-          }
-
-          &.top {
-            top: 0;
-            left: 0;
-          }
-
-          &.bottom {
-            top: 100%;
-            left: 0;
-          }
-
-        }
-
-      }
-
-      .burgerBtn {
-        transform: translateY(0%);
-        width: 27px;
-        height: 22px;
-        overflow: hidden;
-        cursor: pointer;
-        transition: 0.2s;
-
-        i {
-          background-color: #fff;
-          position: absolute;
-          left: 0;
-          width: 100%;
-          height: 4px;
-          transition: all 200ms ease-in-out;
-
-          &.positionTop {
-            top: 0;
-          }
-
-          &.positionMiddle {
-            top: 50%;
-            transform: translateY(-50%);
-          }
-
-          &.positionBottom {
-            top: 100%;
-            transform: translateY(-100%);
-          }
-        }
-
-        &.isAct {
-          .positionTop {
-            top: 50%;
-            transform: translateY(-50%) rotate(45deg);
-          }
-
-          .positionMiddle {
-            transform: scaleX(0);
-          }
-
-          .positionBottom {
-            top: 50%;
-            transform: translateY(-50%) rotate(-45deg);
-          }
-
-        }
-      }
-
-      @include minDevice {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 5px;
+      .hamburger_icon {
+        height: 23px;
       }
     }
 
-    @include mobile {
-      margin-left: auto;
-      padding: 0;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      gap: 10px;
+    &[aria-selected="true"] {
+      .menu_text {
+        visibility: hidden;
+      }
+      .hamburger_icon {
+        .line_top {
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+        }
+
+        .line_middle {
+          transform: scaleX(0);
+        }
+
+        .line_bottom {
+          top: 50%;
+          transform: translateY(-50%) rotate(-45deg);
+        }
+      }
     }
   }
 
+  .menu_text {
+    overflow: hidden;
+    position: relative;
+    width: 74px;
+    height: 23px;
 
+    @include mobile {
+      display: none;
+    }
+
+    &_top,
+    &_bottom {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      font-size: 25px;
+      color: #fff;
+      line-height: 23px;
+      transition: 0.2s;
+      text-transform: uppercase;
+    }
+
+    &_top {
+      top: 0;
+      left: 0;
+    }
+
+    &_bottom {
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  .hamburger_icon {
+    overflow: hidden;
+    transform: translateY(0%);
+    width: 27px;
+    height: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+
+    .line_top,
+    .line_middle,
+    .line_bottom {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .line_top {
+      top: 0;
+    }
+
+    .line_middle {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .line_bottom {
+      top: 100%;
+      transform: translateY(-100%);
+    }
+  }
 }
 
 .gnb {
-  display: flex;
-  align-items: center;
   position: fixed;
   top: 0;
   z-index: 2;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: #e43d67;
-  // background-color: #ff5885;
   clip-path: circle(0% at 50% 50%);
   transition: 0.5s;
 
   &::before {
-    content: "";
     display: block;
-    background: url("../images/gnb_image.png") no-repeat;
-    background-size: 100%;
     width: 440px;
     height: 100%;
-
-    @include desktop {
-      width: 400px;
-    }
+    background: url("../images/img_gnb_slogan.png") no-repeat;
+    background-size: 100%;
+    content: "";
 
     @include mobile {
       display: none;
     }
   }
 
-  &.isAct {
+  &.is_active {
     clip-path: circle(100% at 50% 50%);
   }
 
-  .group {
-    margin: 0 auto;
+  .nav {
     display: flex;
     align-items: flex-end;
     gap: 148px;
@@ -224,233 +168,217 @@
       padding: 63.5px 32px;
     }
 
-
-    &-main {
-      .nav-list {
-        display: flex;
-        flex-direction: column;
-        gap: 28px;
-
-        @include mobile {
-          gap: 27px;
-        }
-
-        .nav-item {
-          font-size: 30px;
-          color: #fff;
-
-          @include mobile {
-            font-size: 40px;
-            line-height: 1;
-          }
-
-          a {
-            display: block;
-            position: relative;
-            overflow: hidden;
-            height: 31px;
-            line-height: 31px;
-
-            span {
-              position: absolute;
-              transition: 0.3s;
-              width: 100%;
-              height: 100%;
-
-              &.top {
-                top: 0;
-                left: 0;
-              }
-
-              &.bottom {
-                top: 100%;
-                left: 0;
-              }
-            }
-
-            &:hover {
-              .top {
-                top: -100%;
-              }
-
-              .bottom {
-                top: 0;
-              }
-            }
-          }
-
-
-          .sub-list {
-            padding-top: 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-            @include mobile {
-              padding: 20px 0;
-              gap: 20px;
-            }
-
-            .sub-item {
-              font-size: 14px;
-              position: relative;
-              overflow: hidden;
-              height: 14px;
-              line-height: 14px;
-
-              @include mobile {
-                font-size: 16px;
-              }
-
-              a {
-                display: block;
-                height: 14px;
-                line-height: 1;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    &-sub {
+    &_list {
       display: flex;
       flex-direction: column;
-      gap: 88px;
+      gap: 28px;
+    }
+
+    &_item {
+      font-size: 30px;
+      color: #fff;
 
       @include mobile {
-        gap: 0px;
-      }
-
-      .sns-area {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        @include mobile {
-          flex-direction: row;
-          padding: 40px 0 30px 0;
-        }
-
-        .title {
-          font-size: 18px;
-          color: #fff;
-          width: 100%;
-
-          @include mobile {
-            width: auto;
-            display: flex;
-            align-items: center;
-          }
-        }
-
-        .sns-list {
-          display: flex;
-          align-items: center;
-          gap: 32px;
-
-          .sns-item {
-            .instagram {
-              &:before {
-
-                content: "";
-                display: block;
-                width: 38px;
-                height: 37px;
-                background: url("../images/instagram.svg") no-repeat;
-                background-size: contain;
-                transition: 0.3s;
-
-                @include mobile {
-                  width: 34px;
-                }
-              }
-
-              &:hover {
-                &::before {
-                  opacity: 0.5;
-                }
-              }
-            }
-
-            .twitter {
-              &:before {
-                content: "";
-                display: block;
-                width: 38px;
-                height: 37px;
-                background: url("../images/twitter.svg") no-repeat;
-                background-size: contain;
-                transition: 0.3s;
-              }
-
-              &:hover {
-                &::before {
-                  opacity: 0.5;
-                }
-              }
-            }
-          }
-        }
-
+        font-size: 40px;
       }
     }
 
-    &-communication {
+    &_link {
+      overflow: hidden;
+      display: block;
+      position: relative;
+      height: 31px;
+      line-height: 31px;
+
+      .text_top,
+      .text_bottom {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+      }
+
+      .text_top {
+        top: 0;
+        left: 0;
+      }
+
+      .text_bottom {
+        top: 100%;
+        left: 0;
+      }
+
+      &:hover {
+        .text_top {
+          top: -100%;
+        }
+
+        .text_bottom {
+          top: 0;
+        }
+      }
+    }
+
+    .sub {
+      &_list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 14px;
+
+        @include mobile {
+          gap: 20px;
+          padding: 20px 0;
+        }
+      }
+
+      &_item {
+        overflow: hidden;
+        position: relative;
+        height: 14px;
+        font-size: 14px;
+        line-height: 14px;
+
+        @include mobile {
+          font-size: 16px;
+        }
+        .nav_link {
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .social_contact_area {
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+
+    @include mobile {
+      gap: 0px;
+    }
+
+    .social_box {
       display: flex;
       flex-direction: column;
-      font-size: 14px;
-      color: #fff;
-      gap: 32px;
+      gap: 24px;
 
       @include mobile {
         flex-direction: row;
-        font-size: 16.5px;
+        padding: 40px 0 30px 0;
       }
 
-      @include minDevice {
-        gap: 0px;
+      .title {
+        width: 100%;
+        font-size: 18px;
+        color: #fff;
+
+        @include mobile {
+          display: flex;
+          align-items: center;
+          width: auto;
+        }
       }
 
-      a {
+      .sns_list {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .instagram,
+      .twitter {
+        &:before {
+          display: block;
+          width: 38px;
+          height: 37px;
+          transition: 0.3s;
+          content: "";
+
+          @include mobile {
+            width: 34px;
+          }
+        }
+
+        &:hover {
+          &::before {
+            opacity: 0.5;
+          }
+        }
+      }
+      .instagram {
+        &:before {
+          background: url("../images/ico_instagram.svg") no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .twitter {
+        &:before {
+          background: url("../images/ico_twitter.svg") no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+
+    .contact {
+      &_box {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        font-size: 14px;
+        color: #fff;
+
+        @include mobile {
+          flex-direction: row;
+          font-size: 16.5px;
+        }
+
+        @include minDevice {
+          gap: 0px;
+        }
+      }
+
+      &_link {
+        overflow: hidden;
         display: block;
         position: relative;
-        overflow: hidden;
         height: 15px;
-        line-height: 15px;
+        white-space: nowrap;
+        line-height: 1;
 
         @include minDevice {
           width: 50%;
         }
 
-        span {
+        .text_top,
+        .text_bottom {
           position: absolute;
-          transition: 0.3s;
           width: 100%;
+          height: 100%;
+          transition: 0.3s;
+        }
 
-          &.top {
-            top: 0;
-            left: 0;
-          }
+        .text_top {
+          top: 0;
+          left: 0;
+        }
 
-          &.bottom {
-            top: 100%;
-            left: 0;
-          }
+        .text_bottom {
+          top: 100%;
+          left: 0;
         }
 
         &:hover {
-          .top {
+          .text_top {
             top: -100%;
           }
 
-          .bottom {
+          .text_bottom {
             top: 0;
           }
         }
       }
     }
   }
-
-
 }
