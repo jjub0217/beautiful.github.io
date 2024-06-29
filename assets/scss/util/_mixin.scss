@@ -1,11 +1,3 @@
-$max: 2560px;
-@mixin max {
-  // 2560 이상를 꾸미는거다.
-  @media screen and (min-width: $max) {
-    @content;
-  }
-}
-
 $desktop: 1280px;
 @mixin desktop {
   // 1280 이하를 꾸미는거다.
@@ -26,14 +18,6 @@ $mobile: 960px;
 @mixin mobile {
   // 960 이하를 꾸미는거다.
   @media screen and (max-width: $mobile) {
-    @content;
-  }
-}
-
-$MinDevice: 479px;
-@mixin minDevice {
-  // 479 이하을 꾸미는거다.
-  @media screen and (max-width: $MinDevice) {
     @content;
   }
 }

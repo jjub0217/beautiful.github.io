@@ -103,10 +103,6 @@
         align-items: center;
       }
 
-      @include minDevice {
-        gap: 20px;
-      }
-
       .title {
         width: auto;
         font-family: "Poppins", sans-serif;
@@ -120,14 +116,6 @@
         br {
           display: none;
         }
-
-        @include minDevice {
-          font-size: 12px;
-
-          br {
-            display: block;
-          }
-        }
       }
 
       .sns {
@@ -135,10 +123,6 @@
           display: flex;
           align-items: center;
           gap: 32px;
-
-          @include minDevice {
-            gap: 20px;
-          }
 
           .instagram,
           .twitter {
@@ -152,11 +136,6 @@
               @include mobile {
                 width: 34px;
                 height: 32px;
-              }
-
-              @include minDevice {
-                width: 26px;
-                height: 24px;
               }
             }
 
@@ -207,11 +186,6 @@
         flex-direction: column;
         gap: 24px;
         padding: 32px 0;
-      }
-
-      @include minDevice {
-        gap: 10px;
-        font-size: 12px;
       }
     }
     &_link {

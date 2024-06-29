@@ -305,10 +305,6 @@
           flex-direction: row;
           font-size: 16.5px;
         }
-
-        @include minDevice {
-          gap: 0;
-        }
       }
 
       &_link {
@@ -317,9 +313,6 @@
         white-space: nowrap;
         line-height: 1;
         @include hidden_text_transition;
-        @include minDevice {
-          width: 50%;
-        }
       }
     }
   }
