@@ -997,27 +997,9 @@
 
     &:nth-child(2n) {
       transform: translateY(280px);
+
       @include mobile {
-        grid-column: auto;
-        grid-row: auto;
-      }
-
-      .image_box {
-        width: 300px;
-
-        @include mobile {
-          width: 200px;
-        }
-      }
-    }
-
-    &:nth-child(3) {
-      .image_box {
-        width: 185px;
-
-        @include mobile {
-          width: 92px;
-        }
+        transform: none;
       }
     }
   }
@@ -1050,22 +1032,11 @@
       width: 242px;
       padding-bottom: calc((160 / 185) * 100%);
 
-      @include desktop {
-        width: 190px;
-        bottom: 33%;
-      }
-
       @include mobile {
-        top: 10%;
-        width: 121px;
+        top: 7%;
+        width: 110px;
         bottom: 148px;
         padding-bottom: calc((279 / 560) * 100%);
-      }
-
-      @include minDevice {
-        display: flex;
-        justify-content: center;
-        width: 35vw;
       }
 
       img {
