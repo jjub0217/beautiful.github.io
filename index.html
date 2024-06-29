@@ -26,8 +26,8 @@
   </div> -->
   <div class="wrapper">
     <div class="skip">
-      <a href="#header">메뉴 바로가기</a>
-      <a href="#main">본문 바로가기</a>
+      <a href="#header">Skip to menu</a>
+      <a href="#main">Skip to content</a>
     </div>
     <header class="header" id="header">
       <button class="menu_button" aria-expanded="false" aria-haspopup="menu" aria-selected="false">
@@ -44,7 +44,7 @@
     </header>
 
     <!-- [D] .menu_button 을 클릭했을때, gnb에 class="is_active" 추가 -->
-    <aside class="gnb">
+    <aside class="gnb" aria-hidden="true">
       <nav class="nav">
         <ul class="nav_list">
           <li class="nav_item">
@@ -116,12 +116,12 @@
             </p>
             <ul class="sns_list">
               <li class="sns_item" aria-labelledby="sns_label">
-                <a href="https://www.instagram.com/chanelofficial/?hl=en" class="instagram" aria-label="샤넬 인스타그램">
+                <a href="https://www.instagram.com/chanelofficial/?hl=en" class="instagram" aria-label="Chanel Instagram link">
                 </a>
               </li>
               <li class="sns_item" aria-labelledby="sns_label">
                 <a href="https://twitter.com/tekkenchanel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                  class="twitter" aria-label="샤넬 트위터">
+                  class="twitter" aria-label="Chanel Twitter link">
                 </a>
               </li>
             </ul>
@@ -240,7 +240,7 @@
               <source media="(min-width: 961px)" srcset="./assets/images/img_about_desc.png 2132w" sizes="100vw">
               <source media="(max-width: 960px)" srcset="./assets/images/img_about_desc_mobile.png 325w"
                 sizes="100vw">
-              <img src="./assets/images/img_about_desc.png" alt="엘라스틱 효과와 모이스쳐 효과와 수딩효과">
+              <img src="./assets/images/img_about_desc.png" alt="Elastic effect, Moisture effect, and Soothing effect">
             </picture>
           </div>
           <div class="description_wrap">
@@ -257,7 +257,7 @@
               </p>
               <div class="about_arrow">
                 <span class="prev">
-                  <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘">
+                  <img src="./assets/images/ico_arrow.svg" alt="View more arrow icon">
                 </span>
                 <span class="next" aria-hidden="false">
                   <img src="./assets/images/ico_arrow.svg" alt="">
@@ -294,7 +294,7 @@
                   </p>
                   <div class="about_arrow">
                     <span class="prev">
-                      <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘">
+                      <img src="./assets/images/ico_arrow.svg" alt="View more arrow icon">
                     </span>
                     <span class="next" aria-hidden="true">
                       <img src="./assets/images/ico_arrow.svg" alt="">
@@ -329,18 +329,17 @@
                 </div>
                 <div class="text_box">
                   <strong class="product_name">
-                    <span class="blind">상품명</span>
-                    N°1 DE CHANEL<br>
-                    REVITALIZING SERUM
+                    <span class="blind">product name</span>
+                    <span >N°1 DE CHANEL</span>
+                    <span>REVITALIZING SERUM</span>
                   </strong>
                   <div class="product_info">
                     <em class="info">
-                      <span class="blind">용량</span>
-                      50mL
+                      <span class="blind">size</span>
+                      50mL&#47;
                     </em>
-                    /
                     <em class="info">
-                      <span class="blind">가격</span>
+                      <span class="blind">price</span>
                       ₩220,000
                     </em>
                   </div> 
@@ -351,7 +350,7 @@
                     </span>
                     <div class="about_arrow">
                       <button class="prev">
-                        <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘" aria-selected="false">
+                        <img src="./assets/images/ico_arrow.svg" alt="View more arrow icon" aria-selected="false">
                       </button>
                       <button class="next" aria-hidden="true">
                         <img src="./assets/images/ico_arrow.svg" alt="">
@@ -372,18 +371,17 @@
                 </div>
                 <div class="text_box">
                   <strong class="product_name">
-                    <span class="blind">상품명</span>
-                    N°1 DE CHANEL<br>
-                    REVITALIZING EYE CREAM
+                    <span class="blind">product name</span>
+                    <span>N°1 DE CHANEL</span>
+                    <span>REVITALIZING EYE CREAM</span>
                   </strong>
                   <div class="product_info">
                     <em class="info">
-                      <span class="blind">용량</span>
-                      15g
+                      <span class="blind">size</span>
+                      15g&#47;
                     </em>
-                    /
                     <em class="info">
-                      <span class="blind">가격</span>
+                      <span class="blind">price</span>
                       ₩119,000
                     </em>
                   </div>
@@ -394,7 +392,7 @@
                     </p>
                     <div class="about_arrow">
                       <span class="prev">
-                        <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘">
+                        <img src="./assets/images/ico_arrow.svg" alt="View more arrow icon">
                       </span>
                       <span class="next">
                         <img src="./assets/images/ico_arrow.svg" alt="">
@@ -415,18 +413,17 @@
                 </div>
                 <div class="text_box">
                   <strong class="product_name">
-                    <span class="blind">상품명</span>
-                    N°1 DE CHANEL<br>
-                    REVITALIZING FOUNDATION
+                    <span class="blind">product name</span>
+                    <span>N°1 DE CHANEL</span>
+                    <span>REVITALIZING FOUNDATION</span>
                   </strong>
                   <div class="product_info">
                     <em class="info">
-                      <span class="blind">용량</span>
-                      30mL
+                      <span class="blind">size</span>
+                      30mL&#47;
                     </em>
-                    /
                     <em class="info">
-                      <span class="blind">가격</span>
+                      <span class="blind">price</span>
                       ₩107,000
                     </em>
                   </div>
@@ -437,7 +434,7 @@
                     </p>
                     <div class="about_arrow">
                       <span class="prev">
-                        <img src="./assets/images/ico_arrow.svg" alt="자세히 보기 화살표 아이콘">
+                        <img src="./assets/images/ico_arrow.svg" alt="View more arrow icon">
                       </span>
                       <span class="next" aria-hidden="true">
                         <img src="./assets/images/ico_arrow.svg" alt="">
@@ -461,7 +458,7 @@
               </p>
               <div class="about_arrow">
                 <span class="prev">
-                  <img src="./assets/images/ico_arrow.svg" alt="모두 보기 화살표 아이콘">
+                  <img src="./assets/images/ico_arrow.svg" alt="View all arrow icon">
                 </span>
                 <span class="next" aria-hidden="true">
                   <img src="./assets/images/ico_arrow.svg" alt="">
@@ -495,7 +492,7 @@
                       </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail1.jpeg" alt="샤넬, 에든버러에서 새로운 루즈 알뤼르 벨벳 뉘 블랑쉬 립스틱 팝업 오픈">
+                      <img src="./assets/images/img_news_thumbnail1.jpeg" alt="Chanel, opens new Rouge Allure Velvet Nuit Blanche lipstick pop-up in Edinburgh">
                     </div>
                   </a>
                 </li>
@@ -514,7 +511,7 @@
                       </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail2.jpg" alt="창의적 감독으로 세 명의 메이크업 아티스트를 임명">
+                      <img src="./assets/images/img_news_thumbnail2.jpg" alt="Appoints three makeup artists as creative directors">
                     </div>
                   </a>
                 </li>
@@ -533,7 +530,7 @@
                       </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail3.jpg" alt="재활용 알루미늄으로 만든 첫 마스카라 출시">
+                      <img src="./assets/images/img_news_thumbnail3.jpg" alt="Launches first mascara made from recycled aluminum">
                     </div>
                   </a>
                 </li>
@@ -553,7 +550,7 @@
                       </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail4.jpg" alt="샤넬 2024 봄/여름 오뜨 꾸뛰르 쇼, 버튼 디테일로 주목받다">
+                      <img src="./assets/images/img_news_thumbnail4.jpg" alt="Chanel 2024 Spring/Summer Haute Couture Show features button detail">
                     </div>
                   </a>
                 </li>
@@ -574,7 +571,7 @@
                       </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail5.jpeg" alt="샤넬, 2023년 크리스마스 캠페인에서 1920년대 황금기를 기념하다">
+                      <img src="./assets/images/img_news_thumbnail5.jpeg" alt="Chanel celebrates the Roaring 1920s for 2023 Christmas campaign">
                     </div>
                   </a>
                 </li>
@@ -599,7 +596,7 @@
                       </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail6.jpg" alt="샤넬, 신세계 면세점과 협력하여 인천공항에 아시아 최대 면세 포디움 오픈">
+                      <img src="./assets/images/img_news_thumbnail6.jpg" alt="Chanel partners with Shinsegae Duty Free to open Asia's largest duty-free podium at Incheon Airport">
                     </div>
                   </a>
                 </li>
@@ -619,7 +616,7 @@
                       </p>
                     </div>
                     <div class="image_box">
-                      <img src="./assets/images/img_news_thumbnail7.jpeg" alt="샤넬, 팀시 샬라메가 출연하는 블루 드 샤넬 캠페인 비디오 티저 공개">
+                      <img src="./assets/images/img_news_thumbnail7.jpeg" alt="Chanel teases Bleu De Chanel campaign video starring Timothée Chalamet">
                     </div>
                   </a>
                 </li>
@@ -633,14 +630,14 @@
         </div>
       </section>
       <section class="section_link_banner">
-        <h2 class="blind">배너</h2>
+        <h2 class="blind">banner</h2>
         <div class="inner">
           <div class="banner_box">
             <div class="image_box">
-              <img src="./assets/images/img_link_banner.png" alt="샤넬 카멜리아 배너">
+              <img src="./assets/images/img_link_banner.png" alt="Chanel Camellia banner">
             </div>
             <a href="#" class="banner_link">
-              <div class="image_box"><img src="./assets/images/img_link_banner_title.png" alt="샤넬 웹사이트"></div>
+              <div class="image_box"><img src="./assets/images/img_link_banner_title.png" alt="Chanel Website"></div>
             </a>
           </div>
           <p class="ingredient">CAMELLIA JAPONICA FLOWER WATER, AQUA (WATER),
@@ -681,14 +678,12 @@
             </p>
             <ul class="sns_list">
               <li class="sns_item">
-                <a href="https://www.instagram.com/chanelofficial/?hl=en" class="instagram">
-                  <span class="blind">샤넬 인스타그램 링크</span>
+                <a href="https://www.instagram.com/chanelofficial/?hl=en" class="instagram" aria-label="Chanel Instagram link">
                 </a>
               </li>
               <li class="sns_item">
                 <a href="https://twitter.com/tekkenchanel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                  class="twitter">
-                  <span class="blind">샤넬 트위터 링크</span>
+                  class="twitter" aria-label="Chanel Twitter link">
                 </a>
               </li>
             </ul>

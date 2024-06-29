@@ -1062,6 +1062,10 @@
       font-weight: 900;
       font-size: 18px;
 
+      span {
+        display: block;
+      }
+
       @include mobile {
         font-size: 12px;
       }

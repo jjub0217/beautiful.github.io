@@ -75,6 +75,7 @@ $(function () {
 
   $(".menu_button").click(function () {
     $(".gnb").toggleClass("is_active");
+    $(".gnb").attr("aria-hidden", "false");
     if ($(this).attr("aria-expanded") === "false") {
       $(this).attr("aria-expanded", "true");
       $(this).attr("aria-labelledby", "메뉴 닫기");
