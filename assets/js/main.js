@@ -79,11 +79,11 @@ $(function () {
     if ($(this).attr("aria-expanded") === "false") {
       $(this).attr("aria-expanded", "true");
       $(this).attr("aria-labelledby", "메뉴 닫기");
-      $(this).attr("aria-selected", "true");
+      $(this).attr("aria-pressed", "true");
     } else {
       $(this).attr("aria-expanded", "false");
       $(this).attr("aria-labelledby", "메뉴 열기");
-      $(this).attr("aria-selected", "false");
+      $(this).attr("aria-pressed", "false");
     }
   });
 
@@ -91,7 +91,7 @@ $(function () {
     e.preventDefault();
     if ($(".gnb").has("is_active")) {
       $(".gnb").removeClass("is_active");
-      $(".menu_button").attr("aria-selected", "false");
+      $(".menu_button").attr("aria-pressed", "false");
       $(".menu_button").attr("aria-expanded", "false");
       $("html, body").animate({ scrollTop: 0 }, 800);
     }

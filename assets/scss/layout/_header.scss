@@ -36,7 +36,7 @@
       }
     }
 
-    &[aria-selected="true"] {
+    &[aria-pressed="true"] {
       .menu_text {
         visibility: hidden;
       }

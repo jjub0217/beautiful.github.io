@@ -236,17 +236,17 @@ fieldset {
 .header .menu_button:hover .hamburger_icon {
   height: 23px;
 }
-.header .menu_button[aria-selected=true] .menu_text {
+.header .menu_button[aria-pressed=true] .menu_text {
   visibility: hidden;
 }
-.header .menu_button[aria-selected=true] .hamburger_icon .line_top {
+.header .menu_button[aria-pressed=true] .hamburger_icon .line_top {
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
 }
-.header .menu_button[aria-selected=true] .hamburger_icon .line_middle {
+.header .menu_button[aria-pressed=true] .hamburger_icon .line_middle {
   transform: scaleX(0);
 }
-.header .menu_button[aria-selected=true] .hamburger_icon .line_bottom {
+.header .menu_button[aria-pressed=true] .hamburger_icon .line_bottom {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
 }
