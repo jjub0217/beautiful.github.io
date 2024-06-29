@@ -31,7 +31,9 @@
 - Open-WAX 결과 : error 0<br>
 <img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/787c38b0-04dc-4cd0-80ff-f6c9910e946d" width=800> <br>
 - WAVE 결과: error 0<br>
-<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/f87e2614-158b-404b-87da-13fd774ddf2b" width=800>
+<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/468bcc03-f582-433b-bad9-5e8801c74927" width=800> <br>
+- 헤딩맵 결과: error 
+<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/0743a989-eba2-4409-9070-4b8551e1ba83" width=800>
 
 
 ## 기술 스택
