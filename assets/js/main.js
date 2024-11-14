@@ -43,19 +43,19 @@ $(function () {
   });
 
   sloganTl
-  .from($(".section_visual picture"), {
-    scale: 1.1,
-  })
-  .from($(".section_visual .title .char"), {
-    opacity: 0,
-    stagger: 0.04,
-    scale: 0.5,
-    ease: "elastic.out(1,0.4)",
-  })
-  .from($(".section_visual .sub_title"), {
-    opacity: 0,
-    yPercent: 100,
-  });
+    .from($(".section_visual picture"), {
+      scale: 1.1,
+    })
+    .from($(".section_visual .title .char"), {
+      opacity: 0,
+      stagger: 0.04,
+      scale: 0.5,
+      ease: "elastic.out(1,0.4)",
+    })
+    .from($(".section_visual .sub_title"), {
+      opacity: 0,
+      yPercent: 100,
+    });
 
   $("[data-scroll]").each(function (i, el) {
     gsap.to(el, {
@@ -108,10 +108,9 @@ $(function () {
       },
     });
     prdTl
-    .from($(this).find(".background"), 0.5, { scale: 0 })
-    .from($(this).find(".content"), 0.5, { opacity: 0 });
+      .from($(this).find(".background"), 0.5, { scale: 0 })
+      .from($(this).find(".content"), 0.5, { opacity: 0 });
   });
-
 
   gsap.from($(".section_news .swiper-slide"), {
     scrollTrigger: {
@@ -150,7 +149,6 @@ $(function () {
     color: "#e43d67",
     speed: 0.2,
   });
-
 })
 
 
