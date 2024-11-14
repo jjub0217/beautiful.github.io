@@ -28,6 +28,9 @@
 
 
 ## 프로젝트 웹접근성
+- chrome Lighthouse 결과 :<br>
+모바일 디바이스의 접근성 표준을 준수하였는지 로컬에서 검사할수 있는 goole 의 lighthouse 로 검사하면 개선할점이 Accessibility  항목과 Best Practices 항목에서 나타납니다.  <br>
+<img src="https://github.com/user-attachments/assets/2c30fd4d-75f5-4136-88ba-8bac089aae86" width=800> <br>
 - Open-WAX 결과 : error 0<br>
 <img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/787c38b0-04dc-4cd0-80ff-f6c9910e946d" width=800> <br>
 - WAVE 결과: error 0<br>
