@@ -84,11 +84,13 @@ window.onload = function () {
       $(this).attr("aria-labelledby", "메뉴 닫기");
       $(this).attr("aria-pressed", "true");
       $(".container").addClass("is_hidden");
+      $(".footer").addClass("is_hidden");
     } else {
       $(this).attr("aria-expanded", "false");
       $(this).attr("aria-labelledby", "메뉴 열기");
       $(this).attr("aria-pressed", "false");
-    $(".container").removeClass("is_hidden");
+      $(".container").removeClass("is_hidden");
+      $(".footer").removeClass("is_hidden");
     }
   });
 
