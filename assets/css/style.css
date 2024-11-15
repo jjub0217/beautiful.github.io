@@ -342,6 +342,9 @@ fieldset {
   -webkit-clip-path: circle(100% at 50% 50%);
           clip-path: circle(100% at 50% 50%);
 }
+.gnb.min_device {
+  padding-top: 0;
+}
 .gnb .nav {
   display: flex;
   align-items: flex-end;

@@ -157,6 +157,9 @@
     display: flex;
     clip-path: circle(100% at 50% 50%);
   }
+  &.min_device {
+    padding-top: 0;
+  }
 
   .nav {
     display: flex;

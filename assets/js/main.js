@@ -1,14 +1,12 @@
-
 $(function () {
-  function setVh() {
-    // 현재 뷰포트 높이를 계산하여 --vh 변수에 할당
-    console.log("현재 뷰포트 높이를 계산하여 --vh 변수에 할당");
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  }
 
-  window.addEventListener("resize", setVh);
-  window.addEventListener("load", setVh);
+  const isIphone = /iPhone/i.test(navigator.userAgent);
+   if (isIphone) {
+     // 아이폰인 경우, window의 width 값을 가져오기
+     const width = window.innerWidth;
+     console.log("아이폰 디바이스입니다. Width 값:", width);
+     $(".gnb").addClass("min_device");
+   } 
   const loadingText = new SplitType(".loading p", { types: "words, chars" });
 
   const sloganText = new SplitType(".section_visual .title_box .title", {
@@ -34,11 +32,13 @@ $(function () {
       yPercent: 100,
     });
 
+
   const loadingTl = gsap.timeline({
     onComplete: function () {
       sloganTl.play();
     },
   });
+
 
   loadingTl
     .to($(".loading .char"), {
@@ -65,6 +65,7 @@ $(function () {
     .to($(".loading"), {
       yPercent: -160,
     });
+
 
   $("[data-scroll]").each(function (i, el) {
     gsap.to(el, {
@@ -163,3 +164,9 @@ $(function () {
     speed: 0.2,
   });
 })
+
+
+
+
+
+  
