@@ -561,6 +561,9 @@ fieldset {
     padding: 80px 0 24px;
   }
 }
+.footer.is_hidden {
+  height: 0;
+}
 .footer_inner {
   width: calc(100vw - 240px);
   max-width: 1400px;

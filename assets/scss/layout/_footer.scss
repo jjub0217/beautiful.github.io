@@ -12,6 +12,9 @@
   @include mobile {
     padding: 80px 0 24px;
   }
+  &.is_hidden {
+    height: 0;
+  }
 
   &_inner {
     width: calc(100vw - 240px);
