@@ -375,7 +375,7 @@ fieldset {
 }
 @media screen and (max-width: 425px) {
   .gnb .nav_item {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .gnb .nav_link {
@@ -395,6 +395,12 @@ fieldset {
 .gnb .nav_link .text_top {
   top: 0;
   left: 0;
+}
+@media screen and (max-width: 425px) {
+  .gnb .nav_link .text_top {
+    position: relative;
+    height: 15px;
+  }
 }
 .gnb .nav_link .text_bottom {
   top: 100%;
@@ -457,6 +463,7 @@ fieldset {
 @media screen and (max-width: 425px) {
   .gnb .social_contact_area .social_box {
     padding-top: 10px;
+    padding-bottom: 20px;
   }
 }
 .gnb .social_contact_area .social_box .title {
@@ -533,6 +540,12 @@ fieldset {
 .gnb .social_contact_area .contact_link .text_top {
   top: 0;
   left: 0;
+}
+@media screen and (max-width: 425px) {
+  .gnb .social_contact_area .contact_link .text_top {
+    position: relative;
+    height: 15px;
+  }
 }
 .gnb .social_contact_area .contact_link .text_bottom {
   top: 100%;
@@ -745,6 +758,12 @@ fieldset {
   top: 0;
   left: 0;
 }
+@media screen and (max-width: 425px) {
+  .footer .footer_nav_link .text_top {
+    position: relative;
+    height: 15px;
+  }
+}
 .footer .footer_nav_link .text_bottom {
   top: 100%;
   left: 0;
@@ -815,6 +834,12 @@ fieldset {
 .footer .footer_nav .contact_box .contact_link .text_top {
   top: 0;
   left: 0;
+}
+@media screen and (max-width: 425px) {
+  .footer .footer_nav .contact_box .contact_link .text_top {
+    position: relative;
+    height: 15px;
+  }
 }
 .footer .footer_nav .contact_box .contact_link .text_bottom {
   top: 100%;

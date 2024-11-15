@@ -58,6 +58,11 @@ $minDevice: 425px;
   .text_top {
     top: 0;
     left: 0;
+
+    @include minDevice {
+      position: relative;
+      height: 15px;
+    }
   }
 
   .text_bottom {
