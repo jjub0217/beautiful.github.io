@@ -1,7 +1,14 @@
 window.onload = function () {
 
-  const loadingText = new SplitType(".loading p", { types: "words, chars" });
 
+   if (isIphone) {
+     // 아이폰인 경우, window의 width 값을 가져오기
+     const width = window.innerWidth;
+     console.log("아이폰 디바이스입니다. Width 값:", width);
+   } else {
+     console.log("아이폰이 아닙니다.");
+   }
+  const loadingText = new SplitType(".loading p", { types: "words, chars" });
 
   const sloganText = new SplitType(".section_visual .title_box .title", {
     types: "words, chars",
