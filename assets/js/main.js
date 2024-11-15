@@ -2,6 +2,7 @@
 $(function () {
   function setVh() {
     // 현재 뷰포트 높이를 계산하여 --vh 변수에 할당
+    console.log("현재 뷰포트 높이를 계산하여 --vh 변수에 할당");
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
   }
