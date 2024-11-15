@@ -1,15 +1,13 @@
 window.onload = function () {
+function setViewportHeight() {
+  // 현재 뷰포트 높이를 가져와서 --vh CSS 변수를 설정
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
 
-  const isIphone = /iPhone/i.test(navigator.userAgent);
-console.log(navigator.userAgent);
-console.log(window.navigator.userAgent);
-   if (isIphone) {
-     // 아이폰인 경우, window의 width 값을 가져오기
-     const width = window.innerWidth;
-     console.log("아이폰 디바이스입니다. Width 값:", width);
-   } else {
-     console.log("아이폰이 아닙니다.");
-   }
+// 페이지 로드 시 및 뷰포트 크기 변경 시 실행
+setViewportHeight();
+window.addEventListener("resize", setViewportHeight);
   const loadingText = new SplitType(".loading p", { types: "words, chars" });
 
   const sloganText = new SplitType(".section_visual .title_box .title", {

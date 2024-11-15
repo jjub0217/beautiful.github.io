@@ -321,8 +321,7 @@ fieldset {
   -webkit-clip-path: circle(0% at 50% 50%);
           clip-path: circle(0% at 50% 50%);
   transition: 0.5s;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: calc(var(--vh, 1vh) * 100);
 }
 .gnb::before {
   display: block;
