@@ -1,40 +1,8 @@
-$(function () {
-
+window.onload = function () {
   const loadingText = new SplitType(".loading p", { types: "words, chars" });
 
-  const loadingTl = gsap.timeline({
-    onComplete: function () {
-      sloganTl.play();
-    },
-  });
 
-  loadingTl
-  .to($(".loading .char"), {
-    opacity: 1,
-    stagger: 0.06,
-    scale: 1,
-    ease: "elastic.out(1,0.3)",
-  })
-  .addLabel("a")
-  .to(
-    $(".loading"),
-    {
-      background: "#e43d67",
-    },
-    "a"
-  )
-  .to(
-    $(".loading p"),
-    {
-      opacity: 0,
-    },
-    "a"
-  )
-  .to($(".loading"), {
-    yPercent: -160,
-  });
-
-  const sloganText = new SplitType(".section_visual .title_box p", {
+  const sloganText = new SplitType(".section_visual .title_box .title", {
     types: "words, chars",
   });
 
@@ -56,6 +24,41 @@ $(function () {
       opacity: 0,
       yPercent: 100,
     });
+
+
+  const loadingTl = gsap.timeline({
+    onComplete: function () {
+      sloganTl.play();
+    },
+  });
+
+
+  loadingTl
+    .to($(".loading .char"), {
+      opacity: 1,
+      stagger: 0.06,
+      scale: 1,
+      ease: "elastic.out(1,0.3)",
+    })
+    .addLabel("a")
+    .to(
+      $(".loading"),
+      {
+        background: "#e43d67",
+      },
+      "a"
+    )
+    .to(
+      $(".loading p"),
+      {
+        opacity: 0,
+      },
+      "a"
+    )
+    .to($(".loading"), {
+      yPercent: -160,
+    });
+
 
   $("[data-scroll]").each(function (i, el) {
     gsap.to(el, {
@@ -149,7 +152,7 @@ $(function () {
     color: "#e43d67",
     speed: 0.2,
   });
-})
+};
 
 
 

@@ -22,6 +22,8 @@
 9. 물결모양으로 넘실대는 영역이 있다.
 
 
+## 콘솔에러 0 <br>
+
 ## 프로젝트 웹표준(W3C의 Markup Validation Service)
 결과 : 0개 <br>
 <img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/948ed539-706f-4526-baef-b76972e23b34" width=800> <br>
