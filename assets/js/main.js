@@ -1,7 +1,8 @@
 window.onload = function () {
 
   const isIphone = /iPhone/i.test(navigator.userAgent);
-
+console.log(navigator.userAgent);
+console.log(window.navigator.userAgent);
    if (isIphone) {
      // 아이폰인 경우, window의 width 값을 가져오기
      const width = window.innerWidth;
