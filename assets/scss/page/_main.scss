@@ -198,10 +198,9 @@
 }
 
 .container {
-  height: 0%;
   animation: up-to 1s reverse linear;
 
-  &.on {
+  &.is_hidden {
     height: 0;
   }
 }

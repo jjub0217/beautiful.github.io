@@ -359,7 +359,7 @@ fieldset {
   flex-direction: column;
   gap: 28px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 425px) {
   .gnb .nav_list {
     gap: 20px;
   }
@@ -373,7 +373,7 @@ fieldset {
     font-size: 40px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 425px) {
   .gnb .nav_item {
     font-size: 30px;
   }
@@ -454,7 +454,7 @@ fieldset {
     padding: 40px 0 30px 0;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 425px) {
   .gnb .social_contact_area .social_box {
     padding-top: 10px;
   }
@@ -1041,10 +1041,9 @@ fieldset {
 }
 
 .container {
-  height: 0%;
   animation: up-to 1s reverse linear;
 }
-.container.on {
+.container.is_hidden {
   height: 0;
 }
 
