@@ -1,4 +1,5 @@
 window.onload = function () {
+
   const loadingText = new SplitType(".loading p", { types: "words, chars" });
 
 
