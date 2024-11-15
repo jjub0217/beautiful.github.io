@@ -4,7 +4,7 @@ $(function () {
    if (isIphone) {
      // 아이폰인 경우, window의 width 값을 가져오기
      const width = window.innerWidth;
-     console.log("아이폰 디바이스입니다. Width 값:", width);
+     console.log("아이폰 디바이스입니다", width);
      $(".gnb").addClass("min_device");
    } 
   const loadingText = new SplitType(".loading p", { types: "words, chars" });
