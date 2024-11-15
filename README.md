@@ -23,6 +23,7 @@
 
 
 ## 콘솔에러 0 <br>
+<img src="https://github.com/user-attachments/assets/208c0e67-939b-4684-b6a6-f16365a857a5" width=800> <br>
 
 ## 프로젝트 웹표준(W3C의 Markup Validation Service)
 결과 : 0개 <br>
@@ -40,6 +41,14 @@
 - 헤딩맵 결과: error 
 <img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/0743a989-eba2-4409-9070-4b8551e1ba83" width=800>
 
+
+## 모바일 디바이스 검수
+- 안드로이드 Note20 울트라
+<video src="https://github.com/user-attachments/assets/1a710364-9a0d-43af-b26a-4ac02cc87ba9" autoplay muted playsinline loop></video>
+- 아이폰 SE2 
+<video src="https://github.com/user-attachments/assets/77e12afe-2460-4e91-a0c7-bedde8b4e429" autoplay muted playsinline loop></video>
+- 아이패드 6
+<video src="https://github.com/user-attachments/assets/ff726cdf-36e7-48f8-8a68-010d70e08c5a" autoplay muted playsinline loop></video>
 
 ## 기술 스택
 ![HTML5](https://img.shields.io/badge/HTML5-FE642E?style=flat-square&logo=HTML5&logoColor=white)

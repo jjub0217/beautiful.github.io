@@ -22,6 +22,14 @@ $mobile: 960px;
   }
 }
 
+$minDevice: 700px;
+@mixin minDevice {
+  // 700 이하를 꾸미는거다.
+  @media screen and (max-width: $minDevice) {
+    @content;
+  }
+}
+
 @mixin ellipse($line: 1) {
   overflow: hidden;
   text-overflow: ellipsis;
