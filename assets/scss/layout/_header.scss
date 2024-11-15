@@ -1,9 +1,9 @@
 .header {
   overflow: hidden;
   position: fixed;
-  top: 48px;
+  top: 0;
   left: 0;
-  right: 65px;
+  right: 0;
   z-index: 3;
   background-color: transparent;
   cursor: pointer;
@@ -22,6 +22,7 @@
     justify-content: flex-end;
     gap: 20px;
     width: 100%;
+    padding: 28px 32px;
     cursor: pointer;
 
     &:hover {
