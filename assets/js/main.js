@@ -1,13 +1,13 @@
-window.onload = function () {
-function setViewportHeight() {
-  // 현재 뷰포트 높이를 가져와서 --vh CSS 변수를 설정
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-}
 
-// 페이지 로드 시 및 뷰포트 크기 변경 시 실행
-setViewportHeight();
-window.addEventListener("resize", setViewportHeight);
+$(function () {
+  function setVh() {
+    // 현재 뷰포트 높이를 계산하여 --vh 변수에 할당
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+
+  window.addEventListener("resize", setVh);
+  window.addEventListener("load", setVh);
   const loadingText = new SplitType(".loading p", { types: "words, chars" });
 
   const sloganText = new SplitType(".section_visual .title_box .title", {
@@ -33,13 +33,11 @@ window.addEventListener("resize", setViewportHeight);
       yPercent: 100,
     });
 
-
   const loadingTl = gsap.timeline({
     onComplete: function () {
       sloganTl.play();
     },
   });
-
 
   loadingTl
     .to($(".loading .char"), {
@@ -66,7 +64,6 @@ window.addEventListener("resize", setViewportHeight);
     .to($(".loading"), {
       yPercent: -160,
     });
-
 
   $("[data-scroll]").each(function (i, el) {
     gsap.to(el, {
@@ -164,10 +161,4 @@ window.addEventListener("resize", setViewportHeight);
     color: "#e43d67",
     speed: 0.2,
   });
-};
-
-
-
-
-
-  
+})
