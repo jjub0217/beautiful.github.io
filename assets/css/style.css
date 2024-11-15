@@ -345,6 +345,11 @@ fieldset {
 .gnb.min_device {
   padding-top: 0;
 }
+@media screen and (max-width: 425px) {
+  .gnb.min_device {
+    padding-top: 0;
+  }
+}
 .gnb .nav {
   display: flex;
   align-items: flex-end;

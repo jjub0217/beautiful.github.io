@@ -158,6 +158,9 @@
     clip-path: circle(100% at 50% 50%);
   }
   &.min_device {
+    @include minDevice {
+      padding-top: 0;
+    }
     padding-top: 0;
   }
 
