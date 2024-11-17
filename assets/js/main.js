@@ -1,12 +1,13 @@
 $(function () {
 
   const isIphone = /iPhone/i.test(navigator.userAgent);
-   if (isIphone) {
-     // 아이폰인 경우, window의 width 값을 가져오기
-     const width = window.innerWidth;
-     console.log("아이폰 디바이스입니다", width);
-     $(".nav").addClass("min_device");
-   } 
+  
+  if (isIphone) {
+    const width = window.innerWidth;
+    console.log("아이폰 디바이스입니다", width);
+    $(".nav").addClass("min_device");
+  } 
+
   const loadingText = new SplitType(".loading p", { types: "words, chars" });
 
   const sloganText = new SplitType(".section_visual .title_box .title", {
