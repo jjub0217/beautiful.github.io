@@ -933,6 +933,7 @@ fieldset {
 
 .description_wrap {
   display: flex;
+  align-items: center;
   position: relative;
   z-index: 1;
   padding-top: 40px;
@@ -953,6 +954,7 @@ fieldset {
   }
   .description_wrap .description {
     display: block;
+    width: 100%;
     padding: 0;
     font-size: 17px;
     font-weight: 900;
@@ -1164,6 +1166,12 @@ fieldset {
 .section_concept .headline {
   top: 0;
   right: 0;
+}
+.section_concept .description_wrap {
+  font-size: 42px;
+}
+.section_concept .description {
+  width: 100%;
 }
 .section_concept .image_box {
   position: relative;
@@ -1407,6 +1415,9 @@ fieldset {
   .section_research .description_wrap .description br:nth-child(1) {
     display: block;
   }
+}
+.section_research .description_wrap .link_more {
+  margin-left: 0;
 }
 .section_research .description_wrap .link_text {
   width: 250px;

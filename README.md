@@ -36,7 +36,7 @@
 [1] 데스크탑
 <img src="https://github.com/user-attachments/assets/81bde11a-70ba-4f66-bdb0-5517283f0964" width=800> <br>
 [2] 모바일
-<img src="https://github.com/user-attachments/assets/2c30fd4d-75f5-4136-88ba-8bac089aae86" width=800> <br>
+<img src="https://github.com/user-attachments/assets/7ecdf005-de6c-45c5-bc21-373e08bde5b7" width=800> <br>
 - Open-WAX 결과 : error 0<br>
 <img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/787c38b0-04dc-4cd0-80ff-f6c9910e946d" width=800> <br>
 - WAVE 결과: error 0<br>
