@@ -1,7 +1,7 @@
 $(function () {
 
   const isIphone = /iPhone/i.test(navigator.userAgent);
-  
+
   if (isIphone) {
     const width = window.innerWidth;
     console.log("아이폰 디바이스입니다", width);
@@ -138,7 +138,23 @@ $(function () {
     stagger: 0.3,
   });
 
-  const sectionNews = new Swiper(".section_news .swiper", {
+  const createSwiper = (selector, options) => new Swiper(selector, options);
+
+  const commonA11ySettings = {
+    enabled: true,
+    containerMessage: "프로모션 슬라이드 영역입니다.",
+    slideLabelMessage:
+      "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+    firstSlideMessage: "첫번째 슬라이드입니다.",
+    lastSlideMessage: "마지막 슬라이드입니다.",
+    paginationBulletMessage: "{{index}}번째 슬라이드로 이동합니다.",
+    containerRoleDescriptionMessage: "Carousel",
+    itemRoleDescriptionMessage: "Slide",
+    slideRole: "listitem",
+  };
+
+  createSwiper(".section_news .swiper", {
+    a11y: commonA11ySettings,
     navigation: {
       nextEl: ".btn_next",
       prevEl: ".btn_prev",
@@ -156,6 +172,26 @@ $(function () {
       },
     },
   });
+
+
+  // const sectionNews = new Swiper(".section_news .swiper", {
+  //   navigation: {
+  //     nextEl: ".btn_next",
+  //     prevEl: ".btn_prev",
+  //   },
+  //   slidesPerView: 2,
+  //   spaceBetween: 15,
+  //   breakpoints: {
+  //     960: {
+  //       slidesPerView: 3,
+  //       spaceBetween: 15,
+  //     },
+  //     1162: {
+  //       slidesPerView: 5.3,
+  //       spaceBetween: 15,
+  //     },
+  //   },
+  // });
 
   $("#wave").wavify({
     height: 60,
