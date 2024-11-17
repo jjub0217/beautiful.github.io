@@ -49,9 +49,10 @@
 - 안드로이드 Note20 울트라
 <video src="https://github.com/user-attachments/assets/1a710364-9a0d-43af-b26a-4ac02cc87ba9" autoplay muted playsinline loop></video>
 - 아이폰 SE2 
-<video src="https://github.com/user-attachments/assets/77e12afe-2460-4e91-a0c7-bedde8b4e429" autoplay muted playsinline loop></video>
+<video src="https://github.com/user-attachments/assets/580913d6-c71d-4ab5-bc52-35e8f2dd4526" autoplay muted playsinline loop></video>
 - 아이패드 6
-<video src="https://github.com/user-attachments/assets/ff726cdf-36e7-48f8-8a68-010d70e08c5a" autoplay muted playsinline loop></video>
+<video src="https://github.com/user-attachments/assets/a574a34e-00a3-4ef5-a59b-b97d51cf0cd0
+" autoplay muted playsinline loop></video>
 
 ## 기술 스택
 ![HTML5](https://img.shields.io/badge/HTML5-FE642E?style=flat-square&logo=HTML5&logoColor=white)

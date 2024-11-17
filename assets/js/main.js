@@ -174,24 +174,6 @@ $(function () {
   });
 
 
-  // const sectionNews = new Swiper(".section_news .swiper", {
-  //   navigation: {
-  //     nextEl: ".btn_next",
-  //     prevEl: ".btn_prev",
-  //   },
-  //   slidesPerView: 2,
-  //   spaceBetween: 15,
-  //   breakpoints: {
-  //     960: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 15,
-  //     },
-  //     1162: {
-  //       slidesPerView: 5.3,
-  //       spaceBetween: 15,
-  //     },
-  //   },
-  // });
 
   $("#wave").wavify({
     height: 60,
