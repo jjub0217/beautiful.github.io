@@ -17,7 +17,7 @@
     <div class="text-area">
       <p>Modernism's Splendor</p>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true">
       <path fill="#e43d67" fill-opacity="1"
         d="M0,192L34.3,165.3C68.6,139,137,85,206,96C274.3,107,343,181,411,197.3C480,213,549,171,617,154.7C685.7,139,754,149,823,176C891.4,203,960,245,1029,256C1097.1,267,1166,245,1234,208C1302.9,171,1371,117,1406,90.7L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
       </path>
@@ -26,10 +26,9 @@
   <div class="wrapper">
     <div class="skip">
       <a href="#header">Skip to menu</a>
-      <a href="#main">Skip to content</a>
     </div>
     <header class="header" id="header">
-      <button class="menu_button" aria-expanded="false" aria-haspopup="menu" aria-pressed="false" type="button" aria-label="menu button">
+      <button type="button" class="menu_button" aria-expanded="false" aria-haspopup="menu" aria-pressed="false" aria-label="menu button" aria-label="open main navigation menu">
         <span class="menu_text">
           <span class="menu_text_top">menu</span>
           <span class="menu_text_bottom" aria-hidden="true">menu</span>
@@ -110,16 +109,16 @@
         </ul>
         <div class="social_contact_area">
           <div class="social_box">
-            <p class="title" id="sns_label">
+            <p id="snsLabel" class="title">
               FOLLOW US!
             </p>
             <ul class="sns_list">
-              <li class="sns_item" aria-labelledby="sns_label">
+              <li class="sns_item" aria-labelledby="snsLabel">
                 <a href="https://www.instagram.com/chanelofficial/?hl=en" class="instagram">
                   <span class="blind">Chanel Instagram link</span>
                 </a>
               </li>
-              <li class="sns_item" aria-labelledby="sns_label">
+              <li class="sns_item" aria-labelledby="snsLabel">
                 <a href="https://twitter.com/tekkenchanel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
                   class="twitter">
                   <span class="blind">Chanel Twitter link</span>
@@ -140,7 +139,7 @@
         </div>
       </nav>
     </aside>
-    <main class="container" id="main">
+    <main id="main" class="container">
       <section class="section_visual">
         <div class="image_box">
           <picture>
@@ -159,11 +158,11 @@
       <section class="section_concept">
         <div class="inner">
           <div class="content">
-            <h2 class="headline" aria-describedby="concept_description">
+            <h2 class="headline" aria-describedby="conceptDescription">
               CONCEPT
             </h2>
             <div class="description_wrap">
-              <p class="description" id="concept_description">
+              <p id="conceptDescription" class="description">
                 In-depth study of the House’s emblematic <br>flower led CHANEL Research <br>to discover its
                 extraordinary levels<br>
                 of
@@ -202,9 +201,9 @@
           </div>
         </div>
       </div>
-      <section class="section_about" id="about">
+      <section id="about" class="section_about">
         <div class="background" data-scroll=""></div>
-        <h2 class="headline" aria-describedby="about_description">
+        <h2 class="headline" aria-describedby="aboutDescription">
           ABOUT
         </h2>
         <strong class="title">
@@ -235,7 +234,7 @@
               alt="Camellia flower">
           </picture>
         </div>
-        <div class="text_box" data-scroll="" id="about_description">
+        <div id="aboutDescription" class="text_box" data-scroll="">
           <div class="about_effect">
             <picture>
               <source media="(min-width: 961px)" srcset="./assets/images/img_about_desc.png 2132w" sizes="100vw">
@@ -268,13 +267,13 @@
           </div>
         </div>
       </section>
-      <section class="section_research" id="ethical">
-        <h2 class="headline" aria-describedby="ethical_description">
+      <section id="ethical" class="section_research">
+        <h2 class="headline" aria-describedby="ethicalDescription">
           RESEARCH
         </h2>
         <div class="inner">
           <div class="text_box">
-            <strong class="title" id="ethical_description">
+            <strong id="ethicalDescription" class="title">
               THE RESEARCH<br> INGREDIENT
             </strong>
             <div class="description_wrap">
@@ -315,7 +314,7 @@
           </div>
         </div>
       </section>
-      <section class="section_products" id="product">
+      <section id="product" class="section_products">
         <h2 class="headline">
           PRODUCTS
         </h2>
@@ -330,8 +329,8 @@
                 <div class="text_box">
                   <strong class="product_name">
                     <span class="blind">product name</span>
-                    <span>N°1 DE CHANEL</span>
-                    <span>REVITALIZING SERUM</span>
+                    <span class="detail_name">N°1 DE CHANEL</span>
+                    <span class="detail_name">REVITALIZING SERUM</span>
                   </strong>
                   <div class="product_info">
                     <em class="info">
@@ -372,8 +371,8 @@
                 <div class="text_box">
                   <strong class="product_name">
                     <span class="blind">product name</span>
-                    <span>N°1 DE CHANEL</span>
-                    <span>REVITALIZING EYE CREAM</span>
+                    <span class="detail_name">N°1 DE CHANEL</span>
+                    <span class="detail_name">REVITALIZING EYE CREAM</span>
                   </strong>
                   <div class="product_info">
                     <em class="info">
@@ -414,8 +413,8 @@
                 <div class="text_box">
                   <strong class="product_name">
                     <span class="blind">product name</span>
-                    <span>N°1 DE CHANEL</span>
-                    <span>REVITALIZING FOUNDATION</span>
+                    <span class="detail_name">N°1 DE CHANEL</span>
+                    <span class="detail_name">REVITALIZING FOUNDATION</span>
                   </strong>
                   <div class="product_info">
                     <em class="info">
@@ -468,7 +467,7 @@
           </div>
         </div>
       </section>
-      <section class="section_news" id="news">
+      <section id="news" class="section_news">
         <h2 class="blind">news</h2>
         <p class="headline">
           NEWS
@@ -623,8 +622,8 @@
               </ul>
             </div>
             <div class="control_area">
-              <button class="slide_btn btn_prev" aria-label="이전슬라이드" aria-pressed="false"></button>
-              <button class="slide_btn btn_next" aria-label="다음슬라이드"></button>
+              <button type="button" class="slide_btn btn_prev" aria-label="이전슬라이드" aria-pressed="false"></button>
+              <button type="button" class="slide_btn btn_next" aria-label="다음슬라이드"></button>
             </div>
           </div>
         </div>
@@ -637,7 +636,9 @@
               <img src="./assets/images/img_link_banner.png" alt="Chanel Camellia banner">
             </div>
             <a href="#" class="banner_link">
-              <div class="image_box"><img src="./assets/images/img_link_banner_title.png" alt="Chanel Website"></div>
+              <div class="image_box">
+                <img src="./assets/images/img_link_banner_title.png" alt="Chanel Website">
+              </div>
             </a>
           </div>
           <p class="ingredient">CAMELLIA JAPONICA FLOWER WATER, AQUA (WATER),

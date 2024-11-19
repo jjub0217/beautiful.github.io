@@ -77,7 +77,7 @@ $(function () {
         markers: false,
         scrub: 1,
         onEnter: function () {
-          $(el).addClass("on");
+          $(el).addClass("is_transformed");
         },
       },
       yPercent: 13,

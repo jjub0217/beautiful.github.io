@@ -25,6 +25,9 @@
   }
 }
 
+// color: #fff;
+// font-family: "poppins", sans-serif;
+
 .title {
   display: block;
   font-family: "poppins", sans-serif;
@@ -361,7 +364,7 @@
       100% 13.75%
     );
 
-    &.on {
+    &.is_transformed {
       clip-path: polygon(
         100% 100%,
         0% 100%,
@@ -585,7 +588,7 @@
       100% 13.75%
     );
 
-    &.on {
+    &.is_transformed {
       clip-path: polygon(
         100% 100%,
         0% 100%,
@@ -843,7 +846,7 @@
       object-fit: cover;
     }
 
-    &.on {
+    &.is_transformed {
       clip-path: polygon(
         100% 100%,
         0% 100%,
@@ -1072,7 +1075,7 @@
       font-weight: 900;
       font-size: 18px;
 
-      span {
+      .detail_name {
         display: block;
       }
 
